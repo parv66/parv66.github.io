@@ -4,6 +4,7 @@
 .logo{
 	width: 100%;
 	align-items:center;
+        animation: error666 1s linear infinite;
 }
 body {
 	background-color: lime;
