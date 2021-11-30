@@ -8,7 +8,7 @@ function error666() {
   if (one == 3) {
     var audio = document.getElementById("error666");
     audio.play();
-    document.getElementByID('html').style.animation="error 4s linear infinite";
+    document.getElementByID('html').style.animation="error666 1s linear infinite";
     one = 0
   }
 }
