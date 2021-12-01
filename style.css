@@ -47,12 +47,12 @@ html {
   0% {filter: invert(100%) grayscale(0.2) brightness(0.9)}
   100% {filter: invert(100%) grayscale(0.2) brightness(0.9);}
 }
-.erbtn {
+.ttbtn {
   position: relative;
   display: inline-block;
 }
 
-.erbtn .errtext {
+.ttbtn .tttext {
   visibility: hidden;
   background-color: #555;
   color: #fff;
@@ -72,7 +72,7 @@ html {
   margin-right: auto;
   width: 100%;
 }
-.erbtn .errtext::after {
+.ttbtn .tttext::after {
   content: "";
     position: absolute;
     bottom: 100%;
@@ -83,7 +83,7 @@ html {
     border-color: transparent transparent #555 transparent;
 }
 
-.erbtn:hover .errtext {
+.ttbtn:hover .tttext {
   visibility: visible;
   opacity: 1;
 }
