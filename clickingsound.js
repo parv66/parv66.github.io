@@ -9,6 +9,6 @@ function error666() {
     var audio = document.getElementById("error666");
     audio.play();
     var error = document.getElementByID('html').style.animation="error666 1s linear infinite";
-    one = 0
+    var one = 0;
   }
 }
