@@ -39,6 +39,10 @@ body {
    background-color: grey;
    border-top-width: thick;
 }
+.errl {
+   animation: error666 1s linear infinite;
+   text-align: center;
+}
 @keyframes error666 {
   0% {filter: invert(100%);}
   100% {filter: invert(100%);}
