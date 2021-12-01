@@ -3,15 +3,6 @@ function play() {
         audio.play();
       }
 var one = 0;
-function error666() { 
-  one++
-  if (one == 3) {
-    var audio = document.getElementById("error666");
-    audio.play();
-    var error = document.getElementById("e").style.animation="error666 1s linear infinite";
-    var one = 0;
-  }
-}
 function err() { 
    one++
    if (one == 3) {
@@ -19,5 +10,6 @@ function err() {
       element.classList.add("errl");
             var audio = document.getElementById("errors");
             audio.play();
+            audio.volume = 0.2;
   }
 }
