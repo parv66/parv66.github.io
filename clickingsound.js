@@ -12,3 +12,12 @@ function error666() {
     var one = 0;
   }
 }
+function err() { 
+   one++
+   if (one == 3) {
+      var element = document.getElementById("error");
+      element.classList.add("err");
+            var error = document.getElementById("errors");
+            error.play();
+  }
+}
