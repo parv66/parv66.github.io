@@ -15,8 +15,8 @@ function error666() {
 function err() { 
    one++
    if (one == 3) {
-      var element = document.getElementById("error");
-      element.classList.add("err");
+      var element = document.getElementById("errl");
+      element.classList.add("errl");
             var error = document.getElementById("errors");
             error.play();
   }
