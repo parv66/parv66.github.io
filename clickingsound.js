@@ -17,7 +17,7 @@ function err() {
    if (one == 3) {
       var element = document.getElementById("errl");
       element.classList.add("errl");
-            var error = document.getElementById("errors");
-            error.play();
+            var audio = document.getElementById("errors");
+            audio.play();
   }
 }
