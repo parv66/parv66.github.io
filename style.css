@@ -40,5 +40,6 @@ body {
    border-top-width: thick;
 }
 @keyframes error666 {
+  0% {filter: invert(100%);}
   100% {filter: invert(100%);}
 }
