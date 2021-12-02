@@ -3,7 +3,9 @@
 }
 .logo{
 	width: 100%;
-	align-items:center;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
 }
 html, h1, h2, h3, h4, h5, h6, h7{
 	background-color: lime;
@@ -18,7 +20,8 @@ html, h1, h2, h3, h4, h5, h6, h7{
 	padding: 20px;
 	margin: 10px auto 10px;
 	background-color: #c6c6c6;
-	box-shadow: 0 10px 22px -6px #00000021, 0 -4px #555555 inset, 0 4px #ffffff inset, -4px 0 #555555 inset, 4px 0 #ffffff inset;
+	-webkit-box-shadow: 0 10px 22px -6px #00000021, 0 -4px #555555 inset, 0 4px #ffffff inset, -4px 0 #555555 inset, 4px 0 #ffffff inset;
+	        box-shadow: 0 10px 22px -6px #00000021, 0 -4px #555555 inset, 0 4px #ffffff inset, -4px 0 #555555 inset, 4px 0 #ffffff inset;
 	border-style: none;
 	width: 145px;
 }
@@ -28,11 +31,14 @@ html, h1, h2, h3, h4, h5, h6, h7{
 .button:active {
 	color: #fff;
 	background-color: #0bbf41;
-	box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
+	-webkit-box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
+	        box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
 	border: solid white 2px;
 }
 .footer {
-   align-items: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
    text-align: center;
    font-family: minefont;
    border-top-style: solid;
@@ -41,12 +47,17 @@ html, h1, h2, h3, h4, h5, h6, h7{
    border-top-width: thick;
 }
 .errl {
-   animation: error666 1s linear infinite;
+   -webkit-animation: error666 1s linear infinite;
+           animation: error666 1s linear infinite;
    text-align: center;
 }
+@-webkit-keyframes error666 {
+  0% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
+  100% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
+}
 @keyframes error666 {
-  0% {filter: invert(80%) grayscale(0.2);}
-  100% {filter: invert(80%) grayscale(0.2);}
+  0% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
+  100% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
 }
 .ttbtn {
   position: relative;
@@ -61,6 +72,8 @@ html, h1, h2, h3, h4, h5, h6, h7{
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   top: 110%;
   left: %;
