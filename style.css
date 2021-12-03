@@ -25,7 +25,9 @@ html, h1, h2, h3, h4, h5, h6, h7{
 	border-style: none;
 	width: 145px;
 }
-
+@media only screen and (max-width: 360px) {
+  .button {font-size: xxx-large;}
+}
 .button:hover,
 .button:focus,
 .button:active {
