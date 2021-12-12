@@ -1,9 +1,10 @@
-document.addEventListener("keydown", event => {
-  if (event.isComposing || event.keyCode !== 69) {
-    return;
+document.addEventListener("keydown", function(event) {
+  event.preventDefault();
+  switch (event.which) {
+    case 112:
+     err();
   }
-  err();
-});
+})
 var one = 0;
 function err() { 
    one++
