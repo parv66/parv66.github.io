@@ -1,3 +1,9 @@
+document.addEventListener("keydown", event => {
+  if (event.isComposing || event.keyCode !== 69) {
+    return;
+  }
+  err();
+});
 var one = 0;
 function err() { 
    one++
