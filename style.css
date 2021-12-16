@@ -106,3 +106,18 @@ html, h1, h2, h3, h4, h5, h6, h7{
 .mcTextDarkgray, .mcTextDarkgrey {color: #555555;} .mcTextRed {color: #FF5555;} .mcTextGreen {color: #55FF55;} .mcTextAqua {color: #55FFFF;} .mcTextBlue {color: #5555FF;}
 .mcTextYellow {color: #FFFF55;}.mcTextGray, .mcTextGrey {color: #555555;} .mcTextMineGold {color: #DDD605;} .mcTextGold {color: #FFAA00;} .mcTextWhite {color: #FFFFFF;}
 .mcTextPurple {color: #FF55FF;}
+
+.fofimg {
+	color: bisque;
+	position: relative;
+	left: 28%;
+	bottom: 48%;
+	display: block;
+}
+.fofdiv {
+     height: 30vmax;
+}
+.fofbtn {
+    left: 5%;
+    position: relative;
+}
