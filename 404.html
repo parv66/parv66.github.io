@@ -4,13 +4,14 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <script src="clickingsound.js"></script>
+    <script src="leave.js"></script>
   </head>
 <h1>Hey There! You Seem Lost...</h1>
 <h2>This Isn't The Page You're Looking For...</h2>
 <br>
 <button class="button" onclick="play();location.href = 'https://parv66.tk/'"> > Take Help</button>
 <br>
-<button class="button" onclick="play();location.href = '.'"> > Leave</button>
+<button class="button" href="#" onclick="play();leave();return false> > Leave</button>
 <br>
 <button class="button" onclick="play();location.href = '.'"> > Ignore</button>
 <audio id="buttonclick" src="random.click.ogg"></audio>
