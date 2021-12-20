@@ -109,15 +109,22 @@ html, h1, h2, h3, h4, h5, h6, h7{
 
 .fofimg {
 	color: bisque;
-	position: relative;
-	left: 28%;
-	bottom: 48%;
-	display: block;
+	position: absolute;
+	left: 12vw;
+	top: 8vmax;
+	height: 27vw;
+	z-index: 2;
+	padding: 10px;
+	margin: 15px;
+	border: whitesmoke none 15px;
+	display: inline-block;
 }
 .fofdiv {
-     height: 30vmax;
+     height: 41vmax;
+     z-index: 1;
 }
 .fofbtn {
     left: 5%;
     position: relative;
 }
+
