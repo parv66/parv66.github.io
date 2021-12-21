@@ -162,4 +162,7 @@ h1 {
   background-image: url("https://parv66.tk/creations/icons/c++ cog.png");
   background-size: cover;
   background-repeat: no-repeat;
+  height: var(--slot-size);
+  width: var(--slot-size);
+  display: block;
 }
