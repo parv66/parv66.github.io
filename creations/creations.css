@@ -166,7 +166,7 @@ h1 {
   width: var(--slot-size);
   display: block;
 }
-#test1 {
+#minetip-tooltip {
     position: fixed;
     top: 0;
     left: 0;
@@ -182,11 +182,11 @@ h1 {
     pointer-events: none;
     z-index: 9999;
 }
-.format-f, #test1 {
+.format-f, #minetip-tooltip {
     color: #FFF;
     text-shadow: 0.125em 0.125em 0 #3F3F3F;
 }
-#test1::before {
+#minetip-tooltip::before {
     content: "";
     position: absolute;
     top: 0.125em;
@@ -197,7 +197,7 @@ h1 {
     border-style: none solid;
     border-color: rgba(16,0,16,0.94);
 }
-#test1::after {
+#minetip-tooltip::after {
     content: "";
     position: absolute;
     top: 0.125em;
