@@ -1,16 +1,16 @@
-var test2 = document.getElementById("test1");
+var minetip = document.getElementById("minetip-tooltip");
 
 $(".minetext").mouseover(function(event) {
-  test2.innerHTML = event.target.dataset.mctitle;
-  test2.style.display = "block";
+  minetip.innerHTML = event.target.dataset.mctitle;
+  minetip.style.display = "block";
 });
 
 $(".minetext").mouseout(function() {
-  test2.style.display = "none";
+  minetip.style.display = "none";
 });
 
 $(".minetext").mousemove(function (event) {
-  pos (test2, 5, -30, event);
+  pos (minetip, 5, -30, event);
 });
 
 var pos = function (o, x, y, event) {
@@ -28,4 +28,4 @@ var pos = function (o, x, y, event) {
     o.style.left = (posX + x) + "px";
 }
 
-test2.style.display = "none";
+minetip.style.display = "none";
