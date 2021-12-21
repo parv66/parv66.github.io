@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
   <style>
+    .tooltip {
+  text-decoration: none;
+  position: relative;
+  border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+}
+
+.tooltip span {
+  display: none;
+  border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+}
+
+.tooltip:hover span {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+}
+
     #minetip-tooltip {
     position: fixed;
     top: 0;
@@ -59,6 +77,12 @@ p {
 <div>
   <p>If you squeeze an <span class="minetext" data-mctitle="Orange">🍊</span>,you'll get a cup of <span class="minetext" data-mctitle="Orange Juice">🥤!</span></p>
 </div>
+    <br>
+    <a class="tooltip" href="http://www.google.com/">
+  Google
+  <span id="tooltip-span">hewo
+  </span>
+    </a>
   </body>
   <script>
     var minetip = document.getElementById("minetip-tooltip");
@@ -92,5 +116,17 @@ var pos = function (o, x, y, event) {
 }
 
 minetip.style.display = "none";
+    
+    
+    
+    var tooltipSpan = document.getElementById('tooltip-span');
+
+window.onmousemove = function(e) {
+  var x = e.clientX,
+    y = e.clientY;
+  tooltipSpan.style.top = (y + 20) + 'px';
+  tooltipSpan.style.left = (x + 20) + 'px';
+};
+
   </script>
 </html>
