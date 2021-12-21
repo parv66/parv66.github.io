@@ -158,7 +158,7 @@ h1 {
   }
 }
 .copperplusplus{
-  height: var(--slot-size) - 2px;
-  width: var(--slot-size) - 2px;
-  backgroundimage: "icons/c++ cog";
+  background-image: url(icons/c++ cog.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
