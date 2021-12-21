@@ -84,7 +84,7 @@ body {
   display: grid;
   grid-template-columns: repeat(9, calc(var(--slot-size) + 8px));
   grid-template-rows: repeat(3, calc(var(--slot-size) + 8px));
-  margin-bottom: 25px;
+  margin-bottom: 6px;
 }
 
 .boxes3 {
