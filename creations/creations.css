@@ -21,12 +21,6 @@ body {
   text-align: center;
   color: #292929;
 }
-
-.fa-facebook-f g g path {
-  stroke: black;
-  stroke-width: 10;
-}
-
 .main1 {
   display: flex;
   justify-content: center;
@@ -162,4 +156,9 @@ h1 {
   h1 {
     font-size: 1rem;
   }
+}
+.copperplusplus{
+  height: var(--slot-size) - 2px;
+  width: var(--slot-size) - 2px;
+  backgroundimage: "icons/c++ cog";
 }
