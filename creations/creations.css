@@ -76,21 +76,21 @@ body {
 .boxes {
   display: grid;
   align-content: center;
-  grid-template-columns: repeat(9, calc(var(--slot-size) + 8px));
-  grid-template-rows: repeat(6, calc(var(--slot-size) + 8px));
+  grid-template-columns: repeat(9, calc(var(--slot-size) + 4px));
+  grid-template-rows: repeat(6, calc(var(--slot-size) + 4px));
 }
 
 .boxes2 {
   display: grid;
-  grid-template-columns: repeat(9, calc(var(--slot-size) + 8px));
-  grid-template-rows: repeat(3, calc(var(--slot-size) + 8px));
+  grid-template-columns: repeat(9, calc(var(--slot-size) + 4px));
+  grid-template-rows: repeat(3, calc(var(--slot-size) + 4px));
   margin-bottom: 6px;
 }
 
 .boxes3 {
   display: grid;
-  grid-template-columns: repeat(9, calc(var(--slot-size) + 8px));
-  grid-template-rows: repeat(1, calc(var(--slot-size) + 8px))
+  grid-template-columns: repeat(9, calc(var(--slot-size) + 4px));
+  grid-template-rows: repeat(1, calc(var(--slot-size) + 4px))
 }
 
 .boxes,
