@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: var(--background-color);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -13,7 +12,11 @@ body {
   align-items: center;
   font-size: 18px;
 }
-
+html {
+  background-image: url("https://parv66.tk/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .box i {
   font-size: calc(var(--slot-size) - 6px);
   line-height: var(--slot-size);
