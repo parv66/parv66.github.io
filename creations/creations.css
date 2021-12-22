@@ -27,6 +27,7 @@ body {
   align-items: center;
   position: relative;
   flex-direction: column;
+  cursor: default;
   
   height: auto;
   padding: 0 15px;
@@ -67,10 +68,12 @@ body {
   box-shadow: 1px 1px 0 1px #e8e8e8,
     -1px -1px 0 1px #555,
     0 0 0 2px #8b8b8b;
+  cursor: default;
 }
 
 .box:hover {
   background-color: #c3c3c3;
+  cursor: default;
 }
 
 .boxes {
@@ -78,18 +81,21 @@ body {
   align-content: center;
   grid-template-columns: repeat(9, calc(var(--slot-size) + 4px));
   grid-template-rows: repeat(6, calc(var(--slot-size) + 4px));
+  cursor: default;
 }
 
 .boxes2 {
   display: grid;
   grid-template-columns: repeat(9, calc(var(--slot-size) + 4px));
   grid-template-rows: repeat(3, calc(var(--slot-size) + 4px));
+  cursor: default;
   margin-bottom: 6px;
 }
 
 .boxes3 {
   display: grid;
   grid-template-columns: repeat(9, calc(var(--slot-size) + 4px));
+  cursor: default;
   grid-template-rows: repeat(1, calc(var(--slot-size) + 4px))
 }
 
@@ -97,7 +103,7 @@ body {
 .boxes2,
 .boxes3 {
   margin-left: 8px;
-  cursor: pointer;
+  cursor: default;
 }
 
 h1 {
@@ -165,15 +171,18 @@ h1 {
   height: var(--slot-size);
   width: var(--slot-size);
   display: block;
+  cursor: default;
 }
 .tooltip {
   text-decoration: none;
   position: relative;
+  cursor: default;
   border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
 }
 
 .tooltip span {
   display: none;
+  cursor: default;
   border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
 }
 
@@ -181,6 +190,7 @@ h1 {
   display: block;
   position: fixed;
   overflow: hidden;
+  cursor: default;
   border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
 }
 
