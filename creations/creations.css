@@ -252,5 +252,5 @@ p {
 .chest {
   height: 48vh;
   left: -28px;
-  position: absolute;
+  position: relative;
 }
