@@ -131,9 +131,6 @@ h1 {
     -1px -1px 0 1px #555,
     0 0 0 2px #8b8b8b;
   }
-  .chest {
-  animation: none;
-  }
   .main1 {
     animation: float 3s ease-in-out infinite;
     padding: 0 8px;
@@ -165,7 +162,11 @@ h1 {
     0 6px 0 0 #000,
     2px 6px 0 0 #000;
   }
-  
+@media (min-width: 800px){
+  .chest {
+    float 3s ease-in-out infinite
+  }
+}
   h1 {
     font-size: 1rem;
   }
@@ -256,7 +257,6 @@ p {
   height: 48vh;
   left: -28px;
   position: relative;
-  animation: float 3s ease-in-out infinite;
 }
 @keyframes float {
     from { transform: translate(0,  0px); }
