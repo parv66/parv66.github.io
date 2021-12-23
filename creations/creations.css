@@ -135,7 +135,7 @@ h1 {
   animation: none;
   }
   .main1 {
-    animation: float 10s linear infinite;
+    animation: float 3s linear infinite;
     padding: 0 8px;
     padding-bottom: 8px;
     
@@ -256,11 +256,10 @@ p {
   height: 48vh;
   left: -28px;
   position: relative;
+  animation: float 3s linear infinite;
 }
 @keyframes float {
-  0% {}
-  20% {}
-  50% {}
-  70% {}
-  100% {}
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }
