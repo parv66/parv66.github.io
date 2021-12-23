@@ -234,7 +234,7 @@ p {
 }
 @keyframes floatgui {
     from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 10px); }
+    65%  { transform: translate(0, 5px); }
     to   { transform: translate(0, -0px); }    
 }
 
