@@ -121,12 +121,50 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
-@media (max-width: 500px){
+
+/* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+
+
+@media (max-width: 800px){
+  .box {
+    box-shadow: 1px 1px 0 1px #e8e8e8,
+    -1px -1px 0 1px #555,
+    0 0 0 2px #8b8b8b;
+  }
   .main1 {
     animation: float 3s ease-in-out infinite;
+    padding: 0 8px;
+    padding-bottom: 8px;
+    
+    box-shadow: 4px 0 0 0 #555555,
+    0 4px 0 0 #555555,
+    2px 2px 0 0 #555555,
+    -4px 0 0 0 #e8e8e8,
+    0 -4px 0 0 #e8e8e8,
+    -2px -2px 0 0 #e8e8e8,
+    0 0 0 2px #b5b4b5,
+    2px 4px 0 0 #555,
+    4px 2px 0 0 #555,
+    -2px -4px 0 0 #e8e8e8,
+    -4px -2px 0 0 #e8e8e8,
+    4px -2px 0 0 #000,
+    2px -4px 0 0 #000,
+    -4px 2px 0 0 #000,
+    -2px 4px 0 0 #000,
+    -4px -4px 0 0 #000,
+    4px 4px 0 0 #000,
+    -6px 0 0 0 #000,
+    -6px -2px 0 0 #000,
+    6px 0 0 0 #000,
+    6px 2px 0 0 #000,
+    0 -6px 0 0 #000,
+    -2px -6px 0 0 #000,
+    0 6px 0 0 #000,
+    2px 6px 0 0 #000;
   }
+@media (min-width: 800px){
   .chest {
-    animation-name: none;
+    float 3s ease-in-out infinite
   }
 }
   h1 {
@@ -219,7 +257,6 @@ p {
   height: 48vh;
   left: -28px;
   position: relative;
-  animation: float 3s ease-in-out infinite;
 }
 @keyframes float {
     from { transform: translate(0,  0px); }
