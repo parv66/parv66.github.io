@@ -33,6 +33,23 @@
      <meta property="og:description" content="PARV66.inc idk what else" />
      <meta property="og:url" content="https://parv66.tk" />
      <meta property="og:image" content="https://parv66.tk/parv66.uwu.jpg" />
+  <style>
+   .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+  </style>
   </head>
  <body>
   <br>
@@ -41,7 +58,7 @@
   <br>
   <br>
   <footer>
-   <div class="footer">
+   <div id="menu" class="footer overlay">
     <h1>press space</h1>
             <button class="button center" onclick="play();location.href = 'https://parv66.github.io/parv66.inc'">home</button>
             <br>
