@@ -29,8 +29,20 @@ h1, h2, h3, h4, h5, h6, h7{
 	border-style: none;
 	width: 145px;
 }
-@media only screen and (max-width: 360px) {
-  .button {font-size: xxx-large;}
+ .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
 }
 .button:hover,
 .button:focus,
@@ -41,7 +53,7 @@ h1, h2, h3, h4, h5, h6, h7{
 	        box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
 	border: solid white 2px;
 }
-.footer {
+.menu {
    -webkit-box-align: center;
        -ms-flex-align: center;
            align-items: center;
