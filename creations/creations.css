@@ -219,10 +219,7 @@ p {
   height: 48vh;
   left: -28px;
   position: relative;
-  animation-name: float;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
+  animation: float 3s ease-in-out infinite;
 }
 @keyframes float {
     from { transform: translate(0,  0px); }
