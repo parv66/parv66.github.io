@@ -131,8 +131,11 @@ h1 {
     -1px -1px 0 1px #555,
     0 0 0 2px #8b8b8b;
   }
-  
+  .chest {
+  animation: none;
+  }
   .main1 {
+    animation: float 10s linear infinite;
     padding: 0 8px;
     padding-bottom: 8px;
     
@@ -253,4 +256,11 @@ p {
   height: 48vh;
   left: -28px;
   position: relative;
+}
+@keyframes float {
+  0% {}
+  20% {}
+  50% {}
+  70% {}
+  100% {}
 }
