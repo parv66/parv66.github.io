@@ -37,9 +37,19 @@
      <meta property="og:image" content="https://parv66.tk/parv66.uwu.jpg" />
   </head>
  <body>
+  <script>
+$(document).ready(function(){
+  $("#menutoggle").click(function(){
+    $("#menu").toggleClass("overlay");
+  });
+  $("#menutogglev2").click(function(){
+    $("#menu").toggleClass("overlay");
+  });
+});
+</script>
   <br>
   <br>
-  <h3>Press <a id="menutoggle" href="#menu" class="mcTextMineGold">Space</a> To Open Menu!</h3>
+  <h3>Press <a id="menutoggle" href="#" class="mcTextMineGold">Space</a> To Open Menu!</h3>
   <br>
   <br>
   <br>
@@ -66,18 +76,7 @@
    <a href="" class="youtube"></a>
   </footer>
  </body>
-  <script>
-$(document).ready(function(){
-  $("#menutoggle").click(function(){
-    $("#menu").toggleClass("overlay");
-  });
-  $("#menutogglev2").click(function(){
-    $("#menu").toggleClass("overlay");
-  });
-});
-</script>
  <script>
-  var modal = document.getElementById('menu');
   document.body.onkeyup = function(e){
     if(e.keyCode == 32){
         document.querySelector("#menu").classList.toggle("overlay");
