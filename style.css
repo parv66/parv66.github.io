@@ -30,12 +30,9 @@ h1, h2, h3, h4, h5, h6, h7{
 	width: 145px;
 }
  .overlay {
-     visibility: hidden;
-     opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+       visibility: hidden;
+       opacity: 0;
+       display: none;
 }
 .button:hover {
 	color: #fff;
