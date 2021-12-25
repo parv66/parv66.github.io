@@ -37,12 +37,12 @@
  <body>
   <br>
   <br>
-  <h6>Press <a class="mcTextMineGold" onclick="menuopen()">Space</a> To Open Menu!</h6>
+  <h6>Press <a class="mcTextMineGold" href="https://parv66.tk/#menu">Space</a> To Open Menu!</h6>
   <br>
   <br>
   <br>
    <div id="menu" class="menu overlay">
-    <h6>Press <a class="mcTextMineGold" onclick="menuclose()">Shift</a> To Exit!</h6>
+    <h6>Press <a class="mcTextMineGold" href="https://parv66.tk/">Shift</a> To Exit!</h6>
             <button class="button center" onclick="play();location.href = 'https://parv66.github.io/parv66.inc'">home</button>
             <br>
             <button class="button center" onclick="play();location.href = 'https://parv66.github.io/parv66.inc/about.html'">about</button>
@@ -64,19 +64,12 @@
  <script>
   document.body.onkeyup = function(e){
     if(e.keyCode == 32){
-        menuopen();
+        window.location.href = "http://parv66.tk/#menu";
     }
    else if(e.keyCode == 16){
-        menuclose();
+        window.location.href = "http://parv66.tk";
    }
 }
-  function menuopen() {
-  window.location("https://parv66.tk/#menu")
-}
-  function menuclose() {
-     history.go(-1);
-}        
-   return false;
  </script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </html>
