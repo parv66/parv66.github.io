@@ -40,7 +40,7 @@
  <body>
   <br>
   <br>
-  <h3>Press <a class="mcTextMineGold" href="" onclick="document.getElementById('menu').style.display='block'">Space</a> To Open Menu!</h3>
+  <h3>Press <a class="mcTextMineGold" href="" onclick="">Space</a> To Open Menu!</h3>
   <br>
   <br>
   <br>
@@ -80,12 +80,18 @@ window.onclick = function(event) {
   var modal = document.getElementById('menu');
   document.body.onkeyup = function(e){
     if(e.keyCode == 32){
-        document.getElementById('menu').style.display='block'"
+        window.location.href = "http://parv66.tk/#menu";
     }
    else if(e.keyCode == 16){
-        modal.style.display = "none";
+        window.location.href = "http://parv66.tk";
    }
 }
  </script>
+ <script>
+  function menuopenv2() {
+  var element = document.getElementById("menu");
+  element.classList.remove("overlay");
+}
+  </script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </html>
