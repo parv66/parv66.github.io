@@ -74,48 +74,6 @@ h1, h2, h3, h4, h5, h6, h7{
   0% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
   100% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
 }
-.ttbtn {
-  position: relative;
-  display: inline-block;
-}
-
-.ttbtn .tttext {
-  visibility: hidden;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  top: 110%;
-  left: %;
-  margin-left: -60px;
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-.ttbtn .tttext::after {
-  content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #555 transparent;
-}
-
-.ttbtn:hover .tttext {
-  visibility: visible;
-  opacity: 1;
-}
 .mcTextDarkred {color: #AA0000;} .mcTextDarkblue {color: #0000AA;} .mcTextDarkpurple {color: #AA00AA;} .mcTextDarkgreen {color: #00AA00;} .mcTextDarkaqua {color: #00AAAA;}
 .mcTextDarkgray, .mcTextDarkgrey {color: #555555;} .mcTextRed {color: #FF5555;} .mcTextGreen {color: #55FF55;} .mcTextAqua {color: #55FFFF;} .mcTextBlue {color: #5555FF;}
 .mcTextYellow {color: #FFFF55;}.mcTextGray, .mcTextGrey {color: #555555;} .mcTextMineGold {color: #DDD605;} .mcTextGold {color: #FFAA00;} .mcTextWhite {color: #FFFFFF;}
