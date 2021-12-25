@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6, h7{
     position: relative;
 }
 .youtube {
-    background-image: url("https://parv66.tk/creations/icon/youtube.png");
+    background-image: url("https://parv66.tk/icon/youtube.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 60px);
@@ -111,12 +111,12 @@ h1, h2, h3, h4, h5, h6, h7{
 .youtube:hover,
 .youtube:active,
 .youtube:focus {
-    background-image: url("https://parv66.tk/creations/icon/youtube_hover.png");
+    background-image: url("https://parv66.tk/icon/youtube_hover.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 .cord {
-    background-image: url("https://parv66.tk/creations/icon/cord.png");
+    background-image: url("https://parv66.tk/icon/cord.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 60px);
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6, h7{
 .cord:hover,
 .cord:active,
 .cord:focus {
-    background-image: url("https://parv66.tk/creations/icon/cord_hover.png");
+    background-image: url("https://parv66.tk/icon/cord_hover.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
