@@ -37,9 +37,7 @@ h1, h2, h3, h4, h5, h6, h7{
   visibility: visible;
   opacity: 1;
 }
-.button:hover,
-.button:focus,
-.button:active {
+.button:hover {
 	color: #fff;
 	background-color: #0bbf41;
 	-webkit-box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
@@ -109,9 +107,7 @@ h1, h2, h3, h4, h5, h6, h7{
     cursor: default;
     margin: 5px;
 }
-.youtube:hover,
-.youtube:active,
-.youtube:focus {
+.youtube:hover {
     background-image: url("https://parv66.tk/icon/youtube_hover.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -126,9 +122,7 @@ h1, h2, h3, h4, h5, h6, h7{
     cursor: default;
     margin: 5px;
 }
-.cord:hover,
-.cord:active,
-.cord:focus {
+.cord:hover {
     background-image: url("https://parv66.tk/icon/cord_hover.png");
     background-size: cover;
     background-repeat: no-repeat;
