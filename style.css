@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, h7{
  .overlay {
        visibility: hidden;
        opacity: 0;
-       top: 999999999vh;
+       top: -210vh;
 }
 .button:hover {
 	color: #fff;
