@@ -40,12 +40,12 @@
  <body>
   <br>
   <br>
-  <h3>Press <a class="mcTextMineGold" href="" onclick="openmenuv2();">Space</a> To Open Menu!</h3>
+  <h3>Press <a class="mcTextMineGold" href="" onclick="document.getElementById("menu").element.classList.remove("overlay");">Space</a> To Open Menu!</h3>
   <br>
   <br>
   <br>
    <div id="menu" class="menu overlay">
-    <h3>Press <a class="mcTextMineGold" href="https://parv66.tk/">Shift</a> To Exit!</h3>
+    <h3>Press <a class="mcTextMineGold" href="https://parv66.tk/" onclick="document.getElementById("menu").element.classList.add("overlay");">Shift</a> To Exit!</h3>
             <button class="button" onclick="play();location.href = 'https://parv66.github.io/parv66.inc'">home</button>
             <br>
             <button class="button" onclick="play();location.href = 'https://parv66.github.io/parv66.inc/about/'">about</button>
@@ -62,7 +62,8 @@
      <audio id="errors" src="error.666.ogg"></audio>
    </div>
   <footer>
-   <h4>footer hello</h4><br>
+   <h4>footer hello foot
+   </h4><br>
    <a href="#" class="cord"></a>
    <a href="#" class="youtube"></a>
   </footer>
