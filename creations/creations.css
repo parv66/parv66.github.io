@@ -149,6 +149,15 @@ h1 {
   display: block;
   cursor: default;
 }
+.papple{
+  background-image: url("https://parv66.tk/creations/icons/pappleicon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: var(--slot-size);
+  width: var(--slot-size);
+  display: block;
+  cursor: default;
+}
 .tooltip {
   text-decoration: none;
   position: relative;
