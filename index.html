@@ -40,7 +40,7 @@
  <body>
   <br>
   <br>
-  <h3>Press <a class="mcTextMineGold" href="" onclick="">Space</a> To Open Menu!</h3>
+  <h3>Press <a class="mcTextMineGold" href="" onclick="openmenuv2();">Space</a> To Open Menu!</h3>
   <br>
   <br>
   <br>
@@ -62,7 +62,7 @@
      <audio id="errors" src="error.666.ogg"></audio>
    </div>
   <footer>
-   <h4>footer idk wut</h4><br>
+   <h4>footer hello</h4><br>
    <a href="#" class="cord"></a>
    <a href="#" class="youtube"></a>
   </footer>
@@ -72,7 +72,8 @@
 
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+      var element = document.getElementById("menu");
+      element.classList.add("overlay");
     }
 }
  </script>
