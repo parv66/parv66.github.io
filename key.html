@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: #050000;
+}
+
+.content {
+    height: 100vh;
+    flex: 4 1 auto;
+    background-color: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    color: #fff;
+    background-color: inherit;
+}
+
+.sidebar {
+    flex: 1 1 0;
+    width: 20%;
+    max-width: 280px;
+    padding: 40px 20px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list__item {
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: wheat;
+}
+
+.user_input {
+    height: 150px;
+    margin-top: 100px;
+}
+
+.user_input__value {
+    overflow-x: auto;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.user_input__value,
+.cheat_message {
+    font-size: 25px;
+    color: greenyellow;
+}
+
+    </style>
+    <body>
+        <main class="container">
+        <aside class="sidebar">
+            <p class="instructions">Use the following key sequences to change the background image (case insensitive):</p>
+            <ul class="list">
+                <li class="list__item">idfa</li>
+                <li class="list__item">idkfa</li>
+                <li class="list__item">idbeholds</li>
+                <li class="list__item">idclev31</li>
+            </ul>
+            <div class="user_input">
+                <p class="user_input__label">You entered:</p>
+                <p id="user_input" class="user_input__value">arrowuparrowdownarrowuparrowdownarrowuparrowdownarrowuparrowdown</p>
+            </div>
+            <div id="cheat_block" class="cheat_block">
+                <p>You got:</p>
+                <p id="cheat_message" class="cheat_message">Nothing</p>
+            </div>
+        </aside>
+        <div id="background" class="content" style="background-image: url(&quot;images/ArrowUpArrowDownArrowUpArrowDownArrowUpArrowDownArrowUpArrowDown.jpg&quot;);">
+            <h1 class="title">Binding a sequence of keys</h1>
+        </div>
+    </main>
+    </body>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    const options = {
+        eventType: 'keydown',
+        keystrokeDelay: 400
+    };
+
+    keyMapper([updateBackground, updateUI], options);
+});
+
+function keyMapper(callbackList, options) {
+    const delay = hasProperty('keystrokeDelay', options) && options.keystrokeDelay >= 300 && options.keystrokeDelay;
+    const keystrokeDelay = delay || 1000;
+    const eventType = hasProperty('eventType', options) && options.eventType || 'keydown';
+
+    let state = {
+        buffer: [],
+        lastKeyTime: Date.now()
+    };
+
+    document.addEventListener(eventType, event => {
+        const key = event.key;
+        const currentTime = Date.now();
+        let buffer = [];
+
+        if (currentTime - state.lastKeyTime > keystrokeDelay) {
+            buffer = [key];
+        } else {
+            buffer = [...state.buffer, key];
+        }
+
+        state = {buffer: buffer, lastKeyTime: currentTime};
+
+        callbackList.forEach(callback => callback(buffer));
+    });
+
+    function hasProperty(property, object) {
+        return object && object.hasOwnProperty(property);
+    }
+}
+
+function updateBackground(keySequence) {
+    const validKeys = keySequence.every(key => !isNaN(parseInt(key)) || key.toLowerCase() !== key.toUpperCase());
+    if (!validKeys) return;
+    const container = document.querySelector('#background');
+    container.style.backgroundImage = `url(images/${keySequence.join('')}.jpg)`;
+}
+
+function updateUI(keySequence) {
+    const userInput = keySequence.join('').toLowerCase();
+    const keySequences = {
+        'ok': 'OK IS WORKING',
+        'test1': 'yep test1 seems good',
+        'test2': 'O TSST2 IS OWKRINF',
+        'test3': 'OAAHHHHHHH'
+    };
+    const userInputDisplay = document.querySelector('#user_input');
+    userInputDisplay.textContent = userInput;
+
+    const cheatMessage = document.querySelector('#cheat_message');
+    cheatMessage.textContent = keySequences[userInput] || 'Nothing';
+}
+    </script>
+</html>
