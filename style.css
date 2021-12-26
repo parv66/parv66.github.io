@@ -1,13 +1,13 @@
 @font-face {font-family: "minefont";
   src: url("mcfont.woff") format("woff");
 }
-.logo{
+.logo {
 	width: 100%;
 	-webkit-box-align:center;
 	    -ms-flex-align:center;
 	        align-items:center;
 }
-html{
+html {
 	background-color: lime;
 	font-family: minefont;
 	font-weight: lighter;
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, h7{
 	border-style: none;
 	width: 145px;
 }
- .overlay {
+.overlay {
        visibility: hidden;
        opacity: 0;
        display: none;
