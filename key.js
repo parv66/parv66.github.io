@@ -52,7 +52,9 @@ function updateUI(keySequence) {
 }
 function enablemsg(){
             var img = document.createElement('img');
-            img.src = 
-       'https://parv66.tk/parv66.uwu.jpg';
+            img.src = 'https://parv66.tk/parv66.uwu.jpg';
+            img.id = 'hiddenimage';
             document.getElementById('body').appendChild(img);
+            var element = document.getElementById("hiddenimage");
+            element.classList.add("himg");
 }
