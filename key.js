@@ -50,3 +50,9 @@ function updateUI(keySequence) {
         setTimeout(function() { enablemsg(); }, 5000);
   }
 }
+function enablemsg(){
+            var img = document.createElement('img');
+            img.src = 
+       'https://parv66.tk/parv66.uwu.jpg';
+            document.getElementById('body').appendChild(img);
+}
