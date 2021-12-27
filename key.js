@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function keyMapper(callbackList, options) {
     const delay = hasProperty('keystrokeDelay', options) && options.keystrokeDelay >= 300 && options.keystrokeDelay;
-    const keystrokeDelay = delay || 1000;
+    const keystrokeDelay = delay || 10000;
     const eventType = hasProperty('eventType', options) && options.eventType || 'keydown';
 
     let state = {
@@ -43,8 +43,6 @@ function keyMapper(callbackList, options) {
 function updateBackground(keySequence) {
     const validKeys = keySequence.every(key => !isNaN(parseInt(key)) || key.toLowerCase() !== key.toUpperCase());
     if (!validKeys) return;
-    const container = document.querySelector('#background');
-    container.style.backgroundImage = `url(images/${keySequence.join('')}.jpg)`;
 }
 
 function updateUI(keySequence) {
@@ -55,14 +53,13 @@ function updateUI(keySequence) {
         'idbeholds': 'Beserk Pack',
         'idclev31': 'Bonus Level'
     };
-    if (keySequences === 'test666') {
+    if (userInput === 'test1') {
       var element = document.getElementById("errl");
       element.classList.add("errl");
-    } else {
-      const keySequences = {
-       'test666': 'test succeds'
-      }
-    }
+            var audio = document.getElementById("errors");
+            audio.play();
+            audio.volume = 0.2;
+  }
     const userInputDisplay = document.querySelector('#user_input');
     userInputDisplay.textContent = userInput;
 
