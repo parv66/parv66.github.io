@@ -47,5 +47,6 @@ function updateUI(keySequence) {
             var audio = document.getElementById("errors");
             audio.play();
             audio.volume = 0.2;
+        setTimeout(function() { enablemsg(); }, 5000);
   }
 }
