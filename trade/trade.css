@@ -14,6 +14,7 @@ body {
 html {
     background-image: url("https://parv66.tk/trade/background_trade.png");
     background-repeat: repeat-x;
+    background-size: contain;
 }
 .box i {
     font-size: calc(var(--slot-size) - 6px);
