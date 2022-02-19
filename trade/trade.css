@@ -180,6 +180,11 @@ h1 {
     display: inline-block;
     z-index: 1;
     box-shadow: 4px 0 0 0 #555555, 0 4px 0 0 #555555, 2px 2px 0 0 #555555, -4px 0 0 0 #e8e8e8, 0 -4px 0 0 #e8e8e8, -2px -2px 0 0 #e8e8e8, 0 0 0 2px #b5b4b5, 2px 4px 0 0 #555, 4px 2px 0 0 #555, -2px -4px 0 0 #e8e8e8, -4px -2px 0 0 #e8e8e8, 4px -2px 0 0 #000, 2px -4px 0 0 #000, -4px 2px 0 0 #000, -2px 4px 0 0 #000, -4px -4px 0 0 #000, 4px 4px 0 0 #000, -6px 0 0 0 #000, -6px -2px 0 0 #000, 6px 0 0 0 #000, 6px 2px 0 0 #000, 0 -6px 0 0 #000, -2px -6px 0 0 #000, 0 6px 0 0 #000, 2px 6px 0 0 #000;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .tradepanel {
     height: 133px;
@@ -236,4 +241,44 @@ h1 {
     width: auto;
     height: 39px;
     margin: 0 16 0 16;
+}
+.tarrow {
+    width: auto;
+    height: 29px;
+    margin: 0 10 0 64;
+}
+.cage {
+    width: 200px;
+    height: 320px;
+    background-color: #434343;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.white {
+    color: #ffffff;
+    font-size: x-small;
+    text-decoration: none;
+}
+.toption {
+    width: 185px;
+    height: 40px;
+    box-shadow: 1px 1px 0 1px #656465, -1px -1px 0 1px #f7f7f7, 0 0 0 2px #C0BFC0;
+    margin: 3px;
+    background-color: #C6C6C6;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.currency {
+    width: 29px;
+    height: 29px;
+    margin-left: 8px;
+    background-image: url(https://parv66.tk/gui/images/prototype_currency.png);
+    background-size: cover;
+    z-index: 2;
 }
