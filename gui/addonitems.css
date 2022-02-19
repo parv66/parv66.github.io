@@ -1,0 +1,20 @@
+.copperplusplus {
+    background-image: url("https://parv66.tk/creations/icons/cog.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--slot-size);
+    width: var(--slot-size);
+    display: block;
+    cursor: default;
+}
+/* copper++ addon*/
+.papple {
+    background-image: url("https://parv66.tk/creations/icons/pappleicon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--slot-size);
+    width: var(--slot-size);
+    display: block;
+    cursor: default;
+}
+/* placeable apples addon*/
