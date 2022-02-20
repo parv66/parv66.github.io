@@ -1,3 +1,13 @@
+.currency {
+    background-image: url(https://parv66.tk/gui/images/prototype_currency.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--slot-size);
+    width: var(--slot-size);
+    display: block;
+    cursor: default;
+}
+/* currency*/
 .copperplusplus {
     background-image: url("https://parv66.tk/creations/icons/cog.png");
     background-size: cover;
