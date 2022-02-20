@@ -16,9 +16,11 @@
 
 .ghostItem img {
   width: 28px;
+  left: 8px;
+  position: absolute;
+  top: 5px;
 }
-.ghostItem .number {
-  top: -20px;
+.ghostItem {
   right: -13px;
 }
 
