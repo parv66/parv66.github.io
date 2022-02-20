@@ -91,24 +91,6 @@ h1 {
     margin-top: 0;
     margin-bottom: 0;
 }
-.copperplusplus {
-    background-image: url("https://parv66.tk/creations/icons/cog.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: var(--slot-size);
-    width: var(--slot-size);
-    display: block;
-    cursor: default;
-}
-.papple {
-    background-image: url("https://parv66.tk/creations/icons/pappleicon.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: var(--slot-size);
-    width: var(--slot-size);
-    display: block;
-    cursor: default;
-}
 .tooltip {
     text-decoration: none;
     position: relative;
@@ -279,14 +261,6 @@ h1 {
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
-.currency {
-    width: 29px;
-    height: 29px;
-    background-image: url(https://parv66.tk/gui/images/prototype_currency.png);
-    background-size: cover;
-    z-index: 2;
-    display: block;
-}
 @media only screen and (max-width: 600px) {
   .main1, .tradeSidePanel {
     left: 130px;
@@ -297,22 +271,4 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
   }
-}
-.item img {
-  width: 28px;
-}
-
-.ghostItem img {
-}
-.ghostItem .number {
-  top: -20px;
-  right: -13px;
-}
-.item {
-  margin: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30px;
-  height: 30px;
 }
