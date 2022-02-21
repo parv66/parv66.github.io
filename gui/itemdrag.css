@@ -11,15 +11,15 @@
   height: 30px;
 }
 
-.item img {
+.item > * {
   width: 28px;
 }
 
-.ghostItem img {
+.ghostItem > * {
   width: 28px;
-  left: -59px;
+  left: -2px;
   position: relative;
-  bottom: 20px;
+  bottom: 47px;
 }
 .ghostItem .number {
   top: -20px;
