@@ -261,11 +261,41 @@ h1 {
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+.toptionPos {
+    width: 185px;
+    height: 40px;
+    box-shadow: 1px 1px 0 1px #656465, -1px -1px 0 1px #f7f7f7, 0 0 0 2px #C0BFC0;
+    margin: 3px;
+    background-color: #C6C6C6;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.toptionNeg {
+    width: 185px;
+    height: 40px;
+    box-shadow: 1px 1px 0 1px #656465, -1px -1px 0 1px #f7f7f7, 0 0 0 2px #C0BFC0;
+    margin: 3px;
+    background-color: #C6C6C6;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
 .toption:hover {
+    background-color: #696969;
+    box-shadow: 1px 1px 0 1px #393939, -1px -1px 0 1px #909090, 0 0 0 2px #6a6a6a;
+}
+.toptionNeg:hover {
     background-color: #993434;
     box-shadow: 1px 1px 0 1px #601819, -1px -1px 0 1px #E07272, 0 0 0 2px #d64747;
 }
-.toptionPos {
+.toptionPos:hover {
     background-color: #89C44E;
     box-shadow: 1px 1px 0 1px #456327, -1px -1px 0 1px #ABF461, 0 0 0 2px #85BF4C;
 }
