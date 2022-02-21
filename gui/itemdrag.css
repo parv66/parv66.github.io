@@ -1,6 +1,7 @@
 .invisible {
   visibility: hidden;
 }
+
 .item {
   margin: 2px;
   display: flex;
@@ -16,18 +17,13 @@
 
 .ghostItem img {
   width: 28px;
-  left: 8px;
-  position: absolute;
-  top: 5px;
+  left: -59px;
+  position: relative;
+  bottom: 20px;
 }
-.ghostItem {
+.ghostItem .number {
+  top: -20px;
   right: -13px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }
 
 ::selection {
@@ -36,14 +32,4 @@
 
 ::-moz-selection {
   background: transparent;
-}
-.number {
-  font-family: minefont;
-  font-size: 24px;
-  color: #fefefe;
-  position: relative;
-  text-shadow: #333 1px 2px 1px;
-  top: -16px;
-  right: -8px;
-  cursor: default;
 }
