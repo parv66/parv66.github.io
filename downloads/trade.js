@@ -32,5 +32,5 @@ if ($('#38').contains(".curr")){
 function clearTrade() {
 $('.tbox2').empty();
 }
-var item = $(.curr).first();
-item.addEventListener('click', clearTrade);
+
+$('.curr').first().addEventListener('click', clearTrade);
