@@ -1,6 +1,6 @@
 //copperplusplus trade//
 $("#toption0").on("click", function() {
-    $(".curr").first().appendTo(".tbox1");
+    $(".curr").first().appendTo("#38");
     if ($('#38').is(':empty')) {
         $('.tbox2').empty();
         $('#copperplusplus').clone().appendTo('.tbox2');
@@ -10,15 +10,15 @@ $("#toption0").on("click", function() {
         $('#copperplusplus').clone().appendTo('.tbox2');
     }
     //button giv class part(giving AND removing classes accorinding to the trade)//
-    $('.tbtn').removeClass('addon1');
-    $('.tbtn').removeClass('addon2');
-    $('.tbtn').removeClass('addon3');
-    $('.tbtn').removeClass('addon4');
-    $('.tbtn').addClass('addon0');
+    $('#tbtn').removeClass('addon1');
+    $('#tbtn').removeClass('addon2');
+    $('#tbtn').removeClass('addon3');
+    $('#tbtn').removeClass('addon4');
+    $('#tbtn').addClass('addon0');
 })
 //papple trade
 $("#toption1").on("click", function() {
-    $(".curr").first().appendTo(".tbox1");
+    $(".curr").first().appendTo("#38");
     if ($('#38').is(':empty')) {
         $('.tbox2').empty();
         $('#papple').clone().appendTo('.tbox2');
@@ -28,11 +28,11 @@ $("#toption1").on("click", function() {
         $('#papple').clone().appendTo('.tbox2');
     }
     //button giv class part(giving AND removing classes accorinding to the trade)//
-    $('.tbtn').removeClass('addon0');
-    $('.tbtn').removeClass('addon2');
-    $('.tbtn').removeClass('addon3');
-    $('.tbtn').removeClass('addon4');
-    $('.tbtn').addClass('addon1');
+    $('#tbtn').removeClass('addon0');
+    $('#tbtn').removeClass('addon2');
+    $('#tbtn').removeClass('addon3');
+    $('#tbtn').removeClass('addon4');
+    $('#tbtn').addClass('addon1');
 })
 //making trade button actually trade/download//
 document.getElementById("tbtn").addEventListener("click", tradeMade);
