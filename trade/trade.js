@@ -20,7 +20,11 @@ $("#toption1").on("click", function() {
         $('#papple').clone().appendTo('.tbox2');
     }
 })
-
+if (document.getElementById("38").querySelector("*")) {
+    $('.tbox2').empty();
+} else {
+    // No, it isn't
+}
  if ( $('#38').children().length > 0 ) {
      $('.tbox2').empty();
 }
