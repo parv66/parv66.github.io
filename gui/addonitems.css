@@ -11,8 +11,8 @@
     background-image: url("https://parv66.tk/creations/icons/cog.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: var(--slot-size);
-    width: var(--slot-size);
+    height: 29px;
+    width: 29px;
     display: block;
     cursor: default;
 }
@@ -21,8 +21,8 @@
     background-image: url("https://parv66.tk/creations/icons/pappleicon.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: var(--slot-size);
-    width: var(--slot-size);
+    height: 29px;
+    width: 29px;
     display: block;
     cursor: default;
 }
