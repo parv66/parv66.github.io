@@ -1,5 +1,8 @@
 $( document ).ready(function() {
-//clicked trade btn part//
+//clear trade slots when currency removed//
+  if ( $('#38').children().length == 0 ){
+  $(".tbox2").empty();
+  }
 //the click to move currency part//
   $("#toption0").on("click", function() {
   $(".curr").first().appendTo(".tbox1");
