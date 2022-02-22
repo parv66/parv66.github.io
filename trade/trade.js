@@ -27,3 +27,9 @@ $("#toption1").on("click", function() {
 if ($('#38').is(':empty')) {
     $('.tbox2').empty();
 };
+$(document).ready(function() {
+    //clear trade slots when currency removed//
+if ($('#38').is(':empty')) {
+    $('.tbox2').empty();
+};
+});
