@@ -49,6 +49,9 @@ function moveItem() {
     item && item.classList.remove('invisible');
     ghostItem.remove();
     status_click = !status_click;
+  //(download page part)clear trade//
+  $('.tbox2').empty();
+  //yep, thats it...//
   };
 
   ghostItem.oncontextmenu = function (event) {
