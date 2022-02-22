@@ -28,5 +28,5 @@ if ($('#38').contains(".curr")){
 function clearTrade() {
 $('.tbox2').empty();
 }
-const currMoved = document.querySelectorAll('.item').first();
+const currMoved = document.querySelectorAll('.curr').first();
 currMoved.addEventListener('click', clearTrade);
