@@ -3,16 +3,13 @@ $( document ).ready(function() {
 //the click to move currency part//
   $("#toption0").on("click", function() {
   $(".curr").first().appendTo(".tbox1");
-  if($('.curr','#38').length == 1) {
   $('#copperplusplus').clone().appendTo('.tbox2');
-  }})
+  })
   
   $("#toption1").on("click", function() {
   $(".curr").first().appendTo(".tbox1");
-  if($('.curr','#38').length == 1) {
-  $(".papple").clone(".tbox2");
   $('#papple').clone().appendTo('.tbox2');
-}})
+})
   
   $("#toption2").on("click", function() {
   $(".curr").first().appendTo(".tbox1");})
