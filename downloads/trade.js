@@ -20,6 +20,9 @@ $("#toption1").on("click", function() {
         $('#papple').clone().appendTo('.tbox2');
     }
 })
+while (!$('#38').contains(".curr")){
+    $('.tbox2').empty();
+};
 
 //clear trade slots when currency removed//
 if ($('#38').contains(".curr")){
