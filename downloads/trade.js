@@ -33,9 +33,7 @@ $("#toption1").on("click", function() {
     $('.tbtn').addClass('addon1');
 })
 //making trade button actually trade/download//
-const tbtn = document.querySelectorAll('.tbtn');
-  tbtn.addEventListener('click', tradeMade);
-
+document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
        $('#38').empty();
