@@ -31,4 +31,4 @@ if ($('#38').contains(".curr")){
 //v2
 $(".curr").on("click", function() {
     $('.tbox2').empty();
-}
+})
