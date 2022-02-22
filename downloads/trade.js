@@ -40,30 +40,35 @@ function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
        $('#38').empty();
        $('#tbtn').removeClass('addon0');
+       $('.tbox2').empty();
        alert('copperplusplus')
    //download copperplusplus
    }
    else if ($('#tbtn').hasClass("addon1")){
        $('#38').empty();
        $('#tbtn').removeClass('addon1');
+       $('.tbox2').empty();
        alert('placeable apples')
    //download placeableapples
    }
    else if ($('#tbtn').hasClass("addon2")){
        $('#38').empty();
        $('#tbtn').removeClass('addon2');
+       $('.tbox2').empty();
        alert('sweetsplusplus beta')
    //download sweetsplusplus
    }
    else if ($('#tbtn').hasClass("addon3")){
        $('#38').empty();
        $('#tbtn').removeClass('addon3');
+       $('.tbox2').empty();
        alert('invalid')
    //download whatever
    }
    else if ($('#tbtn').hasClass("addon4")){
        $('#38').empty();
        $('#tbtn').removeClass('addon4');
+       $('.tbox2').empty();
        alert('invaild the 2nd')
    //download whatever
    }
