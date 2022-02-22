@@ -23,11 +23,11 @@ $("#toption1").on("click", function() {
 while (document.getElementById("38").querySelector("*")) {
     $('.tbox2').empty();
 }
- while ( $('#38').children().length > 0 ) {
+ while ( $('#38').children().length === 0 ) {
      $('.tbox2').empty();
 }
 
 //clear trade slots when currency removed//
-if ($('#38').is(':empty')) {
+if ($('#38').is('empty')) {
     $('.tbox2').empty();
 };
