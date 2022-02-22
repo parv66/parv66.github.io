@@ -260,6 +260,7 @@ h1 {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    border: none;
 }
 .toptionPos {
     width: 185px;
@@ -290,6 +291,10 @@ h1 {
 .toption:hover {
     background-color: #696969;
     box-shadow: 1px 1px 0 1px #393939, -1px -1px 0 1px #909090, 0 0 0 2px #6a6a6a;
+}
+.toption:active {
+    border: none;
+    transform: scale(0.99);
 }
 .toptionNeg:hover {
     background-color: #993434;
