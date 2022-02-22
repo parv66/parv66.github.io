@@ -21,12 +21,4 @@ $("#toption1").on("click", function() {
     }
 })
 //clear trade slots when currency removed//
-if ($('#38').contains(".curr")){
-    $('.tbox2').empty();
-};
-//v2\
-function clearTrade() {
-$('.tbox2').empty();
-}
-const currMoved = document.querySelectorAll('.curr').first();
-currMoved.addEventListener('click', clearTrade);
+//(https://parv66.tk/gui/itemdrag.js{52:5})//
