@@ -39,26 +39,31 @@ document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
        $('#38').empty();
+       $('#tbtn').removeClass('addon0');
        alert('copperplusplus')
    //download copperplusplus
    }
    else if ($('#tbtn').hasClass("addon1")){
        $('#38').empty();
+       $('#tbtn').removeClass('addon1');
        alert('placeable apples')
    //download placeableapples
    }
    else if ($('#tbtn').hasClass("addon2")){
        $('#38').empty();
+       $('#tbtn').removeClass('addon2');
        alert('sweetsplusplus beta')
    //download sweetsplusplus
    }
    else if ($('#tbtn').hasClass("addon3")){
        $('#38').empty();
+       $('#tbtn').removeClass('addon3');
        alert('invalid')
    //download whatever
    }
    else if ($('#tbtn').hasClass("addon4")){
        $('#38').empty();
+       $('#tbtn').removeClass('addon4');
        alert('invaild the 2nd')
    //download whatever
    }
