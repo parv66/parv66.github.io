@@ -28,6 +28,6 @@ while (document.getElementById("38").querySelector("*")) {
 }
 
 //clear trade slots when currency removed//
-if ($('#38').is('empty')) {
+if ($('#38').contains(".curr") {
     $('.tbox2').empty();
 };
