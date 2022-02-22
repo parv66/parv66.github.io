@@ -1,10 +1,11 @@
 $( document ).ready(function() {
 //clear trade slots when currency removed//
-  var i;
-  for (i = 0; i < substr.length; ++i) {
   if ( $('#38').children().length == 0 ){
   $(".tbox2").empty();
-  }}
+  }
+  else{
+  gofkyourself(idiot);
+  }
 //the click to move currency part//
   $("#toption0").on("click", function() {
   $(".curr").first().appendTo(".tbox1");
