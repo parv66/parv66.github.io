@@ -20,12 +20,6 @@ $("#toption1").on("click", function() {
         $('#papple').clone().appendTo('.tbox2');
     }
 })
-while (document.getElementById("38").querySelector("*")) {
-    $('.tbox2').empty();
-}
- while ( $('#38').children().length === 0 ) {
-     $('.tbox2').empty();
-}
 
 //clear trade slots when currency removed//
 if ($('#38').contains(".curr")){
