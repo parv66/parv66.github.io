@@ -28,3 +28,7 @@ while (!$('#38').contains(".curr")){
 if ($('#38').contains(".curr")){
     $('.tbox2').empty();
 };
+//v2
+$(".curr").on("click", function() {
+    $('.tbox2').empty();
+}
