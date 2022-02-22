@@ -4,13 +4,13 @@ $( document ).ready(function() {
   $("#toption0").on("click", function() {
   $(".curr").first().appendTo(".tbox1");
   if($('.curr','#38').length == 1) {
-  $(".copperplusplus").first().clone(".tbox2");
+  $(".copperplusplus").clone(".tbox2");
   }})
   
   $("#toption1").on("click", function() {
   $(".curr").first().appendTo(".tbox1");
   if($('.curr','#38').length == 1) {
-  $(".papple").first().clone(".tbox2");
+  $(".papple").clone(".tbox2");
 }})
   
   $("#toption2").on("click", function() {
