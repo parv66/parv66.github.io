@@ -34,9 +34,39 @@ $("#toption1").on("click", function() {
 })
 //making trade button actually trade/download//
 const tbtn = document.querySelectorAll('.tbtn');
-  tbtn.addEventListener('click', moveItem);
-  tbtn.addEventListener('contextmenu', moveItem);
-  tbtn.setAttribute('draggable', false);
+  tbtn.addEventListener('click', tradeMade);
+
+function tradeMade(){
+   if ($('#tbtn').hasClass("addon0")){
+       $('#38').empty();
+       alert('copperplusplus')
+   //download copperplusplus
+   }
+   else if ($('#tbtn').hasClass("addon1")){
+       $('#38').empty();
+       alert('placeable apples')
+   //download placeableapples
+   }
+   else if ($('#tbtn').hasClass("addon2")){
+       $('#38').empty();
+       alert('sweetsplusplus beta')
+   //download sweetsplusplus
+   }
+   else if ($('#tbtn').hasClass("addon3")){
+       $('#38').empty();
+       alert('invalid')
+   //download whatever
+   }
+   else if ($('#tbtn').hasClass("addon4")){
+       $('#38').empty();
+       alert('invaild the 2nd')
+   //download whatever
+   }
+   else {
+       alert('ugh looks like some error idk hwo did this happen')
+   }
+
+}
 //this thing works!!!!//
 if ( $('#38').children().length > 0 ) {
       $("html").css("background-color", "yellow");
