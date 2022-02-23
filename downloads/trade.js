@@ -79,9 +79,9 @@ function tradeMade(){
 }
 
 //(download page part)clear trade//
-//const currfirst = document.getElementById('currency').first();
+const currfirst = document.getElementById('currency').get( 0 );
 
-$('#currency').first().addEventListener("click", cleartrd)
+currfirst.addEventListener("click", cleartrd)
 
 function cleartrd(){
   $('.tbox2').empty();
