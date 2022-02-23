@@ -77,6 +77,17 @@ function tradeMade(){
    }
 
 }
+
+//(download page part)clear trade//
+const currfirst = document.getElementById('currency').first();
+
+currfirst.addEventListener("click", cleartrd)
+
+function cleartrd(){
+  $('.tbox2').empty();
+}
+//yep, thats it...//
+
 //this thing works!!!!//
 if ( $('#38').children().length > 0 ) {
       $("html").css("background-color", "yellow");
