@@ -79,13 +79,7 @@ function tradeMade(){
 }
 
 //(download page part)clear trade//
-const currfirst = document.getElementById('currency').get( 0 );
 
-currfirst.addEventListener("click", cleartrd)
-
-function cleartrd(){
-  $('.tbox2').empty();
-}
 //yep, thats it...//
 
 //this thing works!!!!//
