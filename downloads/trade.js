@@ -82,7 +82,7 @@ function tradeMade(){
 let currfirst = document.getElementsById('currency').first(); 
 currfirst.addEventListener("click", cleartrd) 
 function cleartrd(){ 
-    let currfirst = document.getElementsById('currency').first(); 
+    let currfirst = document.getElementsById(currency).first(); 
     currfirst.removeEventListener("click", cleartrd);
     $('.tbox2').empty(); 
     console.log("ok this owrks over at 88");
