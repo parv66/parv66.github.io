@@ -1,148 +1,92 @@
-let current_slot = null;
-let status_click = false;
-let current_itemId = null;
-let current_itemType = null;
-let current_itemValue = null;
-
-const items = document.querySelectorAll('.item');
-
-items.forEach((item) => {
-  item.addEventListener('click', moveItem);
-  item.addEventListener('contextmenu', moveItem);
-  item.setAttribute('draggable', false);
-});
-
-function moveItem() {
-  //(download page part)clear trade//
-  $('.tbox2').first().empty();
-  //yep, thats it...//
-  event.preventDefault();
-  const item = this;
-  let waitItem = null;
-
-  let ghostItem = item.cloneNode(true);
-  ghostItem.setAttribute('class', 'ghostItem');
-  item.classList.add('invisible');
-
-  let shiftX = ghostItem.getBoundingClientRect().left + 20;
-  let shiftY = ghostItem.getBoundingClientRect().top + 20;
-
-  ghostItem.style.position = 'absolute';
-  ghostItem.style.zIndex = 1000;
-  document.body.append(ghostItem);
-
-  ghostItem.onclick = function (event) {
-    if (current_itemId && current_itemId != item.parentNode.id) {
-      let area = document.getElementById(current_itemId);
-      let free_space = !!!area.firstElementChild;
-
-      if (free_space) {
-        area.append(item);
-      } else if (current_itemType == item.id) {
-        let destiny = area.firstElementChild.lastElementChild.innerHTML;
-        let origin = item.lastElementChild.innerHTML;
-        let total = parseInt(destiny) + parseInt(origin);
-        area.firstElementChild.lastElementChild.innerHTML = total;
-        item.remove();
-      } else {
-        item.parentNode.append(area.firstElementChild);
-        area.append(item);
-      }
+//copperplusplus trade//
+$("#toption0").on("click", function() {
+    $(".curr").first().appendTo("#38");
+    if ($('#38').is(':empty')) {
+        $('.tbox2').empty();
+        $('#copperplusplus').clone().appendTo('.tbox2');
     }
-    item && item.classList.remove('invisible');
-    ghostItem.remove();
-    status_click = !status_click;
-  };
-
-  ghostItem.oncontextmenu = function (event) {
-    event.preventDefault();
-    if (current_itemId && current_itemId != item.parentNode.id) {
-      let area = document.getElementById(current_itemId);
-      let free_space = !!!area.firstElementChild;
-      if (free_space) {
-        let newItem = item.cloneNode(true);
-        newItem.addEventListener('click', moveItem);
-        newItem.addEventListener('contextmenu', moveItem);
-        newItem.setAttribute('draggable', false);
-        if (parseInt(item.lastElementChild.innerHTML) == 1) {
-          ghostItem.remove();
-          status_click = !status_click;
-          item.remove();
-        } else {
-          item.lastElementChild.innerHTML =
-            parseInt(item.lastElementChild.innerHTML) - 1;
-          ghostItem.lastElementChild.innerHTML =
-            parseInt(ghostItem.lastElementChild.innerHTML) - 1;
-        }
-        newItem.lastElementChild.innerHTML = 1;
-        area.append(newItem);
-        newItem.classList.remove('invisible');
-      } else if (current_itemType == item.id) {
-        if (parseInt(item.lastElementChild.innerHTML) == 1) {
-          ghostItem.remove();
-          status_click = !status_click;
-          item.remove();
-        }
-        let destiny = parseInt(
-          area.firstElementChild.lastElementChild.innerHTML
-        );
-        let origin = parseInt(item.lastElementChild.innerHTML);
-        let ghost = parseInt(ghostItem.lastElementChild.innerHTML);
-
-        area.firstElementChild.lastElementChild.innerHTML = destiny + 1;
-        item.lastElementChild.innerHTML = origin - 1;
-        ghostItem.lastElementChild.innerHTML = ghost - 1;
-      }
+    else {
+        $('.tbox2').empty();
+        $('#copperplusplus').clone().appendTo('.tbox2');
     }
-  };
-
-  status_click = !status_click;
-
-  if (status_click) {
-    moveAt(event.pageX, event.pageY);
-  }
-
-  function moveAt(pageX, pageY) {
-    ghostItem.style.left = pageX - shiftX + 'px';
-    ghostItem.style.top = pageY - shiftY + 'px';
-  }
-
-  function onMouseMove(event) {
-    if (status_click) {
-      moveAt(event.pageX, event.pageY);
+    //button giv class part(giving AND removing classes accorinding to the trade)//
+    $('#tbtn').removeClass('addon1');
+    $('#tbtn').removeClass('addon2');
+    $('#tbtn').removeClass('addon3');
+    $('#tbtn').removeClass('addon4');
+    $('#tbtn').addClass('addon0');
+})
+//papple trade
+$("#toption1").on("click", function() {
+    $(".curr").first().appendTo("#38");
+    if ($('#38').is(':empty')) {
+        $('.tbox2').empty();
+        $('#papple').clone().appendTo('.tbox2');
     }
-    ghostItem.hidden = true;
-    let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-    ghostItem.hidden = false;
-
-    if (!elemBelow) return;
-    let droppableBelow = elemBelow.closest('.box');
-    if (current_slot != droppableBelow) {
-      if (current_slot) {
-        leaveDroppable(current_slot);
-      }
-      current_slot = droppableBelow;
-      if (current_slot) {
-        enterDroppable(current_slot);
-      }
+    else {
+        $('.tbox2').empty();
+        $('#papple').clone().appendTo('.tbox2');
     }
-  }
+    //button giv class part(giving AND removing classes accorinding to the trade)//
+    $('#tbtn').removeClass('addon0');
+    $('#tbtn').removeClass('addon2');
+    $('#tbtn').removeClass('addon3');
+    $('#tbtn').removeClass('addon4');
+    $('#tbtn').addClass('addon1');
+})
+//making trade button actually trade/download//
+document.getElementById("tbtn").addEventListener("click", tradeMade);
+function tradeMade(){
+   if ($('#tbtn').hasClass("addon0")){
+       $('#38').empty();
+       $('#tbtn').removeClass('addon0');
+       $('.tbox2').empty();
+       alert('copperplusplus')
+   //download copperplusplus
+   }
+   else if ($('#tbtn').hasClass("addon1")){
+       $('#38').empty();
+       $('#tbtn').removeClass('addon1');
+       $('.tbox2').empty();
+       alert('placeable apples')
+   //download placeableapples
+   }
+   else if ($('#tbtn').hasClass("addon2")){
+       $('#38').empty();
+       $('#tbtn').removeClass('addon2');
+       $('.tbox2').empty();
+       alert('sweetsplusplus beta')
+   //download sweetsplusplus
+   }
+   else if ($('#tbtn').hasClass("addon3")){
+       $('#38').empty();
+       $('#tbtn').removeClass('addon3');
+       $('.tbox2').empty();
+       alert('invalid')
+   //download whatever
+   }
+   else if ($('#tbtn').hasClass("addon4")){
+       $('#38').empty();
+       $('#tbtn').removeClass('addon4');
+       $('.tbox2').empty();
+       alert('invaild the 2nd')
+   //download whatever
+   }
+   else {
+       alert('ugh looks like some error idk hwo did this happen')
+   }
 
-  document.addEventListener('mousemove', onMouseMove);
 }
-
-function enterDroppable(elem) {
-  current_itemId = elem.id;
-  if (elem.firstElementChild) {
-    current_itemType = elem.firstElementChild.id;
-    child = elem.firstElementChild;
-    current_itemValue = child.lastElementChild.innerHTML;
-  }
+//this thing works!!!!//
+if ( $('#38').children().length > 0 ) {
+      $("html").css("background-color", "yellow");
 }
-
-function leaveDroppable(elem) {
-  current_itemId = null;
-  current_itemType = null;
-  current_itemValue = null;
-  free_space = false;
-}
+//end
+//clear trade slots when currency removed//
+//(https://parv66.tk/gui/itemdrag.js{52:5})//
+//end//
+//lists =>
+//copperplusplus: addon0
+//placeable apples: addon1
+//sweetsplusplus: addon2
+//lists.end();
