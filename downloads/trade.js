@@ -15,6 +15,8 @@ $("#toption0").on("click", function() {
     $('#tbtn').removeClass('addon3');
     $('#tbtn').removeClass('addon4');
     $('#tbtn').addClass('addon0');
+    $('.toptionPos').removeClass('.toptionPos');
+    $('#toption0').addClass('.toptionPos');
 })
 //papple trade
 $("#toption1").on("click", function() {
@@ -33,6 +35,8 @@ $("#toption1").on("click", function() {
     $('#tbtn').removeClass('addon3');
     $('#tbtn').removeClass('addon4');
     $('#tbtn').addClass('addon1');
+    $('.toptionPos').removeClass('.toptionPos');
+    $('#toption1').addClass('.toptionPos');
 })
 //making trade button actually trade/download//
 document.getElementById("tbtn").addEventListener("click", tradeMade);
