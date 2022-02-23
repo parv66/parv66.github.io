@@ -13,6 +13,9 @@ items.forEach((item) => {
 });
 
 function moveItem() {
+  //(download page part)clear trade//
+  $('.tbox2').first().empty();
+  //yep, thats it...//
   event.preventDefault();
   const item = this;
   let waitItem = null;
@@ -49,9 +52,6 @@ function moveItem() {
     item && item.classList.remove('invisible');
     ghostItem.remove();
     status_click = !status_click;
-  //(download page part)clear trade//
-  $('.tbox2').empty();
-  //yep, thats it...//
   };
 
   ghostItem.oncontextmenu = function (event) {
