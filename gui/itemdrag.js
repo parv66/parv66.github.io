@@ -14,7 +14,9 @@ items.forEach((item) => {
 
 function moveItem() {
   //(download page part)clear trade//
-  $('.tbox2').first().empty();
+  if ($('#38:empty')){
+    $('.tbox2').empty();
+  }
   //yep, thats it...//
   event.preventDefault();
   const item = this;
