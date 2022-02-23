@@ -13,6 +13,9 @@ items.forEach((item) => {
 });
 
 function moveItem() {
+  //(download page part)clear trade//
+  $('.tbox2').first().empty();
+  //yep, thats it...//
   event.preventDefault();
   const item = this;
   let waitItem = null;
