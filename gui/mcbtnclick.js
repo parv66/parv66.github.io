@@ -3,7 +3,7 @@ $( document ).ready(function() {
   crtSndEle();
   
   $(".mcbtn").click(function(){
-    let sound = document.getElementById('mcBtnClicked');
+    let sound = $('#mcBtnClicked');
     sound.volume = 0.6;
     sound.play();
   });
@@ -12,6 +12,6 @@ $( document ).ready(function() {
     var audio = document.createElement('audio');
     audio.src = 'https://parv66.tk/random.click.ogg'
     audio.id = 'mcBtnClicked';
-    document.getElementByTagName('body').appendChild(audio);
+    $('body').appendChild(audio);
   }
 });
