@@ -4,10 +4,14 @@ window.onload=function(){
 	ado.id = 'btnsnd';
 	document.body.appendChild(ado);
   	console.log("element created")
-}	
-$('.mcbtn').click(function(){
+	
+	//clicking part
+	$('.mcbtn').click(function(){
+	console.log("button click registered")
 	let sound = document.querySelector('#btnsnd');
 	sound.volume = 0.6;
 	sound.play();
 	console.log("playeed soundd")
 });
+}	
+
