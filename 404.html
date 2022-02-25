@@ -10,8 +10,11 @@
   <script>
   window.onload=function(){
     //location.href = "https://parv66.tk/404/";
-    var FoFbtn = document.querySelector('#fofbtnerror');
-    FoFbtn.style.display = "block";, 5000;
+    setTimeout(function(){
+      var FoFbtn = document.querySelector('#fofbtnerror');
+      FoFbtn.style.display="block";
+      console.log("offline declared!");
+    },5000);
   }
   </script>
 </body>
