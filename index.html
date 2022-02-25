@@ -25,7 +25,6 @@
      <script src="clickingsound.js"></script>
      <script src="err.js"></script>
      <script src="oof.js"></script>
-     <img src="logo.png" class="logo">
      <title>PARV66.inc</title>
      <meta name="title" content="PARV66.inc">
      <meta name="description" content="parv66.inc is a... thing.  yep a thing.    idk what else...    ok bye">
@@ -40,39 +39,8 @@
      <script src="https://parv66.tk/gui/mcbtnclick.js"></script>
   </head>
  <body id="body">
-  <script>
-$(document).ready(function(){
-  $("#menutoggle").click(function(){
-    $("#menu").toggleClass("overlay");
-  });
-  $("#menutogglev2").click(function(){
-    $("#menu").toggleClass("overlay");
-  });
-});
-</script>
-  <script>
-$( document ).ready.ready(function(){
-  document.querySelector("#menutoggle").click(function(){
-    document.querySelector("#menu").classList.toggle("overlay");
-  });
-  document.querySelector("#menutogglev2").click(function(){
-    document.querySelector("#menu").classList.toggle("overlay");
-  });
-});
-</script>
-  <script>
-  document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        document.querySelector("#menu").classList.toggle("overlay");
-    }
-}
- </script>
-  <br>
-  <br>
+  <img src="logo.png" class="logo">
   <h3>Press <a id="menutoggle" class="mcTextPurple">Space</a> To Open Menu!</h3>
-  <br>
-  <br>
-  <br>
    <div id="menu" class="menu overlay">
     <h3>Press <a id="menutogglev2" class="mcTextMineGold">Space</a> To Exit!</h3>
             <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc'">home</button>
@@ -89,9 +57,35 @@ $( document ).ready.ready(function(){
      <audio id="errors" src="error.666.ogg"></audio>
    </div>
   <footer>
-   <h4>footer</h4><br>
-   <a href="" class="cord"></a>
-   <a href="" class="youtube"></a>
+   <h4>footer</h4>
+   <a href="" dragable="false" class="cord"></a><a href="" dragable="false" class="youtube"></a>
   </footer>
+  <script>
+$(document).ready(function(){
+  $("#menutoggle").click(function(){
+    $("#menu").toggleClass("overlay");
+  });
+  $("#menutogglev2").click(function(){
+    $("#menu").toggleClass("overlay");
+  });
+});
+</script>
+  <script>
+$(document).ready(function(){
+  document.querySelector("#menutoggle").click(function(){
+    document.querySelector("#menu").classList.toggle("overlay");
+  });
+  document.querySelector("#menutogglev2").click(function(){
+    document.querySelector("#menu").classList.toggle("overlay");
+  });
+});
+</script>
+  <script>
+  document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        document.querySelector("#menu").classList.toggle("overlay");
+    }
+}
+ </script>
  </body>
 </html>
