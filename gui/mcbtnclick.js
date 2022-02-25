@@ -12,6 +12,6 @@ $( document ).ready(function() {
     var ado = document.createElement('audio');
     ado.src = 'https://parv66.tk/random.click.ogg'
     ado.id = 'mcBtnClicked';
-    document.body.onload.appendChild(ado);
+    document.body.onload = appendChild(ado);
   }
 });
