@@ -1,2 +1,0 @@
-- name: Find and Replace
-  uses: jacobtomlinson/gha-find-replace@2.0.0
