@@ -44,6 +44,9 @@ function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
        $('#38').empty();
        $('#tbtn').removeClass('addon0');
+       if (!$('#38').is(':empty')) {
+       document.querySelector('.number').innerHTML = document.querySelector('.number').innerHTML - 1;
+       }
        $('.tbox2').empty();
        alert('copperplusplus')
    //download copperplusplus
