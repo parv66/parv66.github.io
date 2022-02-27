@@ -32,7 +32,7 @@ minetip.style.display = "none";
 //upadte//
 function reload_js(src) {
   $('script[src="' + src + '"]').remove();
-  $('<script>').attr('src', src).appendTo('head');, 500;
+  $('<script>').attr('src', src).appendTo('head'), 500;
   console.log('updated. it should work properly now')
 }
 
