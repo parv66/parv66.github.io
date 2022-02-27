@@ -42,9 +42,12 @@ $("#toption1").on("click", function() {
 //document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
-       $('#38').empty();
        $('#tbtn').removeClass('addon0');
-       $('.tbox2').empty();
+       let curren = $('#38').lastElementChild;
+       curren.innerHTML = parseInt($('#38').lastElementChild.innerHTML) - 1;
+       if (curren.innerHTML < 0){
+           $('#38').empty();
+       }
        alert('copperplusplus')
    //download copperplusplus
    }
