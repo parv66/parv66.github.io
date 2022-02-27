@@ -1,5 +1,7 @@
 var minetip = document.getElementById("minetip-tooltip");
 
+//upadte//
+function reupdate(){
 $(".minetext").mouseover(function(event) {
   minetip.innerHTML = event.target.dataset.mctitle;
   minetip.style.display = "block";
@@ -12,8 +14,7 @@ $(".minetext").mouseout(function() {
 $(".minetext").mousemove(function (event) {
   pos (minetip, 5, -30, event);
 });
-
-var pos = function (o, x, y, event) {
+  var pos = function (o, x, y, event) {
     var posX = 0, posY = 0;
     var e = event || window.event;
     if (e.pageX || e.pageY) {
@@ -29,21 +30,7 @@ var pos = function (o, x, y, event) {
 }
 
 minetip.style.display = "none";
-//upadte//
-function reupdate(){
-$(".minetext").mouseover(function(event) {
-  minetip.innerHTML = event.target.dataset.mctitle;
-  minetip.style.display = "block";
-});
-
-$(".minetext").mouseout(function() {
-  minetip.style.display = "none";
-});
-
-$(".minetext").mousemove(function (event) {
-  pos (minetip, 5, -30, event);
-});
-  console.log('updated. it should work properly now')
+console.log('updated. it should work properly now')
 }
 
 //update on edit
