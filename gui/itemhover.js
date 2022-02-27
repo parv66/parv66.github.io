@@ -37,7 +37,7 @@ function reload_js(src) {
 }
 
 //update on edit
-$('body').on('DOMSubtreeModified', function(){
+$('body').on('DOMNodeInserted', function(){
   console.log('html has been edited');
   console.log('reupdating itemhover.js')
   reload_js('https://parv66.github.io/parv66.inc/gui/itemhover.js');
