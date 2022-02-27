@@ -9,7 +9,7 @@ window.onload=function(){
 	$('.mcbtn').click(function(){
 	console.log("button click registered")
 	let sound = document.querySelector('#btnsnd');
-	sound.volume = 0.4;
+	sound.volume = 0.2;
 	sound.currentTime = 0.02;
 	sound.play();
 	console.log("playeed soundd")
