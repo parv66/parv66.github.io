@@ -1,4 +1,4 @@
-//copperplusplus trade btn//
+//copperplusplus trade//
 $("#toption0").on("click", function() {
     $(".curr").first().appendTo("#38");
     if ($('#38').is(':empty')) {
@@ -18,7 +18,7 @@ $("#toption0").on("click", function() {
     $('.toptionPos').removeClass('.toptionPos');
     $('#toption0').addClass('.toptionPos');
 })
-//papple trade btn//
+//papple trade
 $("#toption1").on("click", function() {
     $(".curr").first().appendTo("#38");
     if ($('#38').is(':empty')) {
@@ -42,13 +42,9 @@ $("#toption1").on("click", function() {
 //document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
+       $('#38').empty();
        $('#tbtn').removeClass('addon0');
-       let curren = $('#38').lastElementChild;
-       curren.innerHTML = parseInt(curren.innerHTML) - 1;
-       if (curren.innerHTML =< 0){
-           $('#38').empty();
-           $('.tbox2').empty();
-       }
+       $('.tbox2').empty();
        alert('copperplusplus')
    //download copperplusplus
    }
