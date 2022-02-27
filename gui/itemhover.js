@@ -1,7 +1,5 @@
 var minetip = document.getElementById("minetip-tooltip");
 
-//upadte//
-function reupdate(){
 $(".minetext").mouseover(function(event) {
   minetip.innerHTML = event.target.dataset.mctitle;
   minetip.style.display = "block";
@@ -30,15 +28,22 @@ $(".minetext").mousemove(function (event) {
 }
 
 minetip.style.display = "none";
-console.log('updated. it should work properly now')
+
+//upadte//
+function reload_js(src) {
+  $('script[src="' + src + '"]').remove();
+  $('<script>').attr('src', src).appendTo('head');, 500;
+  console.log('updated. it should work properly now')
 }
 
 //update on edit
 $('body').on('DOMSubtreeModified', function(){
   console.log('html has been edited');
   console.log('reupdating itemhover.js')
-  reupdate();
+  reload_js('https://parv66.github.io/gui/itemhover.js');
   
 });
+//cooldown
+
 //<div id="minetip-tooltip" style="display: none;"> <span class="minetip-title" id="minetip-text">Minecraft Tip</span> </div>
 //<span data-mctitle="Copper++ Addon"></span>
