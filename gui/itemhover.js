@@ -29,6 +29,12 @@ var pos = function (o, x, y, event) {
 }
 
 minetip.style.display = "none";
-
+//update on edit
+$('body').on('DOMSubtreeModified', function(){
+  console.log('html has been edited');
+  console.log('reupdating itemhover.js')
+  console.log('error, process failed')
+  
+});
 //<div id="minetip-tooltip" style="display: none;"> <span class="minetip-title" id="minetip-text">Minecraft Tip</span> </div>
 //<span data-mctitle="Copper++ Addon"></span>
