@@ -29,11 +29,28 @@ var pos = function (o, x, y, event) {
 }
 
 minetip.style.display = "none";
+//upadte//
+function reupdate(){
+$(".minetext").mouseover(function(event) {
+  minetip.innerHTML = event.target.dataset.mctitle;
+  minetip.style.display = "block";
+});
+
+$(".minetext").mouseout(function() {
+  minetip.style.display = "none";
+});
+
+$(".minetext").mousemove(function (event) {
+  pos (minetip, 5, -30, event);
+});
+  console.log('updated. it should work properly now')
+}
+
 //update on edit
 $('body').on('DOMSubtreeModified', function(){
   console.log('html has been edited');
   console.log('reupdating itemhover.js')
-  console.log('error, process failed')
+  reupdate();
   
 });
 //<div id="minetip-tooltip" style="display: none;"> <span class="minetip-title" id="minetip-text">Minecraft Tip</span> </div>
