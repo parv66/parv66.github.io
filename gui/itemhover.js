@@ -40,7 +40,7 @@ function reload_js(src) {
 $('body').on('DOMSubtreeModified', function(){
   console.log('html has been edited');
   console.log('reupdating itemhover.js')
-  reload_js('https://parv66.github.io/gui/itemhover.js');
+  reload_js('https://parv66.github.io/parv66.inc/gui/itemhover.js');
   
 });
 //cooldown
