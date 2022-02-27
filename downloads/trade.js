@@ -83,7 +83,7 @@ function tradeMade(){
 }
 
 //(download page part)clear trade//
-let currfirst = document.getElementById(currency).first();
+let currfirst = document.getElementsById(currency).first();
 currfirst.addEventListener("click", cleartrd) 
 function cleartrd(){ 
     let currfirst = document.getElementsById(currency).first(); 
