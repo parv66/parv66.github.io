@@ -13,13 +13,7 @@ items.forEach((item) => {
 });
 
 function moveItem() {
-  //(download page part)clear trade//
-  $('#tbtn').removeClass('addon0');
-  $('#tbtn').removeClass('addon1');
-  $('#tbtn').removeClass('addon2');
-  $('#tbtn').removeClass('addon3');
-  $('#tbtn').removeClass('addon4');
-  $('.tbox2').first().empty();
+  //(download page part)clear trade//$('#tbtn').removeClass('addon0');$('#tbtn').removeClass('addon1');$('#tbtn').removeClass('addon2');$('#tbtn').removeClass('addon3');$('#tbtn').removeClass('addon4');$('.tbox2').first().empty();
   //yep, thats it...//
   event.preventDefault();
   const item = this;
