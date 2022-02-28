@@ -100,8 +100,6 @@ $('#currency').click(function(){
     cleartrd();
 });
 function cleartrd(){ 
-   let currfirst = document.getElementsById(currency).first(); 
-   currfirst.removeEventListener("click", cleartrd);
    $('.tbox2').empty(); 
    console.log("102:3 works just fine");
 }
