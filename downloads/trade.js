@@ -42,7 +42,7 @@ $("#toption1").on("click", function() {
 //document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
-       //$('#38').empty();
+       $('#38').empty();
        $('#tbtn').removeClass('addon0');
        if (!$('#38').is(':empty')) {
        document.querySelector('.number').innerHTML = document.querySelector('.number').innerHTML - 1;
@@ -88,9 +88,8 @@ function tradeMade(){
 //(download page part)clear trade//
 //let currfirst = document.getElementById(currency);
 //currfirst.addEventListener("click", cleartrd) 
-tick();
-function tick(){
-    $("#currency").on( "click", function() {
+
+$('#currency').click(function(){
     $('#tbtn').removeClass('addon0');
     $('#tbtn').removeClass('addon1');
     $('#tbtn').removeClass('addon2');
@@ -100,12 +99,12 @@ function tick(){
     console.log("uh wokred i guess")
     cleartrd();
 });
-}
-function cleartrd(){
-    $('.tbox2').empty(); 
-    console.log("102:3 works just fine");
+function cleartrd(){ 
+   $('.tbox2').empty(); 
+   console.log("102:3 works just fine");
 }
 //yep, thats it...//
+
 //this thing works!!!!//
 if ( $('#38').children().length > 0 ) {
       console.log("empty #38")
