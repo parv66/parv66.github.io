@@ -86,8 +86,12 @@ function tradeMade(){
 }
 
 //(download page part)clear trade//
-let currfirst = document.getElementById(currency);
-currfirst.addEventListener("click", cleartrd) 
+//let currfirst = document.getElementById(currency);
+//currfirst.addEventListener("click", cleartrd) 
+
+$('#currency').click(function(){
+  alert("clearTrd();");
+});
 function cleartrd(){ 
     let currfirst = document.getElementsById(currency).first(); 
     currfirst.removeEventListener("click", cleartrd);
