@@ -89,7 +89,7 @@ function tradeMade(){
 //let currfirst = document.getElementById(currency);
 //currfirst.addEventListener("click", cleartrd) 
 
-$('#currency').click(function(){
+$('#currency').each.click(function(){
     $('#tbtn').removeClass('addon0');
     $('#tbtn').removeClass('addon1');
     $('#tbtn').removeClass('addon2');
@@ -99,12 +99,11 @@ $('#currency').click(function(){
     console.log("uh wokred i guess")
     cleartrd();
 });
-function cleartrd(){ 
-   $('.tbox2').empty(); 
+function cleartrd(){
+    $('.tbox2').empty(); 
    console.log("102:3 works just fine");
 }
 //yep, thats it...//
-
 //this thing works!!!!//
 if ( $('#38').children().length > 0 ) {
       console.log("empty #38")
