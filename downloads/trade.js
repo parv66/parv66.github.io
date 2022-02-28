@@ -90,19 +90,26 @@ function tradeMade(){
 //currfirst.addEventListener("click", cleartrd) 
 
 $('#currency').click(function(){
-  alert("clearTrd();");
+    $('#tbtn').removeClass('addon0');
+    $('#tbtn').removeClass('addon1');
+    $('#tbtn').removeClass('addon2');
+    $('#tbtn').removeClass('addon3');
+    $('#tbtn').removeClass('addon4');
+    $('.tbox2').first().empty();
+    console.log("uh wokred i guess")
+    cleartrd();
 });
 function cleartrd(){ 
-    let currfirst = document.getElementsById(currency).first(); 
-    currfirst.removeEventListener("click", cleartrd);
-    $('.tbox2').empty(); 
-    console.log("ok this owrks over at 88");
+   let currfirst = document.getElementsById(currency).first(); 
+   currfirst.removeEventListener("click", cleartrd);
+   $('.tbox2').empty(); 
+   console.log("102:3 works just fine");
 }
 //yep, thats it...//
 
 //this thing works!!!!//
 if ( $('#38').children().length > 0 ) {
-      $("html").css("background-color", "yellow");
+      console.log("empty #38")
 }
 //end
 //clear trade slots when currency removed//
