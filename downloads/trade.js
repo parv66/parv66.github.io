@@ -42,7 +42,7 @@ $("#toption1").on("click", function() {
 //document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
-       $('#38').empty();
+       //$('#38').empty();
        $('#tbtn').removeClass('addon0');
        if (!$('#38').is(':empty')) {
        document.querySelector('.number').innerHTML = document.querySelector('.number').innerHTML - 1;
@@ -88,7 +88,7 @@ function tradeMade(){
 //(download page part)clear trade//
 //let currfirst = document.getElementById(currency);
 //currfirst.addEventListener("click", cleartrd) 
-$( "#currency" ).on( "click", function() {
+$("#38").$('#currency').on( "click", function() {
     $('#tbtn').removeClass('addon0');
     $('#tbtn').removeClass('addon1');
     $('#tbtn').removeClass('addon2');
