@@ -88,7 +88,9 @@ function tradeMade(){
 //(download page part)clear trade//
 //let currfirst = document.getElementById(currency);
 //currfirst.addEventListener("click", cleartrd) 
-$("#38 > #currency").on( "click", function() {
+tick();
+function tick(){
+    $("#38 > #currency").on( "click", function() {
     $('#tbtn').removeClass('addon0');
     $('#tbtn').removeClass('addon1');
     $('#tbtn').removeClass('addon2');
@@ -98,9 +100,10 @@ $("#38 > #currency").on( "click", function() {
     console.log("uh wokred i guess")
     cleartrd();
 });
+}
 function cleartrd(){
     $('.tbox2').empty(); 
-   console.log("102:3 works just fine");
+    console.log("102:3 works just fine");
 }
 //yep, thats it...//
 //this thing works!!!!//
