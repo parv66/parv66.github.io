@@ -90,7 +90,7 @@ function tradeMade(){
 //currfirst.addEventListener("click", cleartrd) 
 tick();
 function tick(){
-    $("#38 > #currency").on( "click", function() {
+    $("#currency").on( "click", function() {
     $('#tbtn').removeClass('addon0');
     $('#tbtn').removeClass('addon1');
     $('#tbtn').removeClass('addon2');
