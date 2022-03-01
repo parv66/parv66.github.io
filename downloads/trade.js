@@ -1,7 +1,11 @@
 //copperplusplus trade//
 $("#toption0").on("click", function() {
     $(".curr").first().appendTo("#38");
-    if ($('#38').is(':empty')) {
+    if ( $('#38').children().length < 0 ) {
+         $('.tbox2').empty();
+         console.log("empty #38")
+    }
+    else if ( $('.curr') ) {
         $('.tbox2').empty();
         $('#copperplusplus').clone().appendTo('.tbox2');
     }
