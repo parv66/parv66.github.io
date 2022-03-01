@@ -1,7 +1,7 @@
 //copperplusplus trade//
 $("#toption0").on("click", function() {
     $(".curr").first().appendTo("#38");
-    if ( $('#38').children().length < 0 ) {
+    if ($('#38').is(':empty')){
          $('.tbox2').empty();
          console.log("empty #38")
     }
