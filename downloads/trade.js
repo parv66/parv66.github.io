@@ -5,10 +5,6 @@ $("#toption0").on("click", function() {
          $('.tbox2').empty();
          console.log("empty #38")
     }
-    else if ( $('.curr') ) {
-        $('.tbox2').empty();
-        $('#copperplusplus').clone().appendTo('.tbox2');
-    }
     else {
         $('.tbox2').empty();
         $('#copperplusplus').clone().appendTo('.tbox2');
