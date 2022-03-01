@@ -8,15 +8,15 @@ $("#toption0").on("click", function() {
     else {
         $('.tbox2').empty();
         $('#copperplusplus').clone().appendTo('.tbox2');
+        //button giv class part(giving AND removing classes accorinding to the trade)//
+        $('#tbtn').removeClass('addon1');
+        $('#tbtn').removeClass('addon2');
+        $('#tbtn').removeClass('addon3');
+        $('#tbtn').removeClass('addon4');
+        $('#tbtn').addClass('addon0');
+        $('.toptionPos').removeClass('.toptionPos');
+        $('#toption0').addClass('.toptionPos');
     }
-    //button giv class part(giving AND removing classes accorinding to the trade)//
-    $('#tbtn').removeClass('addon1');
-    $('#tbtn').removeClass('addon2');
-    $('#tbtn').removeClass('addon3');
-    $('#tbtn').removeClass('addon4');
-    $('#tbtn').addClass('addon0');
-    $('.toptionPos').removeClass('.toptionPos');
-    $('#toption0').addClass('.toptionPos');
 })
 //papple trade
 $("#toption1").on("click", function() {
@@ -28,15 +28,16 @@ $("#toption1").on("click", function() {
     else {
         $('.tbox2').empty();
         $('#papple').clone().appendTo('.tbox2');
+        //button giv class part(giving AND removing classes accorinding to the trade)//
+        $('#tbtn').removeClass('addon0');
+        $('#tbtn').removeClass('addon2');
+        $('#tbtn').removeClass('addon3');
+        $('#tbtn').removeClass('addon4');
+        $('#tbtn').addClass('addon1');
+        $('.toptionPos').removeClass('.toptionPos');
+        $('#toption1').addClass('.toptionPos');
     }
-    //button giv class part(giving AND removing classes accorinding to the trade)//
-    $('#tbtn').removeClass('addon0');
-    $('#tbtn').removeClass('addon2');
-    $('#tbtn').removeClass('addon3');
-    $('#tbtn').removeClass('addon4');
-    $('#tbtn').addClass('addon1');
-    $('.toptionPos').removeClass('.toptionPos');
-    $('#toption1').addClass('.toptionPos');
+    
 })
 //making trade button actually trade/download//
 //document.getElementById("tbtn").addEventListener("click", tradeMade);
