@@ -21,9 +21,9 @@ $("#toption0").on("click", function() {
 //papple trade
 $("#toption1").on("click", function() {
     $(".curr").first().appendTo("#38");
-    if ($('#38').is(':empty')) {
-        $('.tbox2').empty();
-        $('#papple').clone().appendTo('.tbox2');
+    if ($('#38').is(':empty')){
+         $('.tbox2').empty();
+         console.log("empty #38")
     }
     else {
         $('.tbox2').empty();
