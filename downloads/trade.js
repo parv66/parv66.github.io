@@ -13,7 +13,6 @@ $("#toption0").on("click", function() {
     else {
        $('.tbox2').empty();
        $('#copperplusplus').clone().appendTo('.tbox2');
-       //button giv class part(giving AND removing classes accorinding to the trade)//
        $('#tbtn').removeClass('addon1');
        $('#tbtn').removeClass('addon2');
        $('#tbtn').removeClass('addon3');
@@ -94,13 +93,10 @@ function tradeMade(){
    else {
        alert('ugh looks like some error idk hwo did this happen')
    }
-
+   $('.toptionNeg').removeClass('toptionNeg');
+   $('.toptionPos').removeClass('toptionPos');
 }
-
 //(download page part)clear trade//
-//let currfirst = document.getElementById(currency);
-//currfirst.addEventListener("click", cleartrd) 
-
 $('#currency').click(function(){
     $('#tbtn').removeClass('addon0');
     $('#tbtn').removeClass('addon1');
@@ -108,7 +104,6 @@ $('#currency').click(function(){
     $('#tbtn').removeClass('addon3');
     $('#tbtn').removeClass('addon4');
     $('.tbox2').first().empty();
-    console.log("hey stop cheesing the system! }:(")
     cleartrd();
 });
 function cleartrd(){ 
