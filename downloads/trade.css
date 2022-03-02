@@ -147,10 +147,10 @@ h1 {
 .tbox2Neg {
     background-color: E07272;
 }
-.tbox2Neg {
+.tbox2Neg:hover {
     background-color: E07272;
 }
-.titemNeg:hover {
+.titemNeg {
     filter: brightness(0.4);
 }
 .tbtn {
