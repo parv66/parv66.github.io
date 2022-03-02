@@ -148,7 +148,10 @@ h1 {
     background-color: E07272;
 }
 .titemNeg {
-    filter: brightness(0.7);
+    filter: brightness(0.4);
+}
+.titemNeg:hover {
+    filter: brightness(0.4);
 }
 .tbtn {
     display: inline-block;
