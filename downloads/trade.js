@@ -32,8 +32,8 @@ $("#toption1").on("click", function() {
          $('.toptionNeg').removeClass('toptionNeg');
          $('.toptionPos').removeClass('toptionPos');
          $('#toption1').addClass('toptionNeg');
-         $('#copperplusplus').clone().appendTo('.tbox2');
-         $("[id=copperplusplus]:eq(1)").addClass('titemNeg');
+         $('#papple').clone().appendTo('.tbox2');
+         $("[id=papple]:eq(1)").addClass('titemNeg');
          console.log("empty #38")
     }
     else {
