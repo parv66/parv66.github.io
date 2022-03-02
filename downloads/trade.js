@@ -97,22 +97,13 @@ $('#currency').click(function(){
     $('#tbtn').removeClass('addon3');
     $('#tbtn').removeClass('addon4');
     $('.tbox2').first().empty();
-    console.log("uh wokred i guess")
+    console.log("hey stop cheesing the system! }:(")
     cleartrd();
 });
 function cleartrd(){ 
    $('.tbox2').empty(); 
-   console.log("102:3 works just fine");
 }
 //yep, thats it...//
-
-//this thing works!!!!//
-if ( $('#38').children().length > 0 ) {
-      console.log("empty #38")
-}
-//end
-//clear trade slots when currency removed//
-//(https://parv66.tk/gui/itemdrag.js{52:5})//
 //end//
 //lists =>
 //copperplusplus: addon0
