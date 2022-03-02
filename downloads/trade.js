@@ -9,7 +9,7 @@ $("#toption0").on("click", function() {
        $('#copperplusplus').clone().appendTo('.tbox2');
        $("[id=copperplusplus]:eq(1)").addClass('titemNeg');
        $('.tbox2').addClass('tbox2Neg')
-      console.log("empty #38")
+       //console.log("empty #38")
     }
     else {
        $('.tbox2').empty();
@@ -35,7 +35,7 @@ $("#toption1").on("click", function() {
          $('#papple').clone().appendTo('.tbox2');
          $("[id=papple]:eq(1)").addClass('titemNeg');
          $('.tbox2').addClass('tbox2Neg') 
-        console.log("empty #38")
+         //console.log("empty #38")
     }
     else {
         $('.tbox2').empty();
@@ -55,10 +55,9 @@ $("#toption1").on("click", function() {
 //document.getElementById("tbtn").addEventListener("click", tradeMade);
 function tradeMade(){
    if ($('#tbtn').hasClass("addon0")){
-       $('#38').empty();
        $('#tbtn').removeClass('addon0');
        if (!$('#38').is(':empty')) {
-       document.querySelector('.number').innerHTML = document.querySelector('.number').innerHTML - 1;
+            document.querySelector('.number').innerHTML = document.querySelector('.number').innerHTML - 1;
        }
        $('.tbox2').empty();
        alert('copperplusplus')
