@@ -8,6 +8,7 @@ $("#toption0").on("click", function() {
        $('#toption0').addClass('toptionNeg');
        $('#copperplusplus').clone().appendTo('.tbox2');
        $("[id=copperplusplus]:eq(1)").addClass('titemNeg');
+       $('.tbox2').addClass('tbox2Neg')
       console.log("empty #38")
     }
     else {
@@ -33,7 +34,8 @@ $("#toption1").on("click", function() {
          $('#toption1').addClass('toptionNeg');
          $('#papple').clone().appendTo('.tbox2');
          $("[id=papple]:eq(1)").addClass('titemNeg');
-         console.log("empty #38")
+         $('.tbox2').addClass('tbox2Neg') 
+        console.log("empty #38")
     }
     else {
         $('.tbox2').empty();
@@ -91,7 +93,8 @@ function tradeMade(){
    //download whatever
    }
    else {
-       alert('ugh looks like some error idk hwo did this happen')
+       alert('ugh looks like some error idk hwo did this happen');
+       $('.tbox2').empty();
    }
    $('.toptionNeg').removeClass('toptionNeg');
    $('.toptionPos').removeClass('toptionPos');
