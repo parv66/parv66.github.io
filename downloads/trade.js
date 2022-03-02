@@ -2,20 +2,24 @@
 $("#toption0").on("click", function() {
     $(".curr").first().appendTo("#38");
     if ($('#38').is(':empty')){
-         $('.tbox2').empty();
-         console.log("empty #38")
+       $('.tbox2').empty();
+       $('.toptionNeg').removeClass('toptionNeg');
+       $('.toptionPos').removeClass('toptionPos');
+       $('#toption0').addClass('toptionNeg');
+      console.log("empty #38")
     }
     else {
-        $('.tbox2').empty();
-        $('#copperplusplus').clone().appendTo('.tbox2');
-        //button giv class part(giving AND removing classes accorinding to the trade)//
-        $('#tbtn').removeClass('addon1');
-        $('#tbtn').removeClass('addon2');
-        $('#tbtn').removeClass('addon3');
-        $('#tbtn').removeClass('addon4');
-        $('#tbtn').addClass('addon0');
-        $('.toptionPos').removeClass('.toptionPos');
-        $('#toption0').addClass('.toptionPos');
+       $('.tbox2').empty();
+       $('#copperplusplus').clone().appendTo('.tbox2');
+       //button giv class part(giving AND removing classes accorinding to the trade)//
+       $('#tbtn').removeClass('addon1');
+       $('#tbtn').removeClass('addon2');
+       $('#tbtn').removeClass('addon3');
+       $('#tbtn').removeClass('addon4');
+       $('#tbtn').addClass('addon0');
+       $('.toptionPos').removeClass('toptionPos');
+       $('.toptionNeg').removeClass('toptionNeg');
+       $('#toption0').addClass('toptionPos');
     }
 })
 //papple trade
@@ -23,19 +27,22 @@ $("#toption1").on("click", function() {
     $(".curr").first().appendTo("#38");
     if ($('#38').is(':empty')){
          $('.tbox2').empty();
+         $('.toptionNeg').removeClass('toptionNeg');
+         $('.toptionPos').removeClass('toptionPos');
+         $('#toption1').addClass('toptionNeg');
          console.log("empty #38")
     }
     else {
         $('.tbox2').empty();
+        $('#tbtn').addClass('addon1');
         $('#papple').clone().appendTo('.tbox2');
-        //button giv class part(giving AND removing classes accorinding to the trade)//
         $('#tbtn').removeClass('addon0');
         $('#tbtn').removeClass('addon2');
         $('#tbtn').removeClass('addon3');
         $('#tbtn').removeClass('addon4');
-        $('#tbtn').addClass('addon1');
-        $('.toptionPos').removeClass('.toptionPos');
-        $('#toption1').addClass('.toptionPos');
+        $('.toptionPos').removeClass('toptionPos');
+        $('.toptionNeg').removeClass('toptionNeg');
+        $('#toption1').addClass('toptionPos');
     }
     
 })
