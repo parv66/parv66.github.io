@@ -1,5 +1,6 @@
 .cOption {
-  color:#c6c6c6;
+  text-shadow: 0.125em 0.125em 0 #3F3F3F;
+  color:#AAAAAA;
   margin: 0px;
   margin-top: 4px
 }
@@ -7,9 +8,13 @@
   background-color: rgb(34 14 64 / 88%);
   color: #555555;
 }
+.cinfo {
+  margin: 0px;
+  color: #555555;
+}
 #contextmenu {
-    width: 200px;
-    height: 350px;
+    width: 250px;
+    height: 275px;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +32,7 @@
 }
 .format-f, #contextmenu {
     color: #FFF;
-    text-shadow: 0.125em 0.125em 0 #3F3F3F;
+    
 }
 #contextmenu::before {
     content: "";
