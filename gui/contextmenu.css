@@ -1,4 +1,15 @@
+.cOption {
+  color:#c6c6c6;
+  margin: 0px;
+  margin-top: 4px
+}
+.cOption:hover {
+  background-color: rgb(34 14 64 / 88%);
+  color: #555555;
+}
 #contextmenu {
+    width: 200px;
+    height: 350px;
     position: fixed;
     top: 0;
     left: 0;
