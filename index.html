@@ -67,6 +67,8 @@ $(document).ready(function(){
   });
   $("#menutogglev2").click(function(){
     $("#menu").toggleClass("overlay");
+    document.querySelector("#menu").classList.toggle("overlay");
+  });
   });
 });
 </script>
@@ -76,13 +78,11 @@ $(document).ready(function(){
     document.querySelector("#menu").classList.toggle("overlay");
   });
   document.querySelector("#menutogglev2").click(function(){
-    document.querySelector("#menu").classList.toggle("overlay");
-  });
 });
 </script>
   <script>
   document.body.onkeyup = function(e){
-    if(e.keyCode == 52){
+    if(e.keyCode == 16){
         document.querySelector("#menu").classList.toggle("overlay");
     }
 }
