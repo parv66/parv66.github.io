@@ -2,7 +2,6 @@
   text-shadow: 0.125em 0.125em 0 #3F3F3F;
   color:#AAAAAA;
   margin: 0px;
-  margin-top: 4px
 }
 .cOption:hover {
   background-color: rgb(34 14 64 / 88%);
@@ -14,7 +13,7 @@
 }
 #contextmenu {
     width: 210px;
-    height: 275px;
+    height: 295px;
     position: fixed;
     background-color: #100010;
     background-color: rgba(16,0,16,0.94);
