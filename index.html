@@ -22,13 +22,10 @@
      <meta name="msapplication-TileColor" content="#ffffff">
      <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
      <meta name="theme-color" content="#ffffff">
-     <script src="clickingsound.js"></script>
-     <script src="err.js"></script>
-     <script src="oof.js"></script>
      <title>PARV66.inc</title>
      <meta name="title" content="PARV66.inc">
      <meta name="description" content="parv66.inc is a... thing.  yep a thing.    idk what else...    ok bye">
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://parv66.github.io/parv66.inc/style.css">
      <meta property="og:type" content="parv66.github.io/parv66.inc">
      <meta property="og:title" content="PARV66.inc" />
      <meta property="og:description" content="PARV66.inc idk what else" />
@@ -37,55 +34,29 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="key.js"></script>
      <script src="https://parv66.github.io/parv66.inc/gui/mcbtnclick.js"></script>
+     <script src="https://parv66.github.io/parv66.inc/gui/contextmenu.js"></script>
+     <link rel="stylesheet" href="https://parv66.github.io/parv66.inc/gui/contextmenu.css">
   </head>
  <body id="body">
   <img src="logo.png" class="logo">
-  <h3>Press <a id="menutoggle" class="mcTextPurple">Space</a> To Open Menu!</h3>
-   <div id="menu" class="menu overlay">
-    <h3>Press <a id="menutogglev2" class="mcTextMineGold">Space</a> To Exit!</h3>
-            <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc';",1500">home</button>
+  <p>sidebar here<p>
+   <div id="menu" class="menu">
+            <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc';,1500">home</button>
             <br>
-            <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc/about/';",1500">about</button>
+            <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc/about/';,1500">about</button>
             <br>
-            <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc/creations/';",1500" test="https://mcpedl.com/user/parv66_yt/">creations</button>
+            <button class="button mcbtn" onclick="location.href = 'https://parv66.github.io/parv66.inc/creations/';,1500" test="https://mcpedl.com/user/parv66_yt/">creations</button>
             <br>
-            <button class="button mcbtn" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';",1500">random</button>
+            <button class="button mcbtn" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';,1500">random</button>
             <br>
-            <button class="button mcbtn" onclick="location.href = 'https://discordapp.com/users/622702599468220446/';",1500">contact</button>
+            <button class="button mcbtn" onclick="location.href = 'https://discordapp.com/users/622702599468220446/',1500">contact</button>
             <br>
             <button class="button mcbtn" onclick="err()">???</button>
      <audio id="errors" src="error.666.ogg"></audio>
    </div>
   <footer>
    <h4>footer</h4>
-   <a href="" dragable="false" class="cord"></a><a href="" dragable="false" class="youtube"></a>
+   <a href="" class="cord"></a><a href="" class="youtube"></a>
   </footer>
-  <script>
-$(document).ready(function(){
-  $("#menutoggle").click(function(){
-    $("#menu").toggleClass("overlay");
-  });
-  $("#menutogglev2").click(function(){
-    $("#menu").toggleClass("overlay");
-    document.querySelector("#menu").classList.toggle("overlay");
-  });
-  });
-});
-</script>
-  <script>
-$(document).ready(function(){
-  document.querySelector("#menutoggle").click(function(){
-    document.querySelector("#menu").classList.toggle("overlay");
-  });
-  document.querySelector("#menutogglev2").click(function(){
-});
-</script>
-  <script>
-  document.body.onkeyup = function(e){
-    if(e.keyCode == 16){
-        document.querySelector("#menu").classList.toggle("overlay");
-    }
-}
- </script>
  </body>
 </html>
