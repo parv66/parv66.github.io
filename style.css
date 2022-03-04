@@ -41,60 +41,10 @@ h1, h2, h3, h4, h5, h6, h7{
 	        box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
 	border: solid white 2px;
 }
-.menu {
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
-   text-align: center;
-   font-family: minefont;
-   background-color: #c6c6c6;
-   -webkit-box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
-           box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
-   width: 50vw;
-   height: fit-content;
-   position: relative;
-   top: -13vh;
-   left: 22vw;
-   position: sticky;
-}
-.errl {
-   -webkit-animation: error666 1s linear infinite;
-           animation: error666 1s linear infinite;
-   text-align: center;
-}
-@-webkit-keyframes error666 {
-  0% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
-  100% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
-}
-@keyframes error666 {
-  0% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
-  100% {-webkit-filter: invert(80%) grayscale(0.2);filter: invert(80%) grayscale(0.2);}
-}
 .mcTextDarkred {color: #AA0000;} .mcTextDarkblue {color: #0000AA;} .mcTextDarkpurple {color: #AA00AA;} .mcTextDarkgreen {color: #00AA00;} .mcTextDarkaqua {color: #00AAAA;}
 .mcTextDarkgray, .mcTextDarkgrey {color: #555555;} .mcTextRed {color: #FF5555;} .mcTextGreen {color: #55FF55;} .mcTextAqua {color: #55FFFF;} .mcTextBlue {color: #5555FF;}
 .mcTextYellow {color: #FFFF55;}.mcTextGray, .mcTextGrey {color: #AAAAAA;} .mcTextMineGold {color: #DDD605;} .mcTextGold {color: #FFAA00;} .mcTextWhite {color: #FFFFFF;}
 .mcTextPurple {color: #FF55FF;}
-
-.fofimg {
-	color: bisque;
-	position: absolute;
-	left: 12vw;
-	top: 8vmax;
-	height: 27vw;
-	z-index: 2;
-	padding: 10px;
-	margin: 15px;
-	border: whitesmoke none 15px;
-	display: inline-block;
-}
-.fofdiv {
-     height: 41vmax;
-     z-index: 1;
-}
-.fofbtn {
-    left: 5%;
-    position: relative;
-}
 .youtube {
     background-image: url("https://parv66.tk/icon/youtube.png");
     background-size: cover;
