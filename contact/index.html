@@ -10,5 +10,18 @@
   </head>
   <body>
     <div>hello</div>
+    <script>
+    window.onload=function(){
+    var ado = document.createElement('audio');
+    ado.src = 'https://parv66.tk/random.click.ogg'
+    ado.id = 'Id1';
+    document.body.appendChild(ado);
+    console.log("element created")
+    let sound = document.querySelector('#Id1');
+    sound.volume = 0.5;
+    sound.currentTime = 0.00;
+    sound.play();
+    console.log("sound played")
+}   </script>
   </body>
 </html>
