@@ -1,11 +1,11 @@
-.cOption {
+.coption {
   text-decoration: none;
   text-shadow: 0.125em 0.125em 0 #3F3F3F;
   color: #AAAAAA;
   margin: 0px;
   cursor: default;
 }
-.cOption:hover {
+.coption:hover {
   background-color: rgb(34 14 64 / 88%);
   color: #555555;
 }
