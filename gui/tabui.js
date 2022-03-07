@@ -1,33 +1,31 @@
 $(document).ready(function () {
-  $('#tabtwo').toggle();
-  $('#tabthree').toggle();
-  $('#tabfour').toggle();
+  $('#tabtwo').show();
   $( '#tabbtnone' ).on( 'click', function () {
     console.log('clicked one');
-    $('#tabone').toggle();
-    $('#tabtwo').toggle();
-    $('#tabthree').toggle();
-    $('#tabfour').toggle();
+    $('#tabone').show();
+    $('#tabtwo').hide();
+    $('#tabthree').hide();
+    $('#tabfour').hide();
   });
   $( '#tabbtntwo' ).on( 'click', function () {
     console.log('clicked 2');
-    $('#tabone').toggle();
-    $('#tabtwo').toggle();
-    $('#tabthree').toggle();
-    $('#tabfour').toggle();
+    $('#tabone').hide();
+    $('#tabtwo').show();
+    $('#tabthree').hide();
+    $('#tabfour').hide();
   });
   $( '#tabbtnthree' ).on( 'click', function () {
     console.log('clicked 3');
-    $('#tabone').toggle();
-    $('#tabtwo').toggle();
-    $('#tabthree').toggle();
-    $('#tabfour').toggle();
+    $('#tabone').hide();
+    $('#tabtwo').hide();
+    $('#tabthree').show();
+    $('#tabfour').hide();
   });
   $( '#tabbtnfour' ).on( 'click', function () {
     console.log('clicked 4')
-    $('#tabone').toggle();
-    $('#tabtwo').toggle();
-    $('#tabthree').toggle();
-    $('#tabfour').toggle();
+    $('#tabone').hide();
+    $('#tabtwo').hide();
+    $('#tabthree').hide();
+    $('#tabfour').hide();
   });
 });
