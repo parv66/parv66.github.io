@@ -122,13 +122,20 @@ footer {
 }
 .tab {
        background-color: #C6C6C6;
-    border: none;
-    display: inline-block;
-    z-index: 59;
-    width: 22vw;
-    height: 100px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: -21px;
-    box-shadow: -4px 0px 0px 0px #C6C6C6,0px -4px 0px 0px #C6C6C6,-8px -8px 0px 0px #ffffff,4px -4px 0px 0px #C6C6C6,5px 0px 0px -1px #C6C6C6,-8px -12px 0px 0px #ffffff,-12px -8px 0px 0px #ffffff,-12px 0px 0px 0px #ffffff,4px -12px 0px 0px #ffffff,12px -4px 0px 0px #555555,8px -1px 0px 0px #555555,8px -8px 0px 0px #B8B8B8,-16px 0px 0px 0px black,-16px -8px 0px 0px black,-8px -16px 0px 0px black,-12px -12px 0px 0px black,16px -4px 0px 0px black,4px -16px 0px 0px black,8px -12px 0px 0px black,12px -8px 0px 0px black,0px 10px 15px -3px rgba(0,0,0,0.1),0px 4px 0px 0px #C6C6C6;
+    	border: none;
+    	display: inline-block;
+  	z-index: 7;
+ 	width: 22vw;
+  	height: 100px;
+  	margin-left: 15px;
+    	margin-right: 15px;
+    	margin-bottom: -21px;
+    	box-shadow: -4px 0px 0px 0px #C6C6C6,0px -4px 0px 0px #C6C6C6,-8px -8px 0px 0px #ffffff,4px -4px 0px 0px #C6C6C6,5px 0px 0px -1px #C6C6C6,-8px -12px 0px 0px #ffffff,-12px -8px 0px 0px #ffffff,-12px 0px 0px 0px #ffffff,4px -12px 0px 0px #ffffff,12px -4px 0px 0px #555555,8px -1px 0px 0px #555555,8px -8px 0px 0px #B8B8B8,-16px 0px 0px 0px black,-16px -8px 0px 0px black,-8px -16px 0px 0px black,-12px -12px 0px 0px black,16px -4px 0px 0px black,4px -16px 0px 0px black,8px -12px 0px 0px black,12px -8px 0px 0px black,0px 10px 15px -3px rgba(0,0,0,0.1),0px 4px 0px 0px #C6C6C6;
+}
+.tabindex {
+	box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
+    	width: 96vw;
+    	height: 100px;
+    	background-color: #C6C6C6;
+        z-index: 6;
 }
