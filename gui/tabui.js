@@ -26,6 +26,6 @@ $(document).ready(function () {
     $('#tabone').hide();
     $('#tabtwo').hide();
     $('#tabthree').hide();
-    $('#tabfour').hide();
+    $('#tabfour').show();
   });
 });
