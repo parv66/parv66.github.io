@@ -1,24 +1,25 @@
-$('#tabbtnone').click(function(){
+$( '#tabbtnone' ).on( 'click', function () {
   $('#tabone').css('display', 'block');
   $('#tabtwo').css('display', 'none');
   $('#tabthree').css('display', 'none');
   $('#tabfour').css('display', 'none');
 });
-$('#tabbtntwo').click(function(){
+$( '#tabbtntwo' ).on( 'click', function () {
   $('#tabone').css('display', 'none');
   $('#tabtwo').css('display', 'block');
   $('#tabthree').css('display', 'none');
   $('#tabfour').css('display', 'none');
 });
-$('#tabbtnthree').click(function(){
+$( '#tabbtnthree' ).on( 'click', function () {
   $('#tabone').css('display', 'none');
   $('#tabtwo').css('display', 'none');
   $('#tabthree').css('display', 'block');
   $('#tabfour').css('display', 'none');
 });
-$('#tabbtnfour').click(function(){
+
+$( '#tabbtnfour' ).on( 'click', function () {
   $('#tabone').css('display', 'none');
   $('#tabtwo').css('display', 'none');
   $('#tabthree').css('display', 'none');
-  $('#tabfour').css('display', 'block');
+  $('#tabfour').css('display', 'block');  
 });
