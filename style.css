@@ -130,24 +130,5 @@ footer {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: -21px;
-    box-shadow: -4px 0px 0px 0px #c6c6c6,
-	    0px -4px 0px 0px #c6c6c6,
-	    -8px -8px 0px 0px #ffffff, 
-	    4px -4px 0px 0px #c6c6c6, 
-	    5px 0px 0px -1px #c6c6c6, 
-	    -8px -12px 0px 0px #ffffff, 
-	    -12px -8px 0px 0px #ffffff, 
-	    -12px 0px 0px 0px #ffffff, 
-	    4px -12px 0px 0px #ffffff, 
-	    12px -4px 0px 0px #555555, 
-	    8px -1px 0px 0px #555555, 
-	    8px -8px 0px 0px #b8b8b8, 
-	    -16px 0px 0px 0px black, 
-	    -16px -8px 0px 0px black, 
-	    -8px -16px 0px 0px black, 
-	    -12px -12px 0px 0px black, 
-	    16px -4px 0px 0px black, 
-	    4px -16px 0px 0px black, 
-	    8px -12px 0px 0px black, 
-	    12px -8px 0px 0px black;
+    box-shadow: -4px 0px 0px 0px #C6C6C6,0px -4px 0px 0px #C6C6C6,-8px -8px 0px 0px #ffffff,4px -4px 0px 0px #C6C6C6,5px 0px 0px -1px #C6C6C6,-8px -12px 0px 0px #ffffff,-12px -8px 0px 0px #ffffff,-12px 0px 0px 0px #ffffff,4px -12px 0px 0px #ffffff,12px -4px 0px 0px #555555,8px -1px 0px 0px #555555,8px -8px 0px 0px #B8B8B8,-16px 0px 0px 0px black,-16px -8px 0px 0px black,-8px -16px 0px 0px black,-12px -12px 0px 0px black,16px -4px 0px 0px black,4px -16px 0px 0px black,8px -12px 0px 0px black,12px -8px 0px 0px black,0px 10px 15px -3px rgba(0,0,0,0.1),0px 4px 0px 0px #C6C6C6;
 }
