@@ -79,7 +79,31 @@ footer {
 	background-color: #c6c6c6;
 	display: block;
 	text-align: center;
-	box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
+	box-shadow: 8px 0 0 0 #555555, 
+		0 8px 0 0 #555555, 
+		4px 4px 0 0 #555555, 
+		-8px 0 0 0 #e8e8e8, 
+		0 -8px 0 0 #e8e8e8, 
+		-4px -4px 0 0 #e8e8e8, 
+		0 0 0 4px #b5b4b5,
+		4px 8px 0 0 #555, 
+		8px 4px 0 0 #555, 
+		-4px -8px 0 0 #e8e8e8, 
+		-8px -4px 0 0 #e8e8e8, 
+		8px -4px 0 0 #000, 
+		4px -8px 0 0 #000, 
+		-8px 4px 0 0 #000,
+		-4px 8px 0 0 #000, 
+		-8px -8px 0 0 #000, 
+		8px 8px 0 0 #000, 
+		-12px 0 0 0 #000, 
+		-12px -4px 0 0 #000, 
+		12px 0 0 0 #000, 
+		12px 4px 0 0 #000, 
+		0 -12px 0 0 #000, 
+		-4px -12px 0 0 #000, 
+		0 12px 0 0 #000, 
+		4px 12px 0 0 #000;
 	width: 100%;
 	height: 20vh;
 	display: block;
@@ -95,4 +119,35 @@ footer {
 	right: 0vh;
 	left: 0vh;
 	bottom: 0vh;
+}
+.tab {
+       background-color: #C6C6C6;
+    border: none;
+    display: inline-block;
+    z-index: 59;
+    width: 22vw;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: -21px;
+    box-shadow: -4px 0px 0px 0px #c6c6c6,
+	    0px -4px 0px 0px #c6c6c6,
+	    -8px -8px 0px 0px #ffffff, 
+	    4px -4px 0px 0px #c6c6c6, 
+	    5px 0px 0px -1px #c6c6c6, 
+	    -8px -12px 0px 0px #ffffff, 
+	    -12px -8px 0px 0px #ffffff, 
+	    -12px 0px 0px 0px #ffffff, 
+	    4px -12px 0px 0px #ffffff, 
+	    12px -4px 0px 0px #555555, 
+	    8px -1px 0px 0px #555555, 
+	    8px -8px 0px 0px #b8b8b8, 
+	    -16px 0px 0px 0px black, 
+	    -16px -8px 0px 0px black, 
+	    -8px -16px 0px 0px black, 
+	    -12px -12px 0px 0px black, 
+	    16px -4px 0px 0px black, 
+	    4px -16px 0px 0px black, 
+	    8px -12px 0px 0px black, 
+	    12px -8px 0px 0px black;
 }
