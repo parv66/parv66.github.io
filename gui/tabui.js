@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 $( '#tabbtnone' ).on( 'click', function () {
   console.log('clicked one');
   $('#tabone').css('display', 'block');
@@ -26,4 +28,5 @@ $( '#tabbtnfour' ).on( 'click', function () {
   $('#tabtwo').css('display', 'none');
   $('#tabthree').css('display', 'none');
   $('#tabfour').css('display', 'block');  
+});
 });
