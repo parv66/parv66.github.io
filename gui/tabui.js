@@ -1,5 +1,8 @@
 $(document).ready(function () {
   $('#tabtwo').show();
+  $('#tabtwo').hide();
+  $('#tabthree').hide();
+  $('#tabfour').hide();
   $( '#tabbtnone' ).on( 'click', function () {
     console.log('clicked one');
     $('#tabone').show();
