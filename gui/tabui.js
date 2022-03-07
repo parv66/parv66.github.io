@@ -1,24 +1,24 @@
-$('.tabbtn1').click(function(){
-  $('.tab1').css('display', 'block');
-  $('.tab2').css('display', 'none');
-  $('.tab3').css('display', 'none');
-  $('.tab4').css('display', 'none');
+$('.tabbtnone').click(function(){
+  $('.tabone').css('display', 'block');
+  $('.tabtwo').css('display', 'none');
+  $('.tabthree').css('display', 'none');
+  $('.tabfour').css('display', 'none');
 });
-$('.tabbtn2').click(function(){
-  $('.tab1').css('display', 'none');
-  $('.tab2').css('display', 'block');
-  $('.tab3').css('display', 'none');
-  $('.tab4').css('display', 'none');
+$('.tabbtntwo').click(function(){
+  $('.tabone').css('display', 'none');
+  $('.tabtwo').css('display', 'block');
+  $('.tabthree').css('display', 'none');
+  $('.tabfour').css('display', 'none');
 });
-$('.tabbtn3').click(function(){
-  $('.tab1').css('display', 'none');
-  $('.tab2').css('display', 'none');
-  $('.tab3').css('display', 'block');
-  $('.tab4').css('display', 'none');
+$('.tabbtnthree').click(function(){
+  $('.tabone').css('display', 'none');
+  $('.tabtwo').css('display', 'none');
+  $('.tabthree').css('display', 'block');
+  $('.tabfour').css('display', 'none');
 });
-$('.tabbtn4').click(function(){
-  $('.tab1').css('display', 'none');
-  $('.tab2').css('display', 'none');
-  $('.tab3').css('display', 'none');
-  $('.tab4').css('display', 'block');
+$('.tabbtnfour').click(function(){
+  $('.tabone').css('display', 'none');
+  $('.tabtwo').css('display', 'none');
+  $('.tabthree').css('display', 'none');
+  $('.tabfour').css('display', 'block');
 });
