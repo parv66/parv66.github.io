@@ -125,7 +125,7 @@ footer {
        border: none;
        display: inline-block;
        z-index: 5;
-       width: 22%;
+       width: 19%;
        height: 100px;
        margin-left: 16px;
        margin-right: 16px;
@@ -159,7 +159,7 @@ footer {
        border: none;
        display: inline-block;
        z-index: 7;
-       width: 22%;
+       width: 19%;
        height: 100px;
        margin-left: 16px;
        margin-right: 16px;
@@ -214,8 +214,8 @@ footer {
     -4px -12px 0 0 #000,
     0 12px 0 0 #000,
     4px 12px 0 0 #000;
-	width: 96.33%;
-	height: 100px;
+	width: 84.33%;
+	height: 500px;
 	background-color: #C6C6C6;
 	z-index: 6;
 }
