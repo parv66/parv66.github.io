@@ -165,28 +165,33 @@ footer {
        margin-right: 16px;
        margin-bottom: 4px;
        box-shadow: -4px 0px 0px 0px #c6c6c6,
-		   0px -4px 0px 0px #c6c6c6,
-		   -8px -8px 0px 0px #ffffff,
-		   4px -4px 0px 0px #c6c6c6,
-		   5px 0px 0px -1px #c6c6c6,
-		   -8px -12px 0px 0px #ffffff,
-		   -12px -8px 0px 0px #ffffff,
-		   -12px 0px 0px 0px #ffffff,
-		   4px -12px 0px 0px #ffffff,
-		   12px -4px 0px 0px #555555,
-		   8px -1px 0px 0px #555555,
-		   8px -8px 0px 0px #b8b8b8,
-		   -16px -4px 0px 0px black,
-		   -16px -8px 0px 0px black,
-		   -8px -16px 0px 0px black,
-		   -12px -12px 0px 0px black,
-		   16px -4px 0px 0px black,
-		   4px -16px 0px 0px black,
-		   8px -12px 0px 0px black,
-		   12px -8px 0px 0px black,
-		   0px 4px 0px 0px #c6c6c6,
-		   4px 4px 0px 0px #c6c6c6,
-		   -4px 6px 0px 0px #c6c6c6;
+     0px -4px 0px 0px #c6c6c6,
+     -8px -8px 0px 0px #ffffff,
+     4px -4px 0px 0px #c6c6c6,
+     5px 0px 0px -1px #c6c6c6,
+     -8px -12px 0px 0px #ffffff,
+     -12px -8px 0px 0px #ffffff,
+     -12px 0px 0px 0px #ffffff,
+     4px -12px 0px 0px #ffffff,
+     12px -4px 0px 0px #555555,
+     8px -1px 0px 0px #555555,
+     8px -8px 0px 0px #b8b8b8,
+     -16px -4px 0px 0px black,
+     -16px -8px 0px 0px black,
+     -8px -16px 0px 0px black,
+     -12px -12px 0px 0px black,
+     16px -4px 0px 0px black,
+     4px -16px 0px 0px black,
+     8px -12px 0px 0px black,
+     12px -8px 0px 0px black,
+     0px 4px 0px 0px #c6c6c6,
+     4px 4px 0px 0px #c6c6c6,
+     -4px 6px 0px 0px #c6c6c6;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       flex-wrap: wrap;
+       align-content: flex-start;
 }
 .tabindex {
 	box-shadow: 8px 0 0 0 #555555,
@@ -219,3 +224,17 @@ footer {
 	background-color: #C6C6C6;
 	z-index: 6;
 }
+.tabicon {
+	width: 80px;
+	height: auto;
+	position: relative;
+	margin: auto;
+}
+.tabtext {
+	font-family: 'minefont';
+	position: relative;
+	font-size: 30px;
+	top: 5px;
+	color: #4c4c4c;
+}
+.tabtext2 {background-color: #4c4c4c;color: #ffffff;font-family: 'minefont';box-shadow: 4px 0px 0px 0px #4C4C4C,0px -4px 0px 0px #4C4C4C,-4px 0px 0px 0px #4C4C4C,0px 4px 0px 0px #4C4C4C;font-size: 30px;position: relative;left: 6px;-webkit-user-modify: read-write-plaintext-only;bottom: 4px;}
