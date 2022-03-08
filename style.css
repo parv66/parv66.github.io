@@ -199,10 +199,7 @@ footer {
      12px -8px 0px 0px black,
      0px 4px 0px 0px #c6c6c6,
      4px 4px 0px 0px #c6c6c6,
-     -4px 6px 0px 0px #c6c6c6,
-	 4px 6px 0px 0px #c6c6c6,
-	 12px 6px 0px 0px #555555,
-	 16px 6px 0px 0px black;
+     -4px 6px 0px 0px #c6c6c6;
        display: flex;
        flex-direction: column;
        align-items: flex-start;
