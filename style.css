@@ -129,7 +129,6 @@ footer {
 .tabbtn {
        background-color: #626262;
        border: none;
-       display: inline-block;
        z-index: 5;
        width: 19%;
        height: 100px;
@@ -159,6 +158,11 @@ footer {
 		   0px 4px 0px 0px #626262,
 		   4px 4px 0px 0px #626262,
 		   -4px 6px 0px 0px #626262;
+	display: flex;
+    	flex-direction: column;
+    	align-items: flex-start;
+    	flex-wrap: wrap;
+    	align-content: flex-start;
 }
 .tabbtnactive {
        background-color: #c6c6c6;
