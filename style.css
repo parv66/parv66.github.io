@@ -120,15 +120,49 @@ footer {
 	left: 0vh;
 	bottom: 0vh;
 }
-.tab {
+.tabbtn {
+       background-color: #626262;
+       border: none;
+       display: inline-block;
+       z-index: 7;
+       width: 22%;
+       height: 100px;
+       margin-left: 16px;
+       margin-right: 16px;
+       margin-bottom: 4px;
+       box-shadow: -4px 0px 0px 0px #626262,
+		   0px -4px 0px 0px #626262,
+		   -8px -8px 0px 0px #C4C4C4,
+		   4px -4px 0px 0px #626262,
+		   5px 0px 0px -1px #626262,
+		   -8px -12px 0px 0px #C4C4C4,
+		   -12px -8px 0px 0px #C4C4C4,
+		   -12px 0px 0px 0px #C4C4C4,
+		   4px -12px 0px 0px #C4C4C4,
+		   12px -4px 0px 0px #2C2C2C,
+		   8px -1px 0px 0px #2C2C2C,
+		   8px -8px 0px 0px #8B8B8B,
+		   -16px -4px 0px 0px black,
+		   -16px -8px 0px 0px black,
+		   -8px -16px 0px 0px black,
+		   -12px -12px 0px 0px black,
+		   16px -4px 0px 0px black,
+		   4px -16px 0px 0px black,
+		   8px -12px 0px 0px black,
+		   12px -8px 0px 0px black,
+		   0px 4px 0px 0px #626262,
+		   4px 4px 0px 0px #626262,
+		   -4px 6px 0px 0px #626262;
+}
+.tabbtnactive {
        background-color: #c6c6c6;
        border: none;
        display: inline-block;
        z-index: 7;
-       width: 21%;
+       width: 22%;
        height: 100px;
-       margin-left: 24px;
-       margin-right: 24px;
+       margin-left: 16px;
+       margin-right: 16px;
        margin-bottom: 4px;
        box-shadow: -4px 0px 0px 0px #c6c6c6,
 		   0px -4px 0px 0px #c6c6c6,
@@ -180,7 +214,7 @@ footer {
     -4px -12px 0 0 #000,
     0 12px 0 0 #000,
     4px 12px 0 0 #000;
-	width: 96vw;
+	width: 96.33%;
 	height: 100px;
 	background-color: #C6C6C6;
 	z-index: 6;
