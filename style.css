@@ -250,7 +250,7 @@ footer {
 .tabtext {
 	font-family: 'minefont';
 	position: relative;
-	font-size: 30px;
+	font-size: 25px;
 	top: 5px;
 	color: #4c4c4c;
 }
@@ -259,9 +259,9 @@ footer {
 	color: #ffffff;
 	font-family: 'minefont';
 	box-shadow: 4px 0px 0px 0px #4C4C4C,0px -4px 0px 0px #4C4C4C,-4px 0px 0px 0px #4C4C4C,0px 4px 0px 0px #4C4C4C;
-	font-size: 30px;
+	font-size: 25px;
 	position: relative;
 	left: 6px;
 	bottom: 4px;
-	padding-left: 10px;
+	font-weight: lighter;
 }
