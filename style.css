@@ -1,6 +1,12 @@
 @font-face {font-family: "minefont";
   src: url("mcfont.woff") format("woff");
 }
+@font-face {font-family: "minefontbig";
+  src: url("minefontbig.woff") format("woff");
+}
+@font-face {font-family: "minefontbigcaps";
+  src: url("minefontbigcaps.woff") format("woff");
+}
 .logo {
 	width: 100%;
 	-webkit-box-align:center;
