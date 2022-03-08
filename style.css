@@ -124,7 +124,7 @@ footer {
        background-color: #626262;
        border: none;
        display: inline-block;
-       z-index: 7;
+       z-index: 5;
        width: 22%;
        height: 100px;
        margin-left: 16px;
