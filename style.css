@@ -157,12 +157,15 @@ footer {
 		   12px -8px 0px 0px black,
 		   0px 4px 0px 0px #626262,
 		   4px 4px 0px 0px #626262,
-		   -4px 6px 0px 0px #626262;
-	display: flex;
-    	flex-direction: column;
-    	align-items: flex-start;
-    	flex-wrap: wrap;
-    	align-content: flex-start;
+		   -4px 6px 0px 0px #626262,
+		   4px 6px 0px 0px #626262,
+	       12px 6px 0px 0px #2C2C2C,
+		   16px 6px 0px 0px black;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       flex-wrap: wrap;
+       align-content: flex-start;
 }
 .tabbtnactive {
        background-color: #c6c6c6;
@@ -202,6 +205,7 @@ footer {
        align-items: flex-start;
        flex-wrap: wrap;
        align-content: flex-start;
+       text-align: end;
 }
 .tabindex {
 	box-shadow: 8px 0 0 0 #555555,
@@ -247,4 +251,4 @@ footer {
 	top: 5px;
 	color: #4c4c4c;
 }
-.tabtext2 {background-color: #4c4c4c;color: #ffffff;font-family: 'minefont';box-shadow: 4px 0px 0px 0px #4C4C4C,0px -4px 0px 0px #4C4C4C,-4px 0px 0px 0px #4C4C4C,0px 4px 0px 0px #4C4C4C;font-size: 30px;position: relative;left: 6px;-webkit-user-modify: read-write-plaintext-only;bottom: 4px;}
+.tabtext2 {background-color: #4c4c4c;color: #ffffff;font-family: 'minefont';box-shadow: 4px 0px 0px 0px #4C4C4C,0px -4px 0px 0px #4C4C4C,-4px 0px 0px 0px #4C4C4C,0px 4px 0px 0px #4C4C4C;font-size: 30px;position: relative;left: 6px;bottom: 4px;}
