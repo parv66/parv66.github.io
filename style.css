@@ -128,6 +128,7 @@ footer {
 }
 .tabbtn {
        background-color: #626262;
+	   color: #B1B1B1;
        border: none;
        z-index: 5;
        width: 19%;
@@ -169,6 +170,7 @@ footer {
 }
 .tabbtnactive {
        background-color: #c6c6c6;
+	   color: #4C4C4C;
        border: none;
        display: inline-block;
        z-index: 7;
@@ -249,11 +251,9 @@ footer {
 	position: relative;
 	font-size: 25px;
 	top: 5px;
-	color: #4c4c4c;
 }
 .tabtext2 {
 	background-color: #4c4c4c;
-	color: #ffffff;
 	font-family: 'minefont';
 	box-shadow: 4px 0px 0px 0px #4C4C4C,0px -4px 0px 0px #4C4C4C,-4px 0px 0px 0px #4C4C4C,0px 4px 0px 0px #4C4C4C;
 	font-size: 25px;
@@ -262,6 +262,6 @@ footer {
 	bottom: 4px;
 	font-weight: lighter;
 }
-.tabbtn .tabtext,.tabbtn .tabtext2 {
-        color: #B1B1B1;
+.tabbtnactive .tabtext2 {
+	color: #FFFFFF;
 }
