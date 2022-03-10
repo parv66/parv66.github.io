@@ -127,16 +127,20 @@ footer {
 	bottom: 0vh;
 }
 .tabbtn {
-       background-color: #626262;
-	   color: #B1B1B1;
-       border: none;
-       z-index: 5;
-       width: 19%;
-       height: 100px;
-       margin-left: 16px;
-       margin-right: 16px;
-       margin-bottom: 4px;
-       box-shadow: -4px 0px 0px 0px #626262,
+       -webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
+	background-color: #626262;
+	color: #B1B1B1;
+       	border: none;
+       	z-index: 5;
+       	width: 19%;
+       	height: 100px;
+       	margin-left: 16px;
+       	margin-right: 16px;
+       	margin-bottom: 4px;
+       	box-shadow: -4px 0px 0px 0px #626262,
 		   0px -4px 0px 0px #626262,
 		   -8px -8px 0px 0px #C4C4C4,
 		   4px -4px 0px 0px #626262,
@@ -162,15 +166,19 @@ footer {
 		   4px 6px 0px 0px #626262,
 	       12px 6px 0px 0px #2C2C2C,
 		   16px 6px 0px 0px black;
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       flex-wrap: wrap;
-       align-content: flex-start;
+       	display: flex;
+       	flex-direction: column;
+       	align-items: flex-start;
+       	flex-wrap: wrap;
+       	align-content: flex-start;
 }
 .tabbtnactive {
-       background-color: #c6c6c6;
-	   color: #4C4C4C;
+       -webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
+	background-color: #c6c6c6;
+	color: #4C4C4C;
        border: none;
        display: inline-block;
        z-index: 7;
@@ -241,18 +249,30 @@ footer {
 	z-index: 6;
 }
 .tabicon {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
 	width: 80px;
 	height: auto;
 	position: relative;
 	margin: auto;
 }
 .tabtext {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
 	font-family: 'minefont';
 	position: relative;
 	font-size: 25px;
 	top: 5px;
 }
 .tabtext2 {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
 	background-color: #4c4c4c;
 	font-family: 'minefont';
 	box-shadow: 4px 0px 0px 0px #4C4C4C,0px -4px 0px 0px #4C4C4C,-4px 0px 0px 0px #4C4C4C,0px 4px 0px 0px #4C4C4C;
@@ -263,5 +283,9 @@ footer {
 	font-weight: lighter;
 }
 .tabbtnactive .tabtext2 {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
 	color: #FFFFFF;
 }
