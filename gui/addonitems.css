@@ -1,14 +1,14 @@
 .currency {
     width: 29px;
     height: 29px;
-    background-image: url(https://parv66.tk/gui/images/prototype_currency.png);
+    background-image: url("https://parv66.github.io/gui/images/prototype_currency.png");
     background-size: cover;
     z-index: 2;
     display: block;
 }
 /* currency*/
 .copperplusplus {
-    background-image: url("https://parv66.tk/creations/icons/cog.png");
+    background-image: url("https://parv66.github.io/creations/icons/cog.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 29px;
@@ -18,7 +18,7 @@
 }
 /* copper++ addon*/
 .papple {
-    background-image: url("https://parv66.tk/creations/icons/pappleicon.png");
+    background-image: url("https://parv66.github.io/creations/icons/pappleicon.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 29px;
