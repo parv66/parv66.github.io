@@ -13,7 +13,7 @@ body {
   font-size: 18px;
 }
 html {
-  background-image: url("https://parv66.tk/backgroundv2.png");
+  background-image: url("https://parv66.github.io/backgroundv2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -141,7 +141,7 @@ h1 {
   }
 }
 .copperplusplus{
-  background-image: url("https://parv66.tk/creations/icons/cog.png");
+  background-image: url("https://parv66.github.io/creations/icons/cog.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: var(--slot-size);
@@ -150,7 +150,7 @@ h1 {
   cursor: default;
 }
 .papple{
-  background-image: url("https://parv66.tk/creations/icons/pappleicon.png");
+  background-image: url("https://parv66.github.io/creations/icons/pappleicon.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: var(--slot-size);
