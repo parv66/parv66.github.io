@@ -1,6 +1,6 @@
 window.onload=function(){
 	var ado = document.createElement('audio');
-	ado.src = 'https://parv66.tk/random.click.ogg'
+	ado.src = 'https://parv66.github.io/random.click.ogg'
 	ado.id = 'btnsnd';
 	document.body.appendChild(ado);
   	console.log("element created")
