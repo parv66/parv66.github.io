@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6, h7{
 .mcTextYellow {color: #FFFF55;}.mcTextGray, .mcTextGrey {color: #AAAAAA;} .mcTextMineGold {color: #DDD605;} .mcTextGold {color: #FFAA00;} .mcTextWhite {color: #FFFFFF;}
 .mcTextPurple {color: #FF55FF;}
 .youtube {
-    background-image: url("https://parv66.tk/icon/youtube.png");
+    background-image: url("https://parv66.github.io/icon/youtube.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 30px;
@@ -62,12 +62,12 @@ h1, h2, h3, h4, h5, h6, h7{
     margin: 5px;
 }
 .youtube:hover {
-    background-image: url("https://parv66.tk/icon/youtube_hover.png");
+    background-image: url("https://parv66.github.io/icon/youtube_hover.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 .cord {
-    background-image: url("https://parv66.tk/icon/cord.png");
+    background-image: url("https://parv66.github.io/icon/cord.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 30px;
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6, h7{
     margin: 5px;
 }
 .cord:hover {
-    background-image: url("https://parv66.tk/icon/cord_hover.png");
+    background-image: url("https://parv66.github.io/icon/cord_hover.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
