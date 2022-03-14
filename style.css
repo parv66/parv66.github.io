@@ -247,6 +247,12 @@ footer {
 	height: 500px;
 	background-color: #C6C6C6;
 	z-index: 6;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
 }
 .tabicon {
 	-webkit-user-select: none; /* Safari */        
@@ -288,4 +294,49 @@ footer {
 	-ms-user-select: none; /* IE10+/Edge */
 	user-select: none;
 	color: #FFFFFF;
+}
+.artibtn {
+	box-shadow: 0 10px 22px -6px #00000021, 0 -4px #555555 inset, 0 4px #ffffff inset, -4px 0 #555555 inset, 4px 0 #ffffff inset;
+	background-color: #C6C6C6;
+	width: 95%;
+	border: none;
+	margin: 10px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	align-self: center;
+	justify-content: center;
+	align-content: flex-start;
+}
+.articon {
+	width: 15%;
+	margin: 2%;
+}
+.artitle {
+	font-size: xx-large;
+	text-align: justify;
+	margin-top: 17px;
+	text-decoration: none;
+	text-shadow: 0.1em 0.1em 0 #9d9d9d;
+	color: #fff;
+	font-family: 'minefontbigcaps';
+}
+.artdesc {
+	position: relative;
+	font-size: larger;
+	font-family: 'minefontbig';
+	color: #fff;
+	text-align: justify;
+	right: 67px;
+	top: 45px;
+	width: 59%;
+	text-shadow: 0.125em 0.125em  0 #9d9d9d;
+}
+.artidate {
+	position: relative;
+	font-family: 'minefont';
+	margin: 10px;
+	color: #fff;
+	text-shadow: 0.125em 0.125em 0 #9d9d9d;
 }
