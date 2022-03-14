@@ -253,6 +253,11 @@ footer {
 	justify-content: flex-start;
 	align-content: center;
 	align-items: center;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none; 
+}
+.tabindex::-webkit-scrollbar {
+  display: none;
 }
 .tabicon {
 	-webkit-user-select: none; /* Safari */        
