@@ -305,6 +305,11 @@ footer {
 	justify-content: center;
 	align-content: flex-start;
 }
+.artibtn:hover {
+		background-color: #0bbf41;
+	-webkit-box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
+	        box-shadow: 0 10px 22px -6px #00000021, 0 -4px #06ab33 inset, 0 4px #05d30cf7 inset, -4px 0 #06ab33 inset, 4px 0 #05d30cf7 inset;
+}
 .articon {
 	width: 15%;
 	margin: 2%;
