@@ -352,7 +352,7 @@ footer {
     flex-wrap: wrap;
     margin: auto;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
 	.tabbtn {
 	width: 20.5%;
 	}
@@ -360,7 +360,7 @@ footer {
 	width: 87vw;
 	}
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
 	.tabbtn {
 	width: 19.6%;
 	}
@@ -368,20 +368,12 @@ footer {
 	width: 87vw;
 	}
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
 	.tabbtn {
 	width: 19.64%;
 	}
 	.tabindex {
 	width: 87vw;
-	}
-}
-@media only screen and (max-width: 1200px) {
-	.tabbtn {
-	width: 249px;
-	}
-	.tabindex {
-	width: 1100px;
 	}
 }
 @media only screen and (min-width: 1200px) {
