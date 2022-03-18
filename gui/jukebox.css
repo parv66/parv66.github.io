@@ -1,11 +1,14 @@
 #jukebox {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  position: fixed;
+  top: 83vh;
+  right: 60vw;
   left: 0;
   width: 430px;
-  height: 100px;
+  height: 120px;
   margin: -4px auto;
+  z-index: 11;
+  box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
+  background-color: #C6C6C6;
 }
 
 #bg-artwork {
@@ -36,8 +39,8 @@
 
 #player {
   position: relative;
-  height: 100%;
-  z-index: 3;
+  height: 90%;
+  z-index: 11;
 }
 
 #player-track {
@@ -46,14 +49,18 @@
   right: 15px;
   left: 15px;
   padding: 13px 22px 10px 184px;
-  background-color: #fff7f7;
   border-radius: 15px 15px 0 0;
   transition: 0.3s ease top;
-  z-index: 1;
+  z-index: -2;
+  background-color: #C6C6C6;
+  box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
+  opacity: 0;
 }
 
 #player-track.active {
-  top: -92px;
+  top: -116px;
+  z-index: 9;
+  opacity: 100;
 }
 
 #album-name {
@@ -93,7 +100,7 @@
 
 #track-time.active #current-time,
 #track-time.active #track-length {
-  color: #f86d92;
+  color: #40da00;
   background-color: transparent;
 }
 
@@ -141,7 +148,7 @@
   bottom: 0;
   left: 0;
   width: 0;
-  background-color: #fd6d94;
+  background-color: #40da00;
   transition: 0.2s ease width;
   z-index: 1;
 }
@@ -149,10 +156,8 @@
 #player-content {
   position: relative;
   height: 100%;
-  background-color: #fff;
-  box-shadow: 0 30px 80px #656565;
-  border-radius: 15px;
-  z-index: 2;
+  background-color: #C6C6C6;
+  z-index: 10;
 }
 
 #album-art {
@@ -164,7 +169,6 @@
   transform: rotateZ(0);
   transition: 0.3s ease all;
   box-shadow: 0 0 0 10px #fff;
-  border-radius: 50%;
   overflow: hidden;
 }
 
@@ -274,9 +278,8 @@
   width: 26px;
   height: 26px;
   padding: 25px;
-  background-color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
+  font-family: 'minefontbig';
+  text-align: center;
 }
 
 .button i {
@@ -288,14 +291,9 @@
 }
 
 .button,
-.button i {
+.button a {
   transition: 0.2s ease all;
 }
-
-.button:hover {
-  background-color: #d6d6de;
-}
-
 .button:hover i {
   color: #fff;
 }
