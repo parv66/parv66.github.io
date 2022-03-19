@@ -3,6 +3,7 @@ $( document ).ready(function() {
 	$('#toggleview').click(function(){
 		$('#jukebox').toggleClass("jukehide");
 	});
+	
 });
 $(function () {
   var playerTrack = $("#player-track"),
@@ -230,7 +231,7 @@ $(function () {
 
     selectTrack(0);
 
-    audio.loop = false;
+    audio.loop = true;
 
     playPauseButton.on("click", playPause);
 
@@ -254,4 +255,8 @@ $(function () {
 
   initPlayer();
 });
-
+$(window).unload(function() {
+   	var timestamp = audio.currentTime;
+	var songindex = currIndex;
+	document.cookie = "time= timestamp;sindex= songindex; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+}
