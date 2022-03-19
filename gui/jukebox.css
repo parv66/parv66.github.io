@@ -1,8 +1,10 @@
+.jukehide {
+  left: -75vw;
+}
 #jukebox {
   position: fixed;
   top: 83vh;
   right: 60vw;
-  left: 0;
   width: 430px;
   height: 120px;
   margin: -4px auto;
@@ -295,4 +297,19 @@
 }
 .button:hover i {
   color: #fff;
+}
+#minimize {
+  z-index: 15;
+  left: 102%;
+  height: 120px;
+  width: 10px;
+  position: relative;
+  bottom: 116px;
+}
+#toggleview {
+  bottom: 1%;
+  z-index: 15;
+  left: 38%;
+  height: 120px;
+  width: 10px;
 }
