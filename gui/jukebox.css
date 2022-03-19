@@ -1,10 +1,10 @@
 .jukehide {
-  left: -75vw;
+  left: -70vw;
 }
 #jukebox {
   position: fixed;
   top: 83vh;
-  right: 60vw;
+  right: 65vw;
   width: 430px;
   height: 120px;
   margin: -4px auto;
