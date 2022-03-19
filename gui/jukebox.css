@@ -1,16 +1,17 @@
-.jukehide {
-  left: -70vw;
+#jukebox.jukehide {
+  left: -434px;
 }
 #jukebox {
   position: fixed;
-  top: 83vh;
-  right: 65vw;
+  bottom: 21px;
+  left: 14px;
   width: 430px;
   height: 120px;
   margin: -4px auto;
   z-index: 11;
   box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
   background-color: #C6C6C6;
+  transition: 0.3s ease-in-out all;
 }
 
 #bg-artwork {
@@ -51,7 +52,6 @@
   right: 15px;
   left: 15px;
   padding: 13px 22px 10px 184px;
-  transition: 0.3s ease top;
   z-index: -2;
   background-color: #C6C6C6;
   box-shadow: 8px 0 0 0 #555555, 0 8px 0 0 #555555, 4px 4px 0 0 #555555, -8px 0 0 0 #e8e8e8, 0 -8px 0 0 #e8e8e8, -4px -4px 0 0 #e8e8e8, 0 0 0 4px #b5b4b5, 4px 8px 0 0 #555, 8px 4px 0 0 #555, -4px -8px 0 0 #e8e8e8, -8px -4px 0 0 #e8e8e8, 8px -4px 0 0 #000, 4px -8px 0 0 #000, -8px 4px 0 0 #000, -4px 8px 0 0 #000, -8px -8px 0 0 #000, 8px 8px 0 0 #000, -12px 0 0 0 #000, -12px -4px 0 0 #000, 12px 0 0 0 #000, 12px 4px 0 0 #000, 0 -12px 0 0 #000, -4px -12px 0 0 #000, 0 12px 0 0 #000, 4px 12px 0 0 #000;
