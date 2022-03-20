@@ -66,14 +66,12 @@ $(function () {
         playerTrack.addClass("active");
         albumArt.addClass("active");
         checkBuffering();
-        i.attr("class", "fas fa-pause");
         audio.play();
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
         clearInterval(buffInterval);
         albumArt.removeClass("buffering");
-        i.attr("class", "fas fa-play");
         audio.pause();
       }
     }, 300);
@@ -178,7 +176,6 @@ $(function () {
   function selectTrack(flag) {
     if (flag == 0 || flag == 1) ++currIndex;
     else --currIndex;
-    currsong = currsong + flag;
 	  
     if (currIndex > -1 && currIndex < albumArtworks.length) {
       if (flag == 0) i.attr("class", "fa fa-play");
