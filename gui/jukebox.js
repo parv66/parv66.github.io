@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-   	$("body").prepend("<div id='jukebox' class='jukehide'><div id='player'><div id='player-track' class='active'><div id='album-name'>Dawn</div><div id='track-name'>Skylike - Dawn</div><div id='track-time' class='active'><div id='current-time'>00:00</div><div id='track-length'>03:09</div></div><div id='s-area'><div id='ins-time' style='left: 0px; margin-left: 0px; display: none;'>00:00</div><div id='s-hover' style='width: 0px;'></div><div id='seek-bar' style='width: 0px;'></div></div></div><div id='player-content'><div id='album-art' class=''><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg' class='active' id='_1'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg' id='_2'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg' id='_3'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg' id='_4'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg' id='_5'><div id='buffer-box'>Buffering ...</div></div><div id='player-controls'><div class='control'><div class='button' id='play-previous'><a>&lt;&lt;</a></div></div><div class='control'><div class='button' id='play-pause-button'><a>||</a></div></div><div class='control'><div class='button' id='play-next'><a>&gt;&gt;</a></div></div></div></div></div><div id='minimize'><button id='toggleview' class='button mcbtn'>!</button></div></div>");
+   	$("body").prepend("<div id='jukebox' class='jukehide'><div id='player'><div id='player-track' class='active'><div id='album-name'>Otherside</div><div id='track-name'>Lena Raine</div><div id='track-time' class='active'><div id='current-time'>00:00</div><div id='track-length'>03:09</div></div><div id='s-area'><div id='ins-time' style='left: 0px; margin-left: 0px; display: none;'>00:00</div><div id='s-hover' style='width: 0px;'></div><div id='seek-bar' style='width: 0px;'></div></div></div><div id='player-content'><div id='album-art' class=''><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg' class='active' id='_1'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg' id='_2'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg' id='_3'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg' id='_4'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg' id='_5'><div id='buffer-box'>Buffering ...</div></div><div id='player-controls'><div class='control'><div class='button' id='play-previous'><a>&lt;&lt;</a></div></div><div class='control'><div class='button' id='play-pause-button'><a>||</a></div></div><div class='control'><div class='button' id='play-next'><a>&gt;&gt;</a></div></div></div></div></div><div id='minimize'><button id='toggleview' class='button mcbtn'>!</button></div></div>");
 	$('#toggleview').click(function(){
 		$('#jukebox').toggleClass("jukehide");
 	});	
@@ -56,8 +56,15 @@ $(function () {
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/minecraft.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
-    playNextTrackButton = $("#play-next"),
-    currIndex = -1;
+    playNextTrackButton = $("#play-next")
+  if (Cookies.get('track')) {
+    var currIndex = Cookies.get('track');
+  }
+  else {var currIndex = -1;}
+  if (Cookies.get('timestamp')) {
+    audio.currentTime = Cookies.get('timestamp');
+  }
+  else {audio.currentTime = 0;}
   function playPause() {
     setTimeout(function () {
       if (audio.paused) {
