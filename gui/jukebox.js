@@ -58,9 +58,9 @@ $(function () {
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next")
   if (Cookies.get('track')) {
-    var currIndex = Cookies.get('track');
+    var currIndex = Cookies.get('track') - 1;
   }
-  else {var currIndex = 0;}
+  else {var currIndex = -0;}
   function playPause() {
     setTimeout(function () {
       if (audio.paused) {
