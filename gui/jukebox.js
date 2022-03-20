@@ -4,6 +4,16 @@ $( document ).ready(function() {
 		$('#jukebox').toggleClass("jukehide");
 	});	
 });
+var loadstamp = (function() {
+    var loaded = false;
+    return function() {
+        if (!loaded) {
+            loaded = true;
+            audio.currentTime = Cookies.get('timestamp');
+        }
+    };
+})();
+
 $(function () {
   var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
@@ -62,6 +72,7 @@ $(function () {
   }
   else {var currIndex = -0;}
   function playPause() {
+    loadstamp();
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
