@@ -7,8 +7,6 @@ $( document ).ready(function() {
 });
 $(function () {
   var playerTrack = $("#player-track"),
-    bgArtwork = $("#bg-artwork"),
-    bgArtworkUrl,
     albumName = $("#album-name"),
     trackName = $("#track-name"),
     albumArt = $("#album-art"),
@@ -37,18 +35,18 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "Lena Raine",
-      "Lena Raine",
-      "C148",
-      "C148",
-      "C148"
-    ],
-    trackNames = [
       "Otherside",
       "Pigstep",
       "Stal",
       "Subwoofer Lullaby",
       "Minecraft"
+    ],
+    trackNames = [
+      "Lena Raine",
+      "Lena Raine",
+      "C148",
+      "C148",
+      "C148"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
@@ -60,7 +58,8 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = -1;
+    currIndex = -1,
+    currsong = ;
 
   function playPause() {
     setTimeout(function () {
@@ -180,7 +179,8 @@ $(function () {
   function selectTrack(flag) {
     if (flag == 0 || flag == 1) ++currIndex;
     else --currIndex;
-
+    currsong = currsong + flag;
+	  
     if (currIndex > -1 && currIndex < albumArtworks.length) {
       if (flag == 0) i.attr("class", "fa fa-play");
       else {
@@ -215,10 +215,6 @@ $(function () {
       trackName.text(currTrackName);
       albumArt.find("img.active").removeClass("active");
       $("#" + currArtwork).addClass("active");
-
-      bgArtworkUrl = $("#" + currArtwork).attr("src");
-
-      bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
     } else {
       if (flag == 0 || flag == 1) --currIndex;
       else ++currIndex;
@@ -257,5 +253,5 @@ $(function () {
 $(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
 	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
-	Cookies.set('track', audio.currentTime, {expires: 7}, {path: '/jukebox'})
+	Cookies.set('track', currsong, {expires: 7}, {path: '/jukebox'})
 });
