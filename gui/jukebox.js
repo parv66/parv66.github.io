@@ -37,26 +37,26 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "Dawn",
-      "Me & You",
-      "Electro Boy",
-      "Home",
-      "Proxy (Original Mix)"
+      "otherside -lena ranie",
+      "pigstep -lena ranie",
+      "stal -c148",
+      "beggining -c148",
+      "arimath -c148"
     ],
     trackNames = [
-      "Skylike - Dawn",
-      "Alex Skrindo - Me & You",
-      "Kaaze - Electro Boy",
-      "Jordan Schor - Home",
-      "Martin Garrix - Proxy"
+      "otherside -lena ranie",
+      "pigstep -lena ranie",
+      "stal -c148",
+      "beggining -c148",
+      "ariamath -c148"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/otherside.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/pigstep.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/stal.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/beggining.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/ariamath.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
