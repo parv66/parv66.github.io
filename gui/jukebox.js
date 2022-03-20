@@ -102,7 +102,10 @@ $(function () {
 
     insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
   }
-
+   if (Cookies.get('timestamp')) {
+       var audio.currentTime = Cookies.get('timestamp');
+   }
+   else {var currIndex = -0;}
   function hideHover() {
     sHover.width(0);
     insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
@@ -162,7 +165,7 @@ $(function () {
       clearInterval(buffInterval);
     }
   }
-
+  
   function checkBuffering() {
     clearInterval(buffInterval);
     buffInterval = setInterval(function () {
