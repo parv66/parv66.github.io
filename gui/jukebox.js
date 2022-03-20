@@ -115,7 +115,7 @@ $(function () {
   function updateCurrTime() {
     nTime = new Date();
     nTime = nTime.getTime();
-
+    console.log(currIndex);
     if (!tFlag) {
       tFlag = true;
       trackTime.addClass("active");
@@ -244,9 +244,9 @@ $(function () {
   }
 
   initPlayer();
-});
-$(window).on("beforeunload", function() { 
+	$(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
 	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
-	Cookies.set('track', currsong, {expires: 7}, {path: '/jukebox'})
+	Cookies.set('track', currIndex, {expires: 7}, {path: '/jukebox'})
+    });
 });
