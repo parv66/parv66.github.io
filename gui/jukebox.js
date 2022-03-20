@@ -5,7 +5,6 @@ $( document ).ready(function() {
 	});
 	
 });
-var currIndex = -1;
 $(function () {
   var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
