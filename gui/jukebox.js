@@ -60,7 +60,7 @@ $(function () {
   if (Cookies.get('track')) {
     var currIndex = Cookies.get('track');
   }
-  else {var currIndex = -1;}
+  else {var currIndex = 0;}
   function playPause() {
     setTimeout(function () {
       if (audio.paused) {
