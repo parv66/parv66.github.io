@@ -37,26 +37,26 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "otherside -lena ranie",
-      "pigstep -lena ranie",
-      "stal -c148",
-      "beggining -c148",
-      "arimath -c148"
+      "Lena Raine",
+      "Lena Raine",
+      "C148",
+      "C148",
+      "C148"
     ],
     trackNames = [
-      "otherside -lena ranie",
-      "pigstep -lena ranie",
-      "stal -c148",
-      "beggining -c148",
-      "ariamath -c148"
+      "Otherside",
+      "Pigstep",
+      "Stal",
+      "Subwoofer Lullaby",
+      "Minecraft"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/otherside.mp3",
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/pigstep.mp3",
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/stal.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/beggining.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/ariamath.mp3"
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/subwooferlullaby.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/minecraft.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
