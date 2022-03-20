@@ -258,5 +258,5 @@ $(function () {
 $(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
 	var songindex = currIndex;
-	document.cookie = "time= idkuseclock;sindex= doyouevenhaveabrain; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+	Cookies.set('cookie#1', 'true', { expires: 7 })
 });
