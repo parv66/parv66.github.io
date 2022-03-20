@@ -61,10 +61,6 @@ $(function () {
     var currIndex = Cookies.get('track');
   }
   else {var currIndex = -1;}
-  if (Cookies.get('timestamp')) {
-    audio.currentTime = Cookies.get('timestamp');
-  }
-  else {audio.currentTime = 0;}
   function playPause() {
     setTimeout(function () {
       if (audio.paused) {
