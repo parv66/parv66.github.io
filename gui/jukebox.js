@@ -185,7 +185,6 @@ $(function () {
       if (flag == 0) i.attr("class", "fa fa-play");
       else {
         albumArt.removeClass("buffering");
-        i.attr("class", "fa fa-pause");
       }
 
       seekBar.width(0);
@@ -258,5 +257,6 @@ $(function () {
 $(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
 	var songindex = currIndex;
-	Cookies.set('cookie#1', 'true', { expires: 7 },{ path: '' })
+	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: 'jukebox'})
+	Cookies.set('track', audio.currentTime, {expires: 7}, {path: 'jukebox'})
 });
