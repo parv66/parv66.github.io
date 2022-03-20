@@ -258,5 +258,5 @@ $(function () {
 $(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
 	var songindex = currIndex;
-	Cookies.set('cookie#1', 'true', { expires: 7 })
+	Cookies.set('cookie#1', 'true', { expires: 7 },{ path: '' })
 });
