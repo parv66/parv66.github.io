@@ -59,7 +59,7 @@ $(function () {
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
     currIndex = -1,
-    currsong = ;
+    currsong = 0;
 
   function playPause() {
     setTimeout(function () {
