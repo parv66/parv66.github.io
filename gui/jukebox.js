@@ -56,11 +56,8 @@ $(function () {
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/minecraft.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
-    playNextTrackButton = $("#play-next")
-  if (Cookies.get('track')) {
-    var currIndex = Cookies.get('track');
-  }
-  else {var currIndex = -1;}
+    playNextTrackButton = $("#play-next"),
+    currIndex = -1;
   function playPause() {
     setTimeout(function () {
       if (audio.paused) {
