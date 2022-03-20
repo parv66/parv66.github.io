@@ -259,4 +259,4 @@ $(window).unload(function() {
    	var timestamp = audio.currentTime;
 	var songindex = currIndex;
 	document.cookie = "time= timestamp;sindex= songindex; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
-}
+});
