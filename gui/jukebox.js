@@ -58,7 +58,7 @@ $(function () {
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next")
   if (Cookies.get('track')) {
-    var currIndex = Cookies.get('track') - 1;
+    var currIndex = Cookies.get('track');
   }
   else {var currIndex = -0;}
   function playPause() {
@@ -246,9 +246,10 @@ $(function () {
   }
 
   initPlayer();
-	$(window).on("beforeunload", function() { 
+	$(window).on("beforeunload", function() {
+	var songid = currIndex - 1;
    	var timestamp = audio.currentTime;
 	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
-	Cookies.set('track', currIndex, {expires: 7}, {path: '/jukebox'})
+	Cookies.set('track', songid, {expires: 7}, {path: '/jukebox'})
     });
 });
