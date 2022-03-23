@@ -72,6 +72,7 @@ $(function () {
   }
   else {var currIndex = -0;}
   function playPause() {
+    loadstamp();
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
@@ -230,9 +231,9 @@ $(function () {
     audio = new Audio();
 
     selectTrack(0);
-    loadstamp();
+    playPause();
+    $('#jukebox').toggleClass("jukehide");
     audio.loop = true;
-    audio.autoplay = true;
 
     playPauseButton.on("click", playPause);
 
