@@ -72,7 +72,6 @@ $(function () {
   }
   else {var currIndex = -0;}
   function playPause() {
-    loadstamp();
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
@@ -165,7 +164,6 @@ $(function () {
     seekBar.width(playProgress + "%");
 
     if (playProgress == 100) {
-      i.attr("class", "fa fa-play");
       seekBar.width(0);
       tProgress.text("00:00");
       albumArt.removeClass("buffering").removeClass("active");
@@ -232,7 +230,7 @@ $(function () {
     audio = new Audio();
 
     selectTrack(0);
-
+    loadstamp();
     audio.loop = true;
     audio.autoplay = true;
 
