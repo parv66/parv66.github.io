@@ -13,22 +13,6 @@
   background-color: #C6C6C6;
   transition: 0.3s ease-in-out all;
 }
-
-#bg-artwork {
-  position: fixed;
-  top: -30px;
-  right: -30px;
-  bottom: -30px;
-  left: -30px;
-  background-image: url("https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  filter: blur(40px);
-  -webkit-filter: blur(40px);
-  z-index: 1;
-}
-
 #bg-layer {
   position: fixed;
   top: 0;
@@ -315,5 +299,5 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url(https://parv66.github.io/icons/music_note.png);
+  background-image: url(https://parv66.github.io/icon/music_note.png);
 }
