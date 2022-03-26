@@ -278,12 +278,7 @@ var loadstamp = (function() {
 				audio.currentTime = Cookies.get('timestamp');
 				console.log('no stamp cookies found.');
 			}
-			else if (!!$.cookie('timestamp') || $.cookie('track')) {
- 	   			Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
-	    			Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
-	    			audio.currentTime = Cookies.get('timestamp');
-				console.log('no cookies found.');
-			}
+			
             		else {
 				console.log('all cookies required found.');
 			}
