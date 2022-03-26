@@ -9,35 +9,7 @@ $( document ).ready(function() {
 		$('#jukebox').toggleClass("jukehide");
 	});	
 });
-var loadstamp = (function() {
-	var loaded = false;
-    	console.log('loading pevious stamp');
-    	return function() {
-        	if (!loaded) {
-            		loaded = true;
-			if (!!$.cookie('timestamp') || $.cookie('track')) {
- 	   			Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
-	    			Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
-	    			audio.currentTime = Cookies.get('timestamp');
-				console.log('no cookies found.');
-			}
-			else if(!!$.cookie('track')){
-				Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
-				console.log('no track cookies found.');
-			}
-			else if(!!$.cookie('timestamp')){
-				Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
-				audio.currentTime = Cookies.get('timestamp');
-				console.log('no stamp cookies found.');
-			}
-            		else {
-				audio.currentTime = Cookies.get('timestamp');
-				console.log('all cookies required found.');
-			}
-        	}
-    	};
-	console.log('loading pevious stamp');
-})();
+
 
 $(function () {
   var playerTrack = $("#player-track"),
@@ -288,3 +260,35 @@ $(function () {
 	Cookies.set('track', songid, {expires: 7}, {path: '/jukebox'})
     });
 });
+
+
+
+var loadstamp = (function() {
+	var loaded = false;
+    	console.log('loading pevious stamp');
+    	return function() {
+        	if (!loaded) {
+            		loaded = true;
+			if (!!$.cookie('timestamp') || $.cookie('track')) {
+ 	   			Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
+	    			Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
+	    			audio.currentTime = Cookies.get('timestamp');
+				console.log('no cookies found.');
+			}
+			else if(!!$.cookie('track')){
+				Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
+				console.log('no track cookies found.');
+			}
+			else if(!!$.cookie('timestamp')){
+				Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
+				audio.currentTime = Cookies.get('timestamp');
+				console.log('no stamp cookies found.');
+			}
+            		else {
+				audio.currentTime = Cookies.get('timestamp');
+				console.log('all cookies required found.');
+			}
+        	}
+    	};
+	console.log('loading pevious stamp');
+})();
