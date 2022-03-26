@@ -285,11 +285,11 @@ var loadstamp = (function() {
 				console.log('no cookies found.');
 			}
             		else {
-				audio.currentTime = $.cookie('timestamp');
 				console.log('all cookies required found.');
 			}
 			
         	}
     	};
+	audio.currentTime = $.cookie('timestamp');
 	console.log('loading pevious stamp');
 })();
