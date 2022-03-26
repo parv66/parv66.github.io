@@ -269,25 +269,26 @@ var loadstamp = (function() {
     	return function() {
         	if (!loaded) {
             		loaded = true;
-			if (!!$.cookie('timestamp') || $.cookie('track')) {
+			if (!!$.cookie('track')){
+				Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
+				console.log('no track cookies found.');
+			}
+			else if (!!$.cookie('timestamp')){
+				Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
+				audio.currentTime = Cookies.get('timestamp');
+				console.log('no stamp cookies found.');
+			}
+			else if (!!$.cookie('timestamp') || $.cookie('track')) {
  	   			Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
 	    			Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
 	    			audio.currentTime = Cookies.get('timestamp');
 				console.log('no cookies found.');
 			}
-			else if(!!$.cookie('track')){
-				Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
-				console.log('no track cookies found.');
-			}
-			else if(!!$.cookie('timestamp')){
-				Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
-				audio.currentTime = Cookies.get('timestamp');
-				console.log('no stamp cookies found.');
-			}
             		else {
 				audio.currentTime = $.cookie('timestamp');
 				console.log('all cookies required found.');
 			}
+			
         	}
     	};
 	console.log('loading pevious stamp');
