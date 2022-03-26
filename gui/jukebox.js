@@ -19,9 +19,18 @@ var loadstamp = (function() {
 	    			audio.currentTime = Cookies.get('timestamp');
 				console.log('no cookies found.');
 			}
+			else if(!!Cookies.get('track')){
+				Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
+				console.log('no track cookies found.');
+			}
+			else if(!!Cookies.get('track')){
+				Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
+				audio.currentTime = Cookies.get('timestamp');
+				console.log('no stamp cookies found.');
+			}
             		else {
 				audio.currentTime = Cookies.get('timestamp');
-				console.log('cookies found.');
+				console.log('all cookies required found.');
 			}
         	}
     	};
