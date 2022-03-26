@@ -7,21 +7,25 @@ $( document ).ready(function() {
 		$('#jukebox').toggleClass("jukehide");
 	});	
 });
-if (!!Cookies.get('timestamp') || Cookies.get('track')) {
- 	Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
-	Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
-} else {
- 	console.log('cookies detected!');
-}
-
 var loadstamp = (function() {
-    var loaded = false;
-    return function() {
-        if (!loaded) {
-            loaded = true;
-            audio.currentTime = Cookies.get('timestamp');
-        }
-    };
+	var loaded = false;
+    	console.log('loading pevious stamp');
+    	return function() {
+        	if (!loaded) {
+            		loaded = true;
+			if (!!Cookies.get('timestamp') || Cookies.get('track')) {
+ 	   			Cookies.set('timestamp', '00.000000', {expires: 7}, {path: '/jukebox'});
+	    			Cookies.set('track', '-1', {expires: 7}, {path: '/jukebox'});
+	    			audio.currentTime = Cookies.get('timestamp');
+				console.log('no cookies found.');
+			}
+            		else {
+				audio.currentTime = Cookies.get('timestamp');
+				console.log('cookies found.');
+			}
+        	}
+    	};
+	console.log('loading pevious stamp');
 })();
 
 $(function () {
