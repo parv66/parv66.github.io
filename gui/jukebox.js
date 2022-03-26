@@ -285,7 +285,7 @@ var loadstamp = (function() {
 				console.log('no stamp cookies found.');
 			}
             		else {
-				audio.currentTime = Cookies.get('timestamp');
+				audio.currentTime = $.cookie('timestamp');
 				console.log('all cookies required found.');
 			}
         	}
