@@ -76,7 +76,7 @@ if (exists) {
 	console.log("oh well look who it is...");
 	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
 	var currIndex = Cookies.get('track');
-}, 1000;
+};
 var loadstamp = (function() {
     var loaded = false;
     return function() {
