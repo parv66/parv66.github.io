@@ -7,15 +7,7 @@ $( document ).ready(function() {
 		$('#jukebox').toggleClass("jukehide");
 	});	
 });
-var loadstamp = (function() {
-    var loaded = false;
-    return function() {
-        if (!loaded) {
-            loaded = true;
-            audio.currentTime = Cookies.get('timestamp');
-        }
-    };
-})();
+//js-cookie end//
 
 $(function () {
   var playerTrack = $("#player-track"),
@@ -70,14 +62,36 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next")
-  if (Cookies.get('track')) {
-    var currIndex = Cookies.get('track');
-  }
-  else {var currIndex = -0;}
+  
+//cookie check
+var exists = sessionStorage.getItem('exists');
+
+if (!exists) {
+	console.log("NEWBIE INCOMEING I REPEAt, NEWBIE INCOMMING");
+    	sessionStorage.setItem('exists', true);
+	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
+	Cookies.set('track', -1, {expires: 7}, {path: '/jukebox'});
+}
+if (exists) {
+	console.log("oh well look who it is...");
+	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
+	var currIndex = Cookies.get('track');
+}, 1000;
+var loadstamp = (function() {
+    var loaded = false;
+    return function() {
+        if (!loaded) {
+            loaded = true;
+            audio.currentTime = Cookies.get('timestamp');
+        }
+    };
+})();
+//cookie check end
+	
   function playPause() {
-    loadstamp();
     setTimeout(function () {
       if (audio.paused) {
+	loadstamp();
         playerTrack.addClass("active");
         albumArt.addClass("active");
         checkBuffering();
