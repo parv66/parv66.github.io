@@ -71,10 +71,11 @@ if (!exists) {
     	sessionStorage.setItem('exists', true);
 	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
 	Cookies.set('track', -1, {expires: 7}, {path: '/jukebox'});
+	sessionStorage.setItem('timestamp', 0);
+	sessionStorage.setItem('track', -1);
 }
 if (exists) {
 	console.log("oh well look who it is...");
-	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
 	var currIndex = Cookies.get('track');
 };
 var loadstamp = (function() {
@@ -82,7 +83,8 @@ var loadstamp = (function() {
     return function() {
         if (!loaded) {
             loaded = true;
-            audio.currentTime = Cookies.get('timestamp');
+	    var currIndex = sessionStorage.getItem('track');
+            audio.currentTime = sessionStorage.getItem('timestamp');
         }
     };
 })();
@@ -274,9 +276,11 @@ var loadstamp = (function() {
 
   initPlayer();
 	$(window).on("beforeunload", function() {
-	var songid = currIndex - 1;
-   	var timestamp = audio.currentTime;
-	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
-	Cookies.set('track', songid, {expires: 7}, {path: '/jukebox'})
+		var songid = currIndex-1;
+   		var timestamp = audio.currentTime;
+		Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
+		Cookies.set('track', songid, {expires: 7}, {path: '/jukebox'})
+		sessionStorage.setItem('timestamp', audio.currentTime);
+		sessionStorage.setItem('track', songid);
     });
 });
