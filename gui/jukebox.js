@@ -70,9 +70,9 @@ if (!exists) {
 	console.log("NEWBIE INCOMEING I REPEAt, NEWBIE INCOMMING");
     	sessionStorage.setItem('exists', true);
 	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
-	Cookies.set('track', -1, {expires: 7}, {path: '/jukebox'});
+	Cookies.set('track', 1, {expires: 7}, {path: '/jukebox'});
 	sessionStorage.setItem('timestamp', 0);
-	sessionStorage.setItem('track', -1);
+	sessionStorage.setItem('track', 1);
 }
 if (exists) {
 	console.log("oh well look who it is...");
@@ -276,11 +276,11 @@ var loadstamp = (function() {
 
   initPlayer();
 	$(window).on("beforeunload", function() {
-		var songid = currIndex-1;
+		var songid = currIndex;
    		var timestamp = audio.currentTime;
 		Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
 		Cookies.set('track', songid, {expires: 7}, {path: '/jukebox'})
 		sessionStorage.setItem('timestamp', audio.currentTime);
-		sessionStorage.setItem('track', songid);
+		sessionStorage.setItem('track', currIndex);
     });
 });
