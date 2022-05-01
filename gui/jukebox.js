@@ -1,21 +1,14 @@
 $( document ).ready(function() {
-   	$("body").prepend("<div id='jukebox' class='jukehide'><div id='player'><div id='player-track' class='active'><div id='album-name'>Otherside</div><div id='track-name'>Lena Raine</div><div id='track-time' class='active'><div id='current-time'>00:00</div><div id='track-length'>03:09</div></div><div id='s-area'><div id='ins-time' style='left: 0px; margin-left: 0px; display: none;'>00:00</div><div id='s-hover' style='width: 0px;'></div><div id='seek-bar' style='width: 0px;'></div></div></div><div id='player-content'><div id='album-art' class=''><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg' class='active' id='_1'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg' id='_2'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg' id='_3'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg' id='_4'><img src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg' id='_5'><div id='buffer-box'>Buffering ...</div></div><div id='player-controls'><div class='control'><div class='button' id='play-previous'><a>&lt;&lt;</a></div></div><div class='control'><div class='button' id='play-pause-button'><a>||</a></div></div><div class='control'><div class='button' id='play-next'><a>&gt;&gt;</a></div></div></div></div></div><div id='minimize'><button id='toggleview' class='button mcbtn'>!</button></div></div>");
+   	$("body").prepend("<div id='jukebox' class='jukehide'><div id='player'><div id='player-track' class='active'><div id='album-name'>Dawn</div><div id='track-name'>Skylike - Dawn</div><div id='track-time' class='active'><div id='current-time'>00:00</div><div id='track-length'>03:09</div></div><div id='s-area'><div id='ins-time' style='left: 0px; margin-left: 0px; display: none;'>00:00</div><div id='s-hover' style='width: 0px;'></div><div id='seek-bar' style='width: 0px;'></div></div></div><div id='player-content'><div id='album-art' class=''><img src='https://parv66.github.io/icon/record/record_otherside.png' class='active' id='_1'><img src='https://parv66.github.io/icon/record/record_pigstep.png' id='_2'><img src='https://parv66.github.io/icon/record/record_stal.png' id='_3'><img src='https://parv66.github.io/icon/record/record_mall.png' id='_4'><img src='https://parv66.github.io/icon/record/record_wait.png' id='_5'><div id='buffer-box'>Buffering ...</div></div><div id='player-controls'><div class='control'><div class='button' id='play-previous'><a>&lt;&lt;</a></div></div><div class='control'><div class='button' id='play-pause-button'><a>||</a></div></div><div class='control'><div class='button' id='play-next'><a>&gt;&gt;</a></div></div></div></div></div><div id='minimize'><button id='toggleview' class='button mcbtn'>!</button></div></div>");
 	$('#toggleview').click(function(){
 		$('#jukebox').toggleClass("jukehide");
-	});	
+	});
+	
 });
-var loadstamp = (function() {
-    var loaded = false;
-    return function() {
-        if (!loaded) {
-            loaded = true;
-            audio.currentTime = Cookies.get('timestamp');
-        }
-    };
-})();
-
 $(function () {
   var playerTrack = $("#player-track"),
+    bgArtwork = $("#bg-artwork"),
+    bgArtworkUrl,
     albumName = $("#album-name"),
     trackName = $("#track-name"),
     albumArt = $("#album-art"),
@@ -44,46 +37,45 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "Otherside",
-      "Pigstep",
-      "Stal",
-      "Subwoofer Lullaby",
-      "Minecraft"
+      "Lena raine",
+      "Lena raine",
+      "c418",
+      "c418",
+      "c418"
     ],
     trackNames = [
-      "Lena Raine",
-      "Lena Raine",
-      "C148",
-      "C148",
-      "C148"
+      "otherside",
+      "pigstep",
+      "stal",
+      "subwooferlullaby",
+      "mall"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/otherside.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/pigstep.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/stal.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/subwooferlullaby.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/minecraft.mp3"
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/gui/music/otherside.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/gui/music/pigstep.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/gui/music/stal.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/gui/music/subwooferlullaby.mp3",
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/gui/music/mall.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
-    playNextTrackButton = $("#play-next")
-  if (Cookies.get('track')) {
-    var currIndex = Cookies.get('track');
-  }
-  else {var currIndex = -0;}
+    playNextTrackButton = $("#play-next"),
+    currIndex = -1;
+
   function playPause() {
-    loadstamp();
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
         albumArt.addClass("active");
         checkBuffering();
+        i.attr("class", "fas fa-pause");
         audio.play();
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
         clearInterval(buffInterval);
         albumArt.removeClass("buffering");
+        i.attr("class", "fas fa-play");
         audio.pause();
       }
     }, 300);
@@ -113,6 +105,7 @@ $(function () {
 
     insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
   }
+
   function hideHover() {
     sHover.width(0);
     insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
@@ -127,7 +120,7 @@ $(function () {
   function updateCurrTime() {
     nTime = new Date();
     nTime = nTime.getTime();
-    console.log(currIndex);
+
     if (!tFlag) {
       tFlag = true;
       trackTime.addClass("active");
@@ -172,7 +165,7 @@ $(function () {
       clearInterval(buffInterval);
     }
   }
-  
+
   function checkBuffering() {
     clearInterval(buffInterval);
     buffInterval = setInterval(function () {
@@ -187,7 +180,7 @@ $(function () {
   function selectTrack(flag) {
     if (flag == 0 || flag == 1) ++currIndex;
     else --currIndex;
-	  
+
     if (currIndex > -1 && currIndex < albumArtworks.length) {
       if (flag == 0) i.attr("class", "fa fa-play");
       else {
@@ -222,6 +215,10 @@ $(function () {
       trackName.text(currTrackName);
       albumArt.find("img.active").removeClass("active");
       $("#" + currArtwork).addClass("active");
+
+      bgArtworkUrl = $("#" + currArtwork).attr("src");
+
+      bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
     } else {
       if (flag == 0 || flag == 1) --currIndex;
       else ++currIndex;
@@ -256,10 +253,10 @@ $(function () {
   }
 
   initPlayer();
-	$(window).on("beforeunload", function() {
-	var songid = currIndex - 1;
+});
+$(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
-	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
-	Cookies.set('track', songid, {expires: 7}, {path: '/jukebox'})
-    });
+	var songindex = currIndex;
+	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: 'jukebox'})
+	Cookies.set('track', audio.currentTime, {expires: 7}, {path: 'jukebox'})
 });
