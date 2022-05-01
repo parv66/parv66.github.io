@@ -211,9 +211,10 @@ var loadstamp = (function() {
     currsong = currsong + flag;
 	  
     if (currIndex > -1 && currIndex < albumArtworks.length) {
-      else {
-        albumArt.removeClass("buffering");
-      }
+    if (flag == 0) i.attr("class", "fa fa-play");
+    else {
+      albumArt.removeClass("buffering");
+    }
 
       seekBar.width(0);
       trackTime.removeClass("active");
