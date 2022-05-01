@@ -63,23 +63,48 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = 2,
-    currsong = currIndex - 1;
+    currIndex = 1;
+	
+//cookie check
+var exists = sessionStorage.getItem('exists');
 
+if (!exists) {
+	console.log("NEWBIE INCOMEING I REPEAt, NEWBIE INCOMMING");
+    	sessionStorage.setItem('exists', true);
+	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
+	Cookies.set('track', -1, {expires: 7}, {path: '/jukebox'});
+	sessionStorage.setItem('timestamp', 0);
+	sessionStorage.setItem('track', -1);
+}
+if (exists) {
+	console.log("oh well look who it is...");
+	var currIndex = Cookies.get('track');
+};
+var loadstamp = (function() {
+    var loaded = false;
+    return function() {
+        if (!loaded) {
+            loaded = true;
+	    var currIndex = sessionStorage.getItem('track') + 1;
+            audio.currentTime = sessionStorage.getItem('timestamp');
+        }
+    };
+})();
+//cookie check end
+	
   function playPause() {
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
         albumArt.addClass("active");
         checkBuffering();
-        i.attr("class", "fas fa-pause");
+        
         audio.play();
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
         clearInterval(buffInterval);
         albumArt.removeClass("buffering");
-        i.attr("class", "fas fa-play");
         audio.pause();
       }
     }, 300);
@@ -162,7 +187,6 @@ $(function () {
     seekBar.width(playProgress + "%");
 
     if (playProgress == 100) {
-      i.attr("class", "fa fa-play");
       seekBar.width(0);
       tProgress.text("00:00");
       albumArt.removeClass("buffering").removeClass("active");
@@ -187,7 +211,6 @@ $(function () {
     currsong = currsong + flag;
 	  
     if (currIndex > -1 && currIndex < albumArtworks.length) {
-      if (flag == 0) i.attr("class", "fa fa-play");
       else {
         albumArt.removeClass("buffering");
       }
@@ -257,6 +280,9 @@ $(function () {
 });
 $(window).on("beforeunload", function() { 
    	var timestamp = audio.currentTime;
+	var currsong = currIndex;
 	Cookies.set('timestamp', audio.currentTime, {expires: 7}, {path: '/jukebox'})
 	Cookies.set('track', currsong, {expires: 7}, {path: '/jukebox'})
+	sessionStorage.setItem('timestamp', audio.currentTime);
+	sessionStorage.setItem('track', songid);
 });
