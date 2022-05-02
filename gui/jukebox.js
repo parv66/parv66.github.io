@@ -105,6 +105,7 @@ var loadstamp = (function() {
 //cookie check end
 	
   function playPause() {
+    loadstamp();
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
