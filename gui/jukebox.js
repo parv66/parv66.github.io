@@ -86,8 +86,8 @@ var loadstamp = (function() {
     return function() {
         if (!loaded) {
             loaded = true;
-	    currIndex = sessionStorage.getItem('track');
-            audio.currentTime = sessionStorage.getItem('timestamp');
+	    currIndex = Cookies.get('track') -1 ;
+            audio.currentTime = Cookies.get('timestamp');
         }
     };
 })();
