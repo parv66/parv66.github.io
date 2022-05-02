@@ -68,7 +68,7 @@ $(function () {
     	return function() {
         	if (sessionStorage.getItem('track') != NaN) {
 	    		return currIndex = sessionStorage.getItem('track');
-        	};
+        	}
 		else {
 		   	return 1;
 			sessionStorage.setItem('track', 1);
