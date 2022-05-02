@@ -74,15 +74,18 @@ var loadstamp = (function() {
     return function() {
         if (!loaded) {
             loaded = true;
-	    currIndex = Cindex;
-            audio.currentTime = Cstamp;
-        }
+			if(typeof Cindex !== 'undefined'){
+				currIndex = Cindex;
+			}
+			else if(typeof Cstamp != 'undefined'){
+				audio.currentTime = Cstamp;
+			}
+	    }
     };
 })();
 //cookie check end
 	
   function playPause() {
-    
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
