@@ -157,6 +157,10 @@ var loadstamp = (function() {
     playProgress = (audio.currentTime / audio.duration) * 100;
 
     console.log(currIndex);
+	let timestamp = audio.currentTime;
+	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
+	Cookies.set('track', currIndex , {expires: 7}, {path: '/jukebox'} )
+	  
 	  
     if (curMinutes < 10) curMinutes = "0" + curMinutes;
     if (curSeconds < 10) curSeconds = "0" + curSeconds;
@@ -283,7 +287,7 @@ var loadstamp = (function() {
   initPlayer();
 });
 $(window).on("beforeunload", function() { 
-   	var timestamp = audio.currentTime;
+   	let timestamp = audio.currentTime;
 	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
 	Cookies.set('track', currIndex , {expires: 7}, {path: '/jukebox'} )
 });
