@@ -10,6 +10,10 @@ $( document ).ready(function() {
 	});
 	
 });
+$(window).load(function() {
+	var Cstamp = Cookies.get('timestamp'),
+	    Cindex = Cookies.get('track');
+});
 $(function () {
   var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
@@ -63,24 +67,10 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = 1,
-    currsong = 1;
+    currIndex = 0,
+    currsong = 0;
 	
 //cookie check
-var exists = sessionStorage.getItem('exists');
-
-if (!exists) {
-	console.log("NEWBIE INCOMEING I REPEAt, NEWBIE INCOMMING");
-    	sessionStorage.setItem('exists', true);
-	Cookies.set('timestamp', 0 , {expires: 7}, {path: '/jukebox'} );
-	Cookies.set('track', 1, {expires: 7}, {path: '/jukebox'} );
-	sessionStorage.setItem('timestamp', 0);
-	sessionStorage.setItem('track', 1);
-}
-if (exists) {
-	console.log("oh well look who it is...");
-	currIndex = Cookies.get('track');
-};
 var loadstamp = (function() {
     var loaded = false;
     return function() {
@@ -266,7 +256,11 @@ var loadstamp = (function() {
     sArea.mousemove(function (event) {
       showHover(event);
     });
-
+	
+	  
+    
+	  
+	  
     sArea.mouseout(hideHover);
 
     sArea.on("click", playFromClickedPos);
@@ -279,15 +273,16 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
+	  if(Cindex != null && Cstamp != null){
+       	$('#toggleview').trigger('click');
+		$('#play-pause-button').trigger('click');
+    }
   }
 
   initPlayer();
 });
 $(window).on("beforeunload", function() { 
-   	var timestamp = audio.currentTime,
-	currsong = currIndex;
+   	var timestamp = audio.currentTime;
 	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
-	Cookies.set('track', currsong , {expires: 7}, {path: '/jukebox'} )
-	sessionStorage.setItem('timestamp', audio.currentTime)
-	sessionStorage.setItem('track', songid);
+	Cookies.set('track', currIndex , {expires: 7}, {path: '/jukebox'} )
 });
