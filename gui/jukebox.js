@@ -8,11 +8,9 @@ $( document ).ready(function() {
 	$('#toggleview').click(function(){
 		$('#jukebox').toggleClass("jukehide");
 	});
-	
-});
-$(window).load(function() {
 	var Cstamp = Cookies.get('timestamp'),
 	    Cindex = Cookies.get('track');
+	
 });
 $(function () {
   var playerTrack = $("#player-track"),
@@ -76,8 +74,8 @@ var loadstamp = (function() {
     return function() {
         if (!loaded) {
             loaded = true;
-	    currIndex = Cookies.get('track');
-            audio.currentTime = Cookies.get('timestamp');
+	    currIndex = Cindex;
+            audio.currentTime = Cstamp;
         }
     };
 })();
@@ -273,7 +271,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
-	  if(Cindex != null && Cstamp != null){
+	  if(typeof Cindex !== 'undefined' && typeof Cstamp != 'undefined'){
        	$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
     }
