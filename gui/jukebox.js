@@ -63,18 +63,7 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = (function() {
-    	
-    	return function() {
-        	if (sessionStorage.getItem('track') != NaN) {
-	    		return currIndex = sessionStorage.getItem('track');
-        	}
-		else {
-		   	return 1;
-			sessionStorage.setItem('track', 1);
-		};
-    	};
-})(),
+    currIndex = 1,
     currsong = 1;
 	
 //cookie check
@@ -90,14 +79,14 @@ if (!exists) {
 }
 if (exists) {
 	console.log("oh well look who it is...");
-	var currIndex = Cookies.get('track');
+	currIndex = Cookies.get('track');
 };
 var loadstamp = (function() {
     var loaded = false;
     return function() {
         if (!loaded) {
             loaded = true;
-	    var currIndex = sessionStorage.getItem('track') + 1;
+	    currIndex = sessionStorage.getItem('track');
             audio.currentTime = sessionStorage.getItem('timestamp');
         }
     };
