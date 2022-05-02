@@ -63,7 +63,8 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = 1;
+    currIndex = 1,
+    currsong = 1;
 	
 //cookie check
 var exists = sessionStorage.getItem('exists');
