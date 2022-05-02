@@ -59,11 +59,22 @@ $(function () {
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/pigstep.mp3",
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/stal.mp3",
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/subwooferlullaby.mp3",
-      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/minecraft.mp3"
+      "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/mall.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = 1,
+    currIndex = (function() {
+    	
+    	return function() {
+        	if (sessionStorage.getItem('track') != NaN) {
+	    		return currIndex = sessionStorage.getItem('track');
+        	};
+		else {
+		   	return 1;
+			sessionStorage.setItem('track', 1);
+		};
+    	};
+})(),
     currsong = 1;
 	
 //cookie check
@@ -75,7 +86,7 @@ if (!exists) {
 	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
 	Cookies.set('track', -1, {expires: 7}, {path: '/jukebox'});
 	sessionStorage.setItem('timestamp', 0);
-	sessionStorage.setItem('track', -1);
+	sessionStorage.setItem('track', 1);
 }
 if (exists) {
 	console.log("oh well look who it is...");
