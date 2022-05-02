@@ -72,8 +72,8 @@ var exists = sessionStorage.getItem('exists');
 if (!exists) {
 	console.log("NEWBIE INCOMEING I REPEAt, NEWBIE INCOMMING");
     	sessionStorage.setItem('exists', true);
-	Cookies.set('timestamp', 0, {expires: 7}, {path: '/jukebox'});
-	Cookies.set('track', -1, {expires: 7}, {path: '/jukebox'});
+	Cookies.set('timestamp', 00.0000, {expires: 7}, {path: '/jukebox'});
+	Cookies.set('track', 1, {expires: 7}, {path: '/jukebox'});
 	sessionStorage.setItem('timestamp', 0);
 	sessionStorage.setItem('track', 1);
 }
@@ -86,7 +86,7 @@ var loadstamp = (function() {
     return function() {
         if (!loaded) {
             loaded = true;
-	    currIndex = Cookies.get('track') -1 ;
+	    currIndex = Cookies.get('track');
             audio.currentTime = Cookies.get('timestamp');
         }
     };
@@ -94,13 +94,13 @@ var loadstamp = (function() {
 //cookie check end
 	
   function playPause() {
-    loadstamp();
+    
     setTimeout(function () {
       if (audio.paused) {
         playerTrack.addClass("active");
         albumArt.addClass("active");
         checkBuffering();
-        
+        loadstamp();
         audio.play();
       } else {
         playerTrack.removeClass("active");
