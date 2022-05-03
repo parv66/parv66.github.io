@@ -74,7 +74,7 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = 0,
+    currIndex = -0,
     currtrack = -1;
 //on load
 	
@@ -89,6 +89,7 @@ var loadstamp = (function() {
             loaded = true;
 			if(Cindex !== undefined){
 				currIndex = Cindex;
+				currtrack = Cindex;
 				console.log(Cindex);
 				console.log('^ loaded the index');
 			}
@@ -110,7 +111,8 @@ var loadstamp = (function() {
         albumArt.addClass("active");
         checkBuffering();
         audio.play();
-	loadstamp();
+	setTimeout(loadstamp(), 400)
+	      
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
