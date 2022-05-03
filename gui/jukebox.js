@@ -10,18 +10,10 @@ $( document ).ready(function() {
 	});
 		
 });
-var Cstamp = Cookies.get('timestamp');
-	var Cindex = Cookies.get('track');
-	if(Cindex !== undefined){
-		console.log(Cindex + 'loaded the index from cookie');
-	}
-	if(Cstamp !== undefined){
-		console.log(Cstamp + 'loaded the stamp from cookie');
-	}
-	console.log('variables loaded from cookies')
+var Cstamp = Cookies.get('timestamp'),
+    Cindex = Cookies.get('track');
 
 $(function () {
-	//global variables
  var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
     trackName = $("#track-name"),
@@ -76,51 +68,43 @@ $(function () {
     playNextTrackButton = $("#play-next"),
     currIndex = -1,
     currtrack = -1;
-//end of global variables
-//cookie check
+//load data from cookies
 var loadstamp = (function() {
     var loaded = false;
     return function() {
         if (!loaded) {
             loaded = true;
 			if(Cindex !== undefined){
-				if(Cindex == 0){
-					console.log('loaded song 0 from cookie');
-				}
 				if(Cindex == 1){
 					selectTrack(1);
-					console.log('loaded song 1 from cookie');
 				}
 				if(Cindex == 2){
 					selectTrack(1);
 					selectTrack(1);
-					console.log('loaded song 2 from cookie');
 				}
 				if(Cindex == 3){
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
-					console.log('loaded song 3 from cookie');
 				}
 				if(Cindex == 4){
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
-					console.log('loaded song 4 from cookie');
 				}
-				console.log(Cindex + '<= loaded the index');
+				console.log(Cindex + 'Was Your Previous Track!');
 				console.log();
 			}
 			if(Cstamp !== undefined){
 				audio.currentTime = Cstamp;
-				console.log(Cstamp + '<= loaded the stamp');
+				console.log(Cstamp + 'Was Where You Left Off!');
 			}
-		        console.log('loading done')
+		        console.log('Your Data Has Been Successully Loaded(if u had any :l)')
 	    }
     };
 })();
-//cookie check end
+//cookie data end
 	
   function playPause() {
     setTimeout(function () {
@@ -193,11 +177,6 @@ var loadstamp = (function() {
     durSeconds = Math.floor(audio.duration - durMinutes * 60);
 
     playProgress = (audio.currentTime / audio.duration) * 100;
-
-    console.log(currIndex);
-	let timestamp = audio.currentTime;
-	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
-	Cookies.set('track', currIndex , {expires: 7}, {path: '/jukebox'} )
 	  
 	  
     if (curMinutes < 10) curMinutes = "0" + curMinutes;
@@ -317,7 +296,7 @@ var loadstamp = (function() {
 	  if(Cindex !== NaN && Cstamp !== NaN){
        		$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
-		console.log('simulated a click')
+		  console.log('Popup-ed!')
     }  
   }
 
@@ -327,4 +306,5 @@ $(window).on("beforeunload", function() {
    	let timestamp = audio.currentTime;
 	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
 	Cookies.set('track', currtrack , {expires: 7}, {path: '/jukebox'} )
+	console.log('Your Data Has Been Saved!')
 });
