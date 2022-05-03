@@ -20,9 +20,9 @@ var Cstamp = Cookies.get('timestamp');
 				console.log('loaded the stamp from cookie');
 				console.log(Cstamp);
 			}
-	console.log('variables loaded from cookies')	
-$(function () {
-  var playerTrack = $("#player-track"),
+	console.log('variables loaded from cookies')
+//global variables
+ var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
     trackName = $("#track-name"),
     albumArt = $("#album-art"),
@@ -74,13 +74,10 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = -0,
-    currtrack = -1;
-//on load
-	
-	
-
-//onload end
+    currIndex=  -1,
+    currtrack -1;
+//end of global variables
+$(function () {
 //cookie check
 var loadstamp = (function() {
     var loaded = false;
@@ -281,11 +278,7 @@ var loadstamp = (function() {
     sArea.mousemove(function (event) {
       showHover(event);
     });
-	  //on load
 	
-	  
-    // end onload
-	  
 	  
     sArea.mouseout(hideHover);
 
@@ -299,6 +292,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
+	  //simulate a click
 	  if(Cindex !== NaN && Cstamp !== NaN){
        	$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
