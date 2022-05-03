@@ -10,6 +10,12 @@ $( document ).ready(function() {
 	});
 	var Cstamp = Cookies.get('timestamp'),
 	    Cindex = Cookies.get('track');
+	if(Cindex !== undefined){
+				console.log('loaded the index from cookie');
+			}
+			if(Cstamp !== undefined){
+				console.log('loaded the stamp from cookie');
+			}
 	console.log('variables loaded from cookies')
 	
 });
@@ -75,11 +81,11 @@ var loadstamp = (function() {
     return function() {
         if (!loaded) {
             loaded = true;
-			if(typeof Cindex !== 'undefined'){
+			if(Cindex !== undefined){
 				currIndex = Cindex;
 				console.log('loaded the index');
 			}
-			if(typeof Cstamp != 'undefined'){
+			if(Cstamp !== undefined){
 				audio.currentTime = Cstamp;
 				console.log('loaded the stamp');
 			}
@@ -282,7 +288,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
-	  if(typeof Cindex !== 'undefined' && typeof Cstamp != 'undefined'){
+	  if(Cindex !== undefined && Cstamp !== undefined){
        	$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
 		console.log('simulated a click')
