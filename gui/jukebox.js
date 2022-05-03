@@ -66,7 +66,7 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = -0,
+    currIndex = 0,
     currsong = 0;
 	
 //cookie check
