@@ -74,8 +74,8 @@ var Cstamp = Cookies.get('timestamp');
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex=  -1,
-    currtrack -1;
+    currIndex = -1,
+    currtrack = -1;
 //end of global variables
 $(function () {
 //cookie check
