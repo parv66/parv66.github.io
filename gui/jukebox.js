@@ -88,7 +88,7 @@ var loadstamp = (function() {
         if (!loaded) {
             loaded = true;
 			if(Cindex !== undefined){
-				currtrack = Cindex;
+				currIndex = Cindex;
 				console.log(Cindex);
 				console.log('^ loaded the index');
 			}
