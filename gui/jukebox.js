@@ -75,7 +75,7 @@ $(function () {
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
     currIndex = 0,
-    currsong = 0;
+    currtrack = -1;
 //on load
 	
 	
@@ -88,7 +88,7 @@ var loadstamp = (function() {
         if (!loaded) {
             loaded = true;
 			if(Cindex !== undefined){
-				currIndex = Cindex;
+				currtrack = Cindex;
 				console.log(Cindex);
 				console.log('^ loaded the index');
 			}
@@ -225,7 +225,7 @@ var loadstamp = (function() {
   function selectTrack(flag) {
     if (flag == 0 || flag == 1) ++currIndex;
     else --currIndex;
-    currsong = currsong + flag;
+    currtrack = currtrack + flag;
 	  
     if (currIndex > -1 && currIndex < albumArtworks.length) {
     if (flag == 0) i.attr("class", "fa fa-play");
@@ -309,5 +309,5 @@ var loadstamp = (function() {
 $(window).on("beforeunload", function() { 
    	let timestamp = audio.currentTime;
 	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
-	Cookies.set('track', currIndex , {expires: 7}, {path: '/jukebox'} )
+	Cookies.set('track', currtrack , {expires: 7}, {path: '/jukebox'} )
 });
