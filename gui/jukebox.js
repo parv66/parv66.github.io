@@ -3,7 +3,24 @@
 /*! jquery cookie */
 (function(factory){if(typeof define==='function'&&define.amd){define(['jquery'],factory);}else if(typeof exports==='object'){module.exports=factory(require('jquery'));}else{factory(jQuery);}}(function($){var pluses=/\+/g;function encode(s){return config.raw?s:encodeURIComponent(s);}function decode(s){return config.raw?s:decodeURIComponent(s);}function stringifyCookieValue(value){return encode(config.json?JSON.stringify(value):String(value));}function parseCookieValue(s){if(s.indexOf('"')===0){s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,'\\');}try{s=decodeURIComponent(s.replace(pluses,' '));return config.json?JSON.parse(s):s;}catch(e){}}function read(s,converter){var value=config.raw?s:parseCookieValue(s);return $.isFunction(converter)?converter(value):value;}var config=$.cookie=function(key,value,options){if(arguments.length>1&&!$.isFunction(value)){options=$.extend({},config.defaults,options);if(typeof options.expires==='number'){var days=options.expires,t=options.expires=new Date();t.setMilliseconds(t.getMilliseconds()+days*864e+5);}return(document.cookie=[encode(key),'=',stringifyCookieValue(value),options.expires?'; expires='+options.expires.toUTCString():'',options.path?'; path='+options.path:'',options.domain?'; domain='+options.domain:'',options.secure?'; secure':''].join(''));}var result=key?undefined:{},cookies=document.cookie?document.cookie.split('; '):[],i=0,l=cookies.length;for(;i<l;i++){var parts=cookies[i].split('='),name=decode(parts.shift()),cookie=parts.join('=');if(key===name){result=read(cookie,value);break;}if(!key&&(cookie=read(cookie))!==undefined){result[name]=cookie;}}return result;};config.defaults={};$.removeCookie=function(key,options){$.cookie(key,'',$.extend({},options,{expires:-1}));return!$.cookie(key);};}));
 //eee
-
+$( document ).ready(function() {
+   	$("body").prepend("<div id='jukebox' class='jukehide'><div id='player'><div id='player-track' class='active'><div id='album-name'>Otherside</div><div id='track-name'>lena raine</div><div id='track-time' class='active'><div id='current-time'>00:00</div><div id='track-length'>03:09</div></div><div id='s-area'><div id='ins-time' style='left: 0px; margin-left: 0px; display: none;'>00:00</div><div id='s-hover' style='width: 0px;'></div><div id='seek-bar' style='width: 0px;'></div></div></div><div id='player-content'><div id='album-art' class=''><img src='https://parv66.github.io/icon/record/record_otherside.png' class='active' id='_1'><img src='https://parv66.github.io/icon/record/record_pigstep.png' id='_2'><img src='https://parv66.github.io/icon/record/record_stal.png' id='_3'><img src='https://parv66.github.io/icon/record/record_wait.png' id='_4'><img src='https://parv66.github.io/icon/record/record_mall.png' id='_5'><div id='buffer-box'>Buffering ...</div></div><div id='player-controls'><div class='control'><div class='button' id='play-previous'><a>&lt;&lt;</a></div></div><div class='control'><div class='button' id='play-pause-button'><a>||</a></div></div><div class='control'><div class='button' id='play-next'><a>&gt;&gt;</a></div></div></div></div></div><div id='minimize'><button id='toggleview' class='button mcbtn'>!</button></div></div>");
+	$('#toggleview').click(function(){
+		$('#jukebox').toggleClass("jukehide");
+	});
+		
+});
+var Cstamp = Cookies.get('timestamp');
+	var Cindex = Cookies.get('track');
+	if(Cindex !== undefined){
+				console.log('loaded the index from cookie');
+				console.log(Cindex);
+			}
+			if(Cstamp !== undefined){
+				console.log('loaded the stamp from cookie');
+				console.log(Cstamp);
+			}
+	console.log('variables loaded from cookies')	
 $(function () {
   var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
@@ -60,24 +77,9 @@ $(function () {
     currIndex = 0,
     currsong = 0;
 //on load
-	$( document ).ready(function() {
-   	$("body").prepend("<div id='jukebox' class='jukehide'><div id='player'><div id='player-track' class='active'><div id='album-name'>Otherside</div><div id='track-name'>lena raine</div><div id='track-time' class='active'><div id='current-time'>00:00</div><div id='track-length'>03:09</div></div><div id='s-area'><div id='ins-time' style='left: 0px; margin-left: 0px; display: none;'>00:00</div><div id='s-hover' style='width: 0px;'></div><div id='seek-bar' style='width: 0px;'></div></div></div><div id='player-content'><div id='album-art' class=''><img src='https://parv66.github.io/icon/record/record_otherside.png' class='active' id='_1'><img src='https://parv66.github.io/icon/record/record_pigstep.png' id='_2'><img src='https://parv66.github.io/icon/record/record_stal.png' id='_3'><img src='https://parv66.github.io/icon/record/record_wait.png' id='_4'><img src='https://parv66.github.io/icon/record/record_mall.png' id='_5'><div id='buffer-box'>Buffering ...</div></div><div id='player-controls'><div class='control'><div class='button' id='play-previous'><a>&lt;&lt;</a></div></div><div class='control'><div class='button' id='play-pause-button'><a>||</a></div></div><div class='control'><div class='button' id='play-next'><a>&gt;&gt;</a></div></div></div></div></div><div id='minimize'><button id='toggleview' class='button mcbtn'>!</button></div></div>");
-	$('#toggleview').click(function(){
-		$('#jukebox').toggleClass("jukehide");
-	});
-	var Cstamp = Cookies.get('timestamp');
-	var Cindex = Cookies.get('track');
-	if(Cindex !== undefined){
-				console.log('loaded the index from cookie');
-				console.log(Cindex);
-			}
-			if(Cstamp !== undefined){
-				console.log('loaded the stamp from cookie');
-				console.log(Cstamp);
-			}
-	console.log('variables loaded from cookies')
 	
-});
+	
+
 //onload end
 //cookie check
 var loadstamp = (function() {
@@ -277,9 +279,10 @@ var loadstamp = (function() {
     sArea.mousemove(function (event) {
       showHover(event);
     });
+	  //on load
 	
 	  
-    
+    // end onload
 	  
 	  
     sArea.mouseout(hideHover);
