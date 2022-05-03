@@ -10,6 +10,7 @@ $( document ).ready(function() {
 	});
 	var Cstamp = Cookies.get('timestamp'),
 	    Cindex = Cookies.get('track');
+	console.log('variables loaded from cookies')
 	
 });
 $(function () {
@@ -65,7 +66,7 @@ $(function () {
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
-    currIndex = 0,
+    currIndex = -0,
     currsong = 0;
 	
 //cookie check
@@ -76,10 +77,13 @@ var loadstamp = (function() {
             loaded = true;
 			if(typeof Cindex !== 'undefined'){
 				currIndex = Cindex;
+				console.log('loaded the index');
 			}
-			else if(typeof Cstamp != 'undefined'){
+			if(typeof Cstamp != 'undefined'){
 				audio.currentTime = Cstamp;
+				console.log('loaded the stamp');
 			}
+		        console.log('loading done')
 	    }
     };
 })();
@@ -281,6 +285,7 @@ var loadstamp = (function() {
 	  if(typeof Cindex !== 'undefined' && typeof Cstamp != 'undefined'){
        	$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
+		console.log('simulated a click')
     }
   }
 
