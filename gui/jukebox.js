@@ -313,7 +313,12 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
-	  
+	//simulate a click
+	  if(Cindex !== NaN && Cstamp !== NaN){
+       		$('#toggleview').trigger('click');
+		$('#play-pause-button').trigger('click');
+		console.log('simulated a click')
+    }  
   }
 
   initPlayer();
