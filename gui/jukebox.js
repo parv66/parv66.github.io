@@ -47,7 +47,7 @@ $(function () {
       "Pigstep",
       "Stal",
       "Subwoofer Lullaby",
-      "Minecraft"
+      "Mall"
     ],
     trackNames = [
       "Lena Raine",
