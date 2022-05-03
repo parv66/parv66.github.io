@@ -85,15 +85,37 @@ var loadstamp = (function() {
         if (!loaded) {
             loaded = true;
 			if(Cindex !== undefined){
-				currIndex = Cindex;
-				currtrack = Cindex;
-				console.log(Cindex);
-				console.log('^ loaded the index');
+				if(Cindex == 0){
+					console.log('loaded song 0 from cookie');
+				}
+				if(Cindex == 1){
+					selectTrack(1);
+					console.log('loaded song 1 from cookie');
+				}
+				if(Cindex == 2){
+					selectTrack(1);
+					selectTrack(1);
+					console.log('loaded song 2 from cookie');
+				}
+				if(Cindex == 3){
+					selectTrack(1);
+					selectTrack(1);
+					selectTrack(1);
+					console.log('loaded song 3 from cookie');
+				}
+				if(Cindex == 4){
+					selectTrack(1);
+					selectTrack(1);
+					selectTrack(1);
+					selectTrack(1);
+					console.log('loaded song 4 from cookie');
+				}
+				console.log(Cindex + '<= loaded the index');
+				console.log();
 			}
 			if(Cstamp !== undefined){
 				audio.currentTime = Cstamp;
-				console.log(Cstamp);
-				console.log('^ loaded the stamp');
+				console.log(Cstamp + '<= loaded the stamp');
 			}
 		        console.log('loading done')
 	    }
