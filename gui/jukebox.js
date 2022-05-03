@@ -95,8 +95,8 @@ var loadstamp = (function() {
         playerTrack.addClass("active");
         albumArt.addClass("active");
         checkBuffering();
-        loadstamp();
         audio.play();
+	loadstamp();
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
