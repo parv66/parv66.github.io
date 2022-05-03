@@ -8,8 +8,8 @@ $( document ).ready(function() {
 	$('#toggleview').click(function(){
 		$('#jukebox').toggleClass("jukehide");
 	});
-	var Cstamp = Cookies.get('timestamp'),
-	    Cindex = Cookies.get('track');
+	var Cstamp = Cookies.get('timestamp');
+	var Cindex = Cookies.get('track');
 	if(Cindex !== undefined){
 				console.log('loaded the index from cookie');
 			}
