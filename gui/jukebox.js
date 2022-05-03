@@ -12,9 +12,11 @@ $( document ).ready(function() {
 	var Cindex = Cookies.get('track');
 	if(Cindex !== undefined){
 				console.log('loaded the index from cookie');
+				console.log(Cindex);
 			}
 			if(Cstamp !== undefined){
 				console.log('loaded the stamp from cookie');
+				console.log(Cstamp);
 			}
 	console.log('variables loaded from cookies')
 	
@@ -83,11 +85,13 @@ var loadstamp = (function() {
             loaded = true;
 			if(Cindex !== undefined){
 				currIndex = Cindex;
-				console.log('loaded the index');
+				console.log(Cindex);
+				console.log('^ loaded the index');
 			}
 			if(Cstamp !== undefined){
 				audio.currentTime = Cstamp;
-				console.log('loaded the stamp');
+				console.log(Cstamp);
+				console.log('^ loaded the stamp');
 			}
 		        console.log('loading done')
 	    }
@@ -288,7 +292,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
-	  if(Cindex !== undefined && Cstamp !== undefined){
+	  if(Cindex !== NaN && Cstamp !== NaN){
        	$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
 		console.log('simulated a click')
