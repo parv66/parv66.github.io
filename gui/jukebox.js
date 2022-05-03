@@ -13,15 +13,15 @@ $( document ).ready(function() {
 var Cstamp = Cookies.get('timestamp');
 	var Cindex = Cookies.get('track');
 	if(Cindex !== undefined){
-				console.log('loaded the index from cookie');
-				console.log(Cindex);
-			}
-			if(Cstamp !== undefined){
-				console.log('loaded the stamp from cookie');
-				console.log(Cstamp);
-			}
+		console.log(Cindex + 'loaded the index from cookie');
+	}
+	if(Cstamp !== undefined){
+		console.log(Cstamp + 'loaded the stamp from cookie');
+	}
 	console.log('variables loaded from cookies')
-//global variables
+
+$(function () {
+	//global variables
  var playerTrack = $("#player-track"),
     albumName = $("#album-name"),
     trackName = $("#track-name"),
@@ -77,7 +77,6 @@ var Cstamp = Cookies.get('timestamp');
     currIndex = -1,
     currtrack = -1;
 //end of global variables
-$(function () {
 //cookie check
 var loadstamp = (function() {
     var loaded = false;
@@ -314,12 +313,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
-	  //simulate a click
-	  if(Cindex !== NaN && Cstamp !== NaN){
-       	$('#toggleview').trigger('click');
-		$('#play-pause-button').trigger('click');
-		console.log('simulated a click')
-    }
+	  
   }
 
   initPlayer();
