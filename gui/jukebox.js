@@ -77,21 +77,29 @@ var loadstamp = (function() {
 			if(Cindex !== undefined){
 				if(Cindex == 1){
 					selectTrack(1);
+					playPause();
+					
 				}
 				if(Cindex == 2){
 					selectTrack(1);
 					selectTrack(1);
+					playPause();
+
 				}
 				if(Cindex == 3){
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
+					playPause();
+
 				}
 				if(Cindex == 4){
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
+					playPause();
+
 				}
 				console.log(Cindex + 'Was Your Previous Track!');
 				console.log();
