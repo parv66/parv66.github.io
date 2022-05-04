@@ -11,7 +11,19 @@ $( document ).ready(function() {
 		
 });
 var Cstamp = Cookies.get('timestamp'),
-    Cindex = Cookies.get('track');
+    Cindex = Cookies.get('track'),
+	currIndex = -1,
+    currtrack = -1;
+
+if(!Cookies.get('track')){
+    	Cookies.set('track', 0 , {expires: 7}, {path: '/jukebox'} );
+		currIndex = 0;
+		console.log("could not find cookie 'track' ")
+}
+if(!Cookies.get('timestamp')){
+    	Cookies.set('timestamp', 0 , {expires: 7}, {path: '/jukebox'} );
+		console.log("could not find cookie 'timestamp' ")
+}
 
 $(function () {
  var playerTrack = $("#player-track"),
@@ -65,9 +77,8 @@ $(function () {
       "https://raw.githubusercontent.com/parv66/parv66.github.io/master/gui/music/mall.mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
-    playNextTrackButton = $("#play-next"),
-    currIndex = -1,
-    currtrack = -1;
+    playNextTrackButton = $("#play-next");
+    
 //load data from cookies
 var loadstamp = (function() {
     var loaded = false;
@@ -292,6 +303,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
+    
 	//simulate a click
 	  if(Cindex !== NaN && Cstamp !== NaN){
        		$('#toggleview').trigger('click');
