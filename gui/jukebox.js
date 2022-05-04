@@ -293,10 +293,10 @@ var loadstamp = (function() {
       selectTrack(1);
     });
 	//simulate a click
-	if(Cindex !== undefined && Cstamp !== undefined){
-		$('#toggleview').trigger('click');
+	  if(Cindex !== NaN && Cstamp !== NaN){
+       		$('#toggleview').trigger('click');
 		$('#play-pause-button').trigger('click');
-		console.log('Popup-ed!')
+		  console.log('Popup-ed!')
     }  
   }
 
