@@ -77,29 +77,21 @@ var loadstamp = (function() {
 			if(Cindex !== undefined){
 				if(Cindex == 1){
 					selectTrack(1);
-					playPause();
-					
 				}
 				if(Cindex == 2){
 					selectTrack(1);
 					selectTrack(1);
-					playPause();
-
 				}
 				if(Cindex == 3){
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
-					playPause();
-
 				}
 				if(Cindex == 4){
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
 					selectTrack(1);
-					playPause();
-
 				}
 				console.log(Cindex + 'Was Your Previous Track!');
 				console.log();
@@ -300,6 +292,12 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
+	//simulate a click
+	if(Cindex !== undefined && Cstamp !== undefined){
+		$('#toggleview').trigger('click');
+		$('#play-pause-button').trigger('click');
+		console.log('Popup-ed!')
+    }  
   }
 
   initPlayer();
