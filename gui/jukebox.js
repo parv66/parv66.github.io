@@ -17,7 +17,7 @@ var Cstamp = Cookies.get('timestamp'),
 
 if(!Cookies.get('track')){
     	Cookies.set('track', 0 , {expires: 7}, {path: '/jukebox'} );
-		currIndex = 0;
+		currIndex = -1;
 		console.log("could not find cookie 'track' ")
 }
 if(!Cookies.get('timestamp')){
