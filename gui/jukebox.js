@@ -316,7 +316,8 @@ var loadstamp = (function() {
 });
 $(window).on("beforeunload", function() { 
    	let timestamp = audio.currentTime;
+	let trrack = currtrack + 1;
 	Cookies.set('timestamp', timestamp , {expires: 7}, {path: '/jukebox'} )
-	Cookies.set('track', currtrack , {expires: 7}, {path: '/jukebox'} )
+	Cookies.set('track', trrack , {expires: 7}, {path: '/jukebox'} )
 	console.log('Your Data Has Been Saved!')
 });
