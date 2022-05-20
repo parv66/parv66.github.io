@@ -8,19 +8,18 @@ $( document ).ready(function() {
 	$('#toggleview').click(function(){
 		$('#jukebox').toggleClass("jukehide");
 	});
-		
+	
+	//simulate a click
+	if(Cindex !== NaN || Cstamp !== NaN){
+		$('#toggleview').trigger('click');
+		$('#play-pause-button').trigger('click');
+		console.log('Popup-ed!')
+	} 
 });
 var Cstamp = Cookies.get('timestamp'),
     Cindex = Cookies.get('track'),
     currIndex = -1,
     currtrack = -1;
-
-//simulate a click
-if(Cindex !== NaN && Cstamp !== NaN){
-	$('#toggleview').trigger('click');
-	$('#play-pause-button').trigger('click');
-	console.log('Popup-ed!')
-} 
 
 if(!Cookies.get('track')){
     	Cookies.set('track', 0 , {expires: 7}, {path: '/jukebox'} );
@@ -31,6 +30,8 @@ if(!Cookies.get('timestamp')){
     	Cookies.set('timestamp', 0 , {expires: 7}, {path: '/jukebox'} );
 		console.log("could not find cookie 'timestamp' ")
 }
+
+
 
 $(function () {
  var playerTrack = $("#player-track"),
