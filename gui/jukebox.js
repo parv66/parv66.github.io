@@ -12,8 +12,15 @@ $( document ).ready(function() {
 });
 var Cstamp = Cookies.get('timestamp'),
     Cindex = Cookies.get('track'),
-	currIndex = -1,
+    currIndex = -1,
     currtrack = -1;
+
+//simulate a click
+if(Cindex !== NaN && Cstamp !== NaN){
+	$('#toggleview').trigger('click');
+	$('#play-pause-button').trigger('click');
+	console.log('Popup-ed!')
+} 
 
 if(!Cookies.get('track')){
     	Cookies.set('track', 0 , {expires: 7}, {path: '/jukebox'} );
@@ -303,13 +310,7 @@ var loadstamp = (function() {
     playNextTrackButton.on("click", function () {
       selectTrack(1);
     });
-    
-	//simulate a click
-	  if(Cindex !== NaN && Cstamp !== NaN){
-       		$('#toggleview').trigger('click');
-		$('#play-pause-button').trigger('click');
-		  console.log('Popup-ed!')
-    }  
+     
   }
 
   initPlayer();
