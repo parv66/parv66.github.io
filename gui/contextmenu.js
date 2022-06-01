@@ -3,12 +3,12 @@ $(document).ready(function(){
 	$("#contextmenu").hide();
         $(document).bind('contextmenu', function(event){
 		if(event.pageY < 644){
-			$("#contextmenu").css({"top": event.pageY + "px"}).show();
+			$("#contextmenu").css({"top": event.pageY + "px", "left": event.pageX-2 + "px"}).show();
 			console.log("up");
 			event.preventDefault();
 		}
 		else if(event.pageY > 644){
-			$("#contextmenu").css({"top": event.pageY-280 + "px"}).show();
+			$("#contextmenu").css({"top": event.pageY-280 + "px", "left": event.pageX-2 + "px"}).show();
 			console.log("down");
 			event.preventDefault();
 		}
